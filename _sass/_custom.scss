@@ -1,0 +1,395 @@
+/*******************************************************************************
+ * Tuỳ biến riêng: bảng màu xám nhạt – đen – xanh nhạt, chữ monospace.
+ *
+ * Muốn đổi màu chủ đạo: sửa đúng một giá trị --global-theme-color bên dưới
+ * (một cho nền sáng, một cho nền tối). Không cần sửa chỗ nào khác.
+ ******************************************************************************/
+
+// ---------- Font ----------
+// Đổi sang font khác: sửa $font-main rồi cập nhật đường dẫn Google Fonts
+// trong _config.yml (mục third_party_libraries.google_fonts).
+// Inter: sans-serif đơn giản, phổ biến, có đầy đủ dấu tiếng Việt.
+// Danh sách dự phòng chỉ gồm các font hệ thống chắc chắn có dấu tiếng Việt,
+// nên kể cả khi Google Fonts tải chậm thì chữ cũng không bị vỡ dấu.
+$font-main:
+  "Inter",
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  sans-serif;
+
+// ---------- Bảng màu ----------
+$c-black: #1c1e21; // chữ chính
+$c-grey: #6b7280; // chữ phụ, chú thích
+$c-grey-light: #f5f6f7; // nền xám nhạt
+$c-grey-line: #e3e5e8; // đường kẻ
+$c-blue: #2f6fd0; // xanh nhạt — màu chủ đạo (nền sáng)
+
+$c-black-dark: #16181a; // nền tối
+$c-text-dark: #d8dadd; // chữ trên nền tối
+$c-grey-dark: #9aa0a6;
+$c-line-dark: #2c2f33;
+$c-blue-dark: #7fb3ff; // xanh nhạt — màu chủ đạo (nền tối)
+
+:root {
+  --global-text-color: #{$c-black};
+  --global-text-color-light: #{$c-grey};
+  --global-theme-color: #{$c-blue};
+  --global-hover-color: #{$c-blue};
+  --global-divider-color: #{$c-grey-line};
+  --global-code-bg-color: #{$c-grey-light};
+  --global-card-bg-color: #{$c-grey-light};
+  --global-highlight-color: #{$c-blue};
+  --global-footer-bg-color: #{$c-grey-light};
+  --global-footer-text-color: #{$c-grey};
+  --global-footer-link-color: #{$c-black};
+  --global-distill-app-color: #{$c-grey};
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #{$c-black-dark};
+  --global-text-color: #{$c-text-dark};
+  --global-text-color-light: #{$c-grey-dark};
+  --global-theme-color: #{$c-blue-dark};
+  --global-hover-color: #{$c-blue-dark};
+  --global-hover-text-color: #{$c-black-dark};
+  --global-divider-color: #{$c-line-dark};
+  --global-code-bg-color: #1f2225;
+  --global-card-bg-color: #1f2225;
+  --global-highlight-color: #{$c-blue-dark};
+  --global-footer-bg-color: #1f2225;
+  --global-footer-text-color: #{$c-grey-dark};
+  --global-footer-link-color: #{$c-text-dark};
+}
+
+// ---------- Chữ monospace, giống trang mẫu ----------
+html,
+body {
+  font-family: $font-main;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.nav-link,
+.post-title,
+.category,
+.publications .bibliography,
+footer {
+  font-family: $font-main;
+}
+
+// Tên ở thanh menu và đầu trang chủ: đậm đều, giãn chữ hơi rộng
+.navbar-brand.title,
+.post-header .post-title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+// Phụ đề dưới tên: in nghiêng, xám — như trang mẫu
+.post-header .desc {
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+// ---------- Tinh chỉnh nhỏ cho dễ đọc ----------
+body {
+  // Nới dòng cho dễ đọc, nhất là với chữ tiếng Việt nhiều dấu.
+  line-height: 1.7;
+}
+
+// Phụ đề dưới tên: in nghiêng, màu xám — như trang mẫu
+.profile .more-info,
+.post-description {
+  color: var(--global-text-color-light);
+}
+
+// Đường kẻ mảnh, nhạt
+hr {
+  border-top: 1px solid var(--global-divider-color);
+  opacity: 1;
+}
+
+// Thẻ (tag, category) trên trang blog
+.tag-category-list a,
+.post-tags a {
+  color: var(--global-text-color-light);
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+}
+
+/*******************************************************************************
+ * Banner trang chủ (_includes/hero.liquid)
+ *
+ * Phong cách tối giản: nền sáng, chữ mảnh giãn rộng, một đường kẻ ngắn,
+ * ảnh chân dung đã tách nền nên hoà thẳng vào nền, không có khung.
+ *
+ * Đổi màu nền banner: sửa $hero-bg. Đổi màu chữ nhấn: sửa $hero-accent.
+ ******************************************************************************/
+
+// Đổi $hero-bg thì phải tạo lại ảnh assets/img/prof_pic.png với đúng màu nền mới,
+// nếu không viền tròn của ảnh sẽ lộ ra thành một khung xám trên nền banner.
+$hero-bg: #f4f5f7;
+$hero-accent: $c-blue;
+
+.hero {
+  // Khung nội dung của theme có lớp .mt-5 (48px) ở trên; kéo ngược lại đúng
+  // bằng đó để banner dính liền dưới thanh menu, không hở một vệt trắng.
+  margin-top: -3rem;
+
+  // Tràn hết chiều ngang màn hình, thoát khỏi khung nội dung.
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+
+  padding: 3.5rem 1.5rem;
+  margin-bottom: 3.5rem;
+  background: $hero-bg;
+  overflow: hidden;
+}
+
+// Banner đã tràn 100vw nên chặn thanh cuộn ngang thừa do bề rộng thanh cuộn.
+body {
+  overflow-x: hidden;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center; // ảnh căn đều trên dưới so với khối chữ
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 930px; // khớp với site.max_width
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $c-black;
+
+  .hero-accent {
+    color: $hero-accent;
+  }
+}
+
+.hero-rule {
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero-role {
+  margin: 0 0 1.25rem;
+  max-width: 30rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $c-grey;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  margin: 0 0 2rem;
+  font-size: 0.85rem;
+  color: $c-grey;
+}
+
+.hero-stat b {
+  color: $hero-accent;
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.8rem 1.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hero-btn-primary {
+  background: $c-black;
+  color: #fff;
+
+  &:hover {
+    background: $hero-accent;
+    color: #fff;
+  }
+}
+
+.hero-btn-ghost {
+  background: transparent;
+  color: $c-black;
+  border-color: rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    border-color: $hero-accent;
+    color: $hero-accent;
+  }
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    // Ảnh đã tách nền và tô lại đúng màu nền banner, nên viền tròn hoà
+    // vào nền, không tạo thành khung.
+    border-radius: 50%;
+  }
+}
+
+// Màn hình nhỏ: xếp dọc, ảnh xuống dưới chữ.
+@media (max-width: 767px) {
+  .hero {
+    padding: 2.5rem 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-role,
+  .hero-stats {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats,
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-photo img {
+    width: 200px;
+  }
+}
+
+// Nền tối: banner dùng nền xám đậm, ảnh tách nền vẫn hợp.
+html[data-theme="dark"] .hero {
+  background: #202326;
+
+  .hero-title {
+    color: #e8eaed;
+  }
+
+  .hero-btn-primary {
+    background: #e8eaed;
+    color: #16181a;
+  }
+
+  .hero-btn-ghost {
+    color: #e8eaed;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-rule {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/*******************************************************************************
+ * Nút chuyển ngôn ngữ EN / VI ở góc trên bên phải (_includes/header.liquid)
+ ******************************************************************************/
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  margin-left: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+
+  .lang-opt {
+    padding: 0.1rem 0.25rem;
+    color: var(--global-text-color-light);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+
+    &.is-active {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .lang-sep {
+    color: var(--global-divider-color);
+  }
+}
+
+/*******************************************************************************
+ * Danh sách đề tài nghiên cứu (trang Nghiên cứu)
+ ******************************************************************************/
+
+.grant-list {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--global-divider-color);
+  }
+
+  .text-muted {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}

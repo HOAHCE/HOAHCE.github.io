@@ -1,0 +1,412 @@
+<!DOCTYPE html> <html lang="vi"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Nghiên cứu khoa học | Trần Thái Hòa </title> <meta name="author" content="Hoa Tran Thai"> <meta name="description" content="Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu."> <meta name="keywords" content="Trần Thái Hòa, Tran Thai Hoa, Đại học Kinh tế Huế, Hue University, dự báo du lịch, tourism demand forecasting, time series, machine learning"> <meta property="og:site_name" content="Trần Thái Hòa"> <meta property="og:type" content="website"> <meta property="og:title" content="Trần Thái Hòa | Nghiên cứu khoa học"> <meta property="og:url" content="https://tranthaihoa.id.vn/vi/nghien-cuu/"> <meta property="og:description" content="Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Nghiên cứu khoa học"> <meta name="twitter:description" content="Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Hoa Tran Thai"
+        },
+        "url": "https://tranthaihoa.id.vn/vi/nghien-cuu/",
+        "@type": "WebSite",
+        "description": "Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu.",
+        "headline": "Nghiên cứu khoa học",
+        
+        "sameAs": ["https://orcid.org/0009-0006-2405-4697","https://scholar.google.com/citations?user=mYEjZ20AAAAJ","https://github.com/HOAHCE","https://csdlkhoahoc.hueuni.edu.vn/index.php/scientist/detail/id/2119"],
+        
+        "name": "Hoa Tran Thai",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Material+Icons&amp;subset=latin,latin-ext,vietnamese&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8F%AF&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://tranthaihoa.id.vn/vi/nghien-cuu/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/vi/"> Trần Thái Hòa </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/vi/">Trang chủ </a> </li> <li class="nav-item active"> <a class="nav-link" href="/vi/nghien-cuu/">Nghiên cứu <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/vi/giang-day/">Giảng dạy </a> </li> <li class="nav-item "> <a class="nav-link" href="/vi/du-an/">Dự án </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">Blog </a> </li> <li class="nav-item lang-switch"> <a class="lang-opt" href="/publications/" hreflang="en" title="English">EN</a><span class="lang-sep">/</span><a class="lang-opt is-active" href="/vi/nghien-cuu/" hreflang="vi" title="Tiếng Việt">VI</a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Nghiên cứu khoa học</h1> <p class="post-description">Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu.</p> </header> <article> <p>Danh mục dưới đây được đồng bộ với hồ sơ tại <a href="https://csdlkhoahoc.hueuni.edu.vn/index.php/scientist/detail/id/2119" rel="external nofollow noopener" target="_blank">CSDL Khoa học Đại học Huế</a>.</p> <h2 id="bài-báo-và-báo-cáo-khoa-học">Bài báo và báo cáo khoa học</h2> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">HUJS</abbr> </div> <div id="tranthai2026gru" class="col-sm-8"> <div class="title">Short-term Bitcoin forecasting across multiple horizons: The effectiveness of GRU networks</div> <div class="author"> <em>Hoa Tran Thai</em>, Thi Hai Phuong Duong, Thanh Manh Le, and Cuong Hoa Nguyen-Dinh </div> <div class="periodical"> <em>Tạp chí Khoa học Đại học Huế: Kỹ thuật và Công nghệ</em> 135(2A), 15, 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2026gru</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Short-term Bitcoin forecasting across multiple horizons: The effectiveness of GRU networks}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Thi Hai Phuong Duong} and {Thanh Manh Le} and {Cuong Hoa Nguyen-Dinh}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học Đại học Huế: Kỹ thuật và Công nghệ}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2588-1175}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{135}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{2A}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{15}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CCIS</abbr> </div> <div id="tranthai2026nasdaq" class="col-sm-8"> <div class="title">Integrating NASDAQ spillover signals into hybrid 1D-CNN-LSTM frameworks for multi-horizon Bitcoin forecasting</div> <div class="author"> <em>Hoa Tran Thai</em>, Cuong Hoa Nguyen-Dinh, Ngoc Nam Nguyen, Huu Trung Hoang, and Thanh Manh Le </div> <div class="periodical"> <em>Communications in Computer and Information Science</em> 2944(2), 475–489, 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2026nasdaq</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Integrating NASDAQ spillover signals into hybrid 1D-CNN-LSTM frameworks for multi-horizon Bitcoin forecasting}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Cuong Hoa Nguyen-Dinh} and {Ngoc Nam Nguyen} and {Huu Trung Hoang} and {Thanh Manh Le}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Communications in Computer and Information Science}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{1865-0929}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{2944}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{475--489}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TCKHCN</abbr> </div> <div id="tranthai2026nbeats" class="col-sm-8"> <div class="title">Phân tích thực nghiệm mô hình N-BEATS cho bài toán dự báo giá Bitcoin theo nhiều khung thời gian</div> <div class="author"> <em>Trần Thái Hòa</em>, Nguyễn Thanh Nam, and Dương Đức Hưng </div> <div class="periodical"> <em>Tạp chí Khoa học và Công nghệ: Khoa học tự nhiên, Trường Đại học Khoa học, Đại học Huế</em> 33(1), 59–74, 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2026nbeats</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Phân tích thực nghiệm mô hình N-BEATS cho bài toán dự báo giá Bitcoin theo nhiều khung thời gian}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Nguyễn Thanh Nam} and {Dương Đức Hưng}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học và Công nghệ: Khoa học tự nhiên, Trường Đại học Khoa học, Đại học Huế}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2354-0842}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{33}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{1}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{59--74}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">HUJS</abbr> </div> <div id="tranthai2026vcb" class="col-sm-8"> <div class="title">Dự báo giá cổ phiếu bằng các mô hình học sâu được tối ưu bằng PSO: Xét trường hợp mã cổ phiếu VCB</div> <div class="author"> <em>Trần Thái Hòa</em>, Lê Ngọc Lưu Quang, and Lê Thị Quỳnh Liên </div> <div class="periodical"> <em>Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển</em> 135(5A), 157–177, 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2026vcb</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Dự báo giá cổ phiếu bằng các mô hình học sâu được tối ưu bằng PSO: Xét trường hợp mã cổ phiếu VCB}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Lê Ngọc Lưu Quang} and {Lê Thị Quỳnh Liên}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2588-1205}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{135}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{5A}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{157--177}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2025</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">FAIR</abbr> </div> <div id="tranthai2025galstm" class="col-sm-8"> <div class="title">A multi-objective GA-LSTM framework for simultaneous optimization of predictive accuracy and computational efficiency in Bitcoin price forecasting</div> <div class="author"> <em>Hoa Tran Thai</em>, Thanh Manh Le, Dang Binh Nguyen, Thanh Nam Nguyen, and Cuong Hoa Nguyen-Dinh </div> <div class="periodical"> <em>In Kỷ yếu Hội nghị khoa học quốc gia lần thứ 18 về Nghiên cứu cơ bản và ứng dụng Công nghệ thông tin (FAIR 2025)</em>, 26–31, 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2025galstm</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A multi-objective GA-LSTM framework for simultaneous optimization of predictive accuracy and computational efficiency in Bitcoin price forecasting}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Thanh Manh Le} and {Dang Binh Nguyen} and {Thanh Nam Nguyen} and {Cuong Hoa Nguyen-Dinh}}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu Hội nghị khoa học quốc gia lần thứ 18 về Nghiên cứu cơ bản và ứng dụng Công nghệ thông tin (FAIR 2025)}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-357-455-5}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{26--31}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ICYREB</abbr> </div> <div id="tranthai2025gold" class="col-sm-8"> <div class="title">Advancing financial forecasting: On the effectiveness of the Transformer architecture for gold price time series analysis</div> <div class="author"> <em>Hoa Tran Thai</em>, Thi Hai Phuong Duong, and Cuong Hoa Nguyen-Dinh </div> <div class="periodical"> <em>In Proceedings of ICYREB 2025 — The 11th International Conference for Young Researchers in Economics and Business</em>, 379, 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2025gold</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Advancing financial forecasting: On the effectiveness of the Transformer architecture for gold price time series analysis}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Thi Hai Phuong Duong} and {Cuong Hoa Nguyen-Dinh}}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of ICYREB 2025 — The 11th International Conference for Young Researchers in Economics and Business}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-79-5179-6}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{379}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">IJIT</abbr> </div> <div id="tranthai2025ethereum" class="col-sm-8"> <div class="title">Hybrid model of 1D-CNN and LSTM for forecasting Ethereum closing prices: A case study of temporal analysis</div> <div class="author"> <em>Hoa Tran Thai</em>, Thanh Manh Le, and Cuong Hoa Nguyen-Dinh </div> <div class="periodical"> <em>International Journal of Information Technology</em> 17(7), 3999–4011, 2025 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1007/s41870-025-02472-6" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1007/s41870-025-02472-6" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2025ethereum</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Hybrid model of 1D-CNN and LSTM for forecasting Ethereum closing prices: A case study of temporal analysis}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Thanh Manh Le} and {Cuong Hoa Nguyen-Dinh}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{International Journal of Information Technology}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer Nature}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2511-2104}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{17}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{7}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{3999--4011}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1007/s41870-025-02472-6}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TCKHCN</abbr> </div> <div id="tranthai2024sosanh" class="col-sm-8"> <div class="title">So sánh hiệu quả mô hình học sâu 1D-CNN, LSTM và mô hình lai trong dự báo giá đóng cửa Bitcoin</div> <div class="author"> <em>Trần Thái Hòa</em>, Lê Mạnh Thạnh, and Nguyễn Đình Hoa Cương </div> <div class="periodical"> <em>Tạp chí Khoa học và Công nghệ, Trường Đại học Khoa học, Đại học Huế</em> 27(1B), 121–136, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2024sosanh</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{So sánh hiệu quả mô hình học sâu 1D-CNN, LSTM và mô hình lai trong dự báo giá đóng cửa Bitcoin}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Lê Mạnh Thạnh} and {Nguyễn Đình Hoa Cương}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học và Công nghệ, Trường Đại học Khoa học, Đại học Huế}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2354-0842}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{27}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{1B}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{121--136}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">HUJS</abbr> </div> <div id="tranthai2023blockchain" class="col-sm-8"> <div class="title">Phân tích khả năng ứng dụng công nghệ blockchain vào chuỗi cung ứng dầu tràm tại Huế</div> <div class="author"> <em>Trần Thái Hòa</em>, Dương Đắc Quang Hảo, and Trương Tấn Quân </div> <div class="periodical"> <em>Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển</em> 132(5C), 183–202, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2023blockchain</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Phân tích khả năng ứng dụng công nghệ blockchain vào chuỗi cung ứng dầu tràm tại Huế}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Dương Đắc Quang Hảo} and {Trương Tấn Quân}}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2588-1205}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{132}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{5C}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{183--202}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="tranthai2023logistics_moitruong" class="col-sm-8"> <div class="title">Xây dựng môi trường logistics nhằm giảm chi phí lưu thông trong xuất, nhập khẩu ở Việt Nam</div> <div class="author"> <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới</em>, 63, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2023logistics_moitruong</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Xây dựng môi trường logistics nhằm giảm chi phí lưu thông trong xuất, nhập khẩu ở Việt Nam}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-480-548-1}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{63}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="tranthai2023logistics_trungtam" class="col-sm-8"> <div class="title">Trung tâm logistics — mô hình kinh doanh mới trong phát triển kinh tế và thúc đẩy xuất nhập khẩu của địa phương</div> <div class="author"> <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới</em>, 96, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2023logistics_trungtam</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Trung tâm logistics — mô hình kinh doanh mới trong phát triển kinh tế và thúc đẩy xuất nhập khẩu của địa phương}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-480-548-1}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{96}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="tranthai2023logistics_quantri" class="col-sm-8"> <div class="title">Một số vấn đề quản trị tổ chức hệ thống logistics doanh nghiệp</div> <div class="author"> <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới</em>, 525, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2023logistics_quantri</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Một số vấn đề quản trị tổ chức hệ thống logistics doanh nghiệp}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo khoa học quốc tế — Phát triển hệ thống Logistics nhằm thúc đẩy xuất, nhập khẩu hàng hoá, dịch vụ ở nước ta trong bối cảnh mới}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-480-548-1}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{525}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="tranthai2023melaleuca" class="col-sm-8"> <div class="title">Modelling blockchain technology applications in developing agricultural supply chains: The case of melaleuca oil in Hue</div> <div class="author"> <em>Hoa Tran Thai</em>, Tan Quan Truong, and Dac Quang Hao Duong </div> <div class="periodical"> <em>In Kỷ yếu hội thảo khoa học quốc tế — Phát triển kinh tế xanh ở Việt Nam</em> 2, 30, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2023melaleuca</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Modelling blockchain technology applications in developing agricultural supply chains: The case of melaleuca oil in Hue}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tran Thai, Hoa and {Tan Quan Truong} and {Dac Quang Hao Duong}}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo khoa học quốc tế — Phát triển kinh tế xanh ở Việt Nam}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-55-7851}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{30}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="nguyen2023nanglucso" class="col-sm-8"> <div class="title">Năng lực số của sinh viên và các nhân tố ảnh hưởng</div> <div class="author"> Nguyễn Ngọc Nam, Lê Tô Minh Tân, and <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo khoa học quốc tế — Phát triển kinh tế xanh ở Việt Nam</em> 2, 480, 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">nguyen2023nanglucso</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Năng lực số của sinh viên và các nhân tố ảnh hưởng}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Nguyễn Ngọc Nam} and {Lê Tô Minh Tân} and Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo khoa học quốc tế — Phát triển kinh tế xanh ở Việt Nam}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-55-7851}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{480}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2020</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">HUJS</abbr> </div> <div id="duong2020blockchain" class="col-sm-8"> <div class="title">Factors affecting customer acceptance on the adoption of blockchain technology at Dong A Commercial Joint Stock Bank, Hue branch</div> <div class="author"> Dac Quang Hao Duong and <em>Hoa Tran Thai</em> </div> <div class="periodical"> <em>Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển</em> 129(5B), 5–16, 2020 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">duong2020blockchain</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Factors affecting customer acceptance on the adoption of blockchain technology at Dong A Commercial Joint Stock Bank, Hue branch}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Dac Quang Hao Duong} and Tran Thai, Hoa}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học Đại học Huế: Kinh tế và phát triển}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2588-1205}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{129}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{5B}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{5--16}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2018</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="tranthai2018logistics" class="col-sm-8"> <div class="title">Một số xu hướng phát triển logistics trong quá trình toàn cầu hoá</div> <div class="author"> <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo quốc gia “Xây dựng và phát triển hệ thống Logistics quốc gia và vùng kinh tế trọng điểm miền Trung”</em>, 136, 2018 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">tranthai2018logistics</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Một số xu hướng phát triển logistics trong quá trình toàn cầu hoá}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo quốc gia “Xây dựng và phát triển hệ thống Logistics quốc gia và vùng kinh tế trọng điểm miền Trung”}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{136}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2017</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Kỷ yếu</abbr> </div> <div id="mai2017khaiphadulieu" class="col-sm-8"> <div class="title">Ứng dụng khai phá dữ liệu trong quản lý giáo dục tại Trường Đại học Kinh tế Huế</div> <div class="author"> Mai Thu Giang and <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>In Kỷ yếu hội thảo quốc tế “Khung trình độ quốc gia Việt Nam và phát triển chương trình đào tạo đại học”</em>, 166–174, 2017 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">mai2017khaiphadulieu</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Ứng dụng khai phá dữ liệu trong quản lý giáo dục tại Trường Đại học Kinh tế Huế}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Mai Thu Giang} and Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Kỷ yếu hội thảo quốc tế “Khung trình độ quốc gia Việt Nam và phát triển chương trình đào tạo đại học”}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{166--174}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Nha Trang}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2017}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2013</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">HUJS</abbr> </div> <div id="tranthai2013hailong" class="col-sm-8"> <div class="title">Mức độ hài lòng của sinh viên về hoạt động đào tạo theo học chế tín chỉ tại Trường Đại học Kinh tế, Đại học Huế</div> <div class="author"> <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>Tạp chí Khoa học Đại học Huế: Khoa học xã hội và Nhân văn</em> 72B(3), 2013 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tranthai2013hailong</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Mức độ hài lòng của sinh viên về hoạt động đào tạo theo học chế tín chỉ tại Trường Đại học Kinh tế, Đại học Huế}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Tạp chí Khoa học Đại học Huế: Khoa học xã hội và Nhân văn}</span><span class="p">,</span>
+  <span class="na">issn</span> <span class="p">=</span> <span class="s">{2588-1213}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{72B}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2013}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> <h2 id="sách-giáo-trình">Sách, giáo trình</h2> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Tham khảo</abbr> </div> <div id="sach2026marketingxanh" class="col-sm-8"> <div class="title">Mối liên hệ giữa marketing xanh trên mạng xã hội và ý định quay trở lại của du khách nội địa ở Việt Nam</div> <div class="author"> Trương Tấn Quân, Nguyễn Hữu Hoàng Thọ, Hoàng Đức Sinh, Lê Thanh An, Lê Anh Quý, Nguyễn Thanh Tuấn, <em>Trần Thái Hòa</em>, and Trần Hữu Tuấn </div> <div class="periodical"> <em>Nhà xuất bản Đại học Huế</em> (Đồng tác giả), 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2026marketingxanh</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Mối liên hệ giữa marketing xanh trên mạng xã hội và ý định quay trở lại của du khách nội địa ở Việt Nam}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Trương Tấn Quân} and {Nguyễn Hữu Hoàng Thọ} and {Hoàng Đức Sinh} and {Lê Thanh An} and {Lê Anh Quý} and {Nguyễn Thanh Tuấn} and Thái Hòa, Trần and {Trần Hữu Tuấn}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Đại học Huế}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-632-627-296-3}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Giáo trình</abbr> </div> <div id="sach2024logistics" class="col-sm-8"> <div class="title">Quản trị Logistics căn bản</div> <div class="author"> Đặng Đình Đào, <em>Trần Thái Hòa</em>, Trần Văn Bão, and Nguyễn Thái Bình </div> <div class="periodical"> <em>Nhà xuất bản Lao Động</em> (Đồng tác giả), 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2024logistics</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Quản trị Logistics căn bản}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Đặng Đình Đào} and Thái Hòa, Trần and {Trần Văn Bão} and {Nguyễn Thái Bình}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Lao Động}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-492-200-3}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chuyên khảo</abbr> </div> <div id="sach2023daihocthongminh" class="col-sm-8"> <div class="title">Nghiên cứu xây dựng mô hình đại học thông minh và đề xuất quá trình chuyển đổi cho các trường đại học Việt Nam</div> <div class="author"> <em>Trần Thái Hòa</em>, Nguyễn Thanh Tuấn, and Lê Minh Tuấn </div> <div class="periodical"> <em>Nhà xuất bản Đại học Huế</em> (Chủ biên), 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2023daihocthongminh</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Nghiên cứu xây dựng mô hình đại học thông minh và đề xuất quá trình chuyển đổi cho các trường đại học Việt Nam}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Nguyễn Thanh Tuấn} and {Lê Minh Tuấn}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Đại học Huế}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-399-577-0}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chuyên khảo</abbr> </div> <div id="sach2023dautram" class="col-sm-8"> <div class="title">Xây dựng mô hình ứng dụng công nghệ Blockchain trong quản lý chuỗi cung ứng: Trường hợp sản phẩm dầu tràm ở Huế</div> <div class="author"> <em>Trần Thái Hòa</em>, Trương Tấn Quân, Dương Đắc Quang Hảo, and Nguyễn Thanh Tuấn </div> <div class="periodical"> <em>Nhà xuất bản Đại học Huế</em> (Chủ biên), 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2023dautram</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Xây dựng mô hình ứng dụng công nghệ Blockchain trong quản lý chuỗi cung ứng: Trường hợp sản phẩm dầu tràm ở Huế}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Thái Hòa, Trần and {Trương Tấn Quân} and {Dương Đắc Quang Hảo} and {Nguyễn Thanh Tuấn}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Đại học Huế}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-399-551-0}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chuyên khảo</abbr> </div> <div id="sach2023chuoikhoi" class="col-sm-8"> <div class="title">Ứng dụng công nghệ chuỗi khối (Blockchain) nhằm phát triển chuỗi cung ứng nông nghiệp</div> <div class="author"> Dương Đắc Quang Hảo, <em>Trần Thái Hòa</em>, Nguyễn Thị Minh Hòa, and Hoàng La Phương Hiền </div> <div class="periodical"> <em>Nhà xuất bản Lao Động</em> (Đồng tác giả), 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2023chuoikhoi</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Ứng dụng công nghệ chuỗi khối (Blockchain) nhằm phát triển chuỗi cung ứng nông nghiệp}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Dương Đắc Quang Hảo} and Thái Hòa, Trần and {Nguyễn Thị Minh Hòa} and {Hoàng La Phương Hiền}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Lao Động}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-393-670-4}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Giáo trình</abbr> </div> <div id="sach2023quantrilogistics" class="col-sm-8"> <div class="title">Giáo trình Quản trị hoạt động logistics và thương mại doanh nghiệp</div> <div class="author"> Đặng Đình Đào, <em>Trần Thái Hòa</em>, and Trương Tấn Quân </div> <div class="periodical"> <em>Nhà xuất bản Tài chính</em> (Đồng tác giả), 2023 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2023quantrilogistics</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Giáo trình Quản trị hoạt động logistics và thương mại doanh nghiệp}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Đặng Đình Đào} and Thái Hòa, Trần and {Trương Tấn Quân}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Tài chính}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-793-664-9}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2022</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chuyên khảo</abbr> </div> <div id="sach2022thuongmai" class="col-sm-8"> <div class="title">Thương mại và logistics Việt Nam thời kỳ đổi mới 1986–2021, triển vọng đến năm 2045</div> <div class="author"> Đặng Đình Đào, Trần Văn Hòa, Trương Tấn Quân, and <em>Trần Thái Hòa</em> </div> <div class="periodical"> <em>Nhà xuất bản Lao Động</em> (Đồng tác giả), 2022 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2022thuongmai</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Thương mại và logistics Việt Nam thời kỳ đổi mới 1986–2021, triển vọng đến năm 2045}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Đặng Đình Đào} and {Trần Văn Hòa} and {Trương Tấn Quân} and Thái Hòa, Trần}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Lao Động}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-393-670-4}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2020</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">Chuyên khảo</abbr> </div> <div id="sach2020quanlytoandien" class="col-sm-8"> <div class="title">Ứng dụng mô hình quản lý toàn diện trường đại học trong các trường đại học ở Việt Nam: Thử nghiệm tại Trường Đại học Kinh tế, Đại học Huế</div> <div class="author"> Nguyễn Thanh Tuấn, Dương Thị Hải Phương, Mai Thu Giang, <em>Trần Thái Hòa</em>, Nguyễn Hữu Hoàng Thọ, Trần Thị Khánh Linh, and Nguyễn Thị Phương Thảo </div> <div class="periodical"> <em>Nhà xuất bản Lao động xã hội</em> (Đồng tác giả), 2020 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@book</span><span class="p">{</span><span class="nl">sach2020quanlytoandien</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Ứng dụng mô hình quản lý toàn diện trường đại học trong các trường đại học ở Việt Nam: Thử nghiệm tại Trường Đại học Kinh tế, Đại học Huế}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Nguyễn Thanh Tuấn} and {Dương Thị Hải Phương} and {Mai Thu Giang} and Thái Hòa, Trần and {Nguyễn Hữu Hoàng Thọ} and {Trần Thị Khánh Linh} and {Nguyễn Thị Phương Thảo}}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Nhà xuất bản Lao động xã hội}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{978-604-65-4644-3}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> <h2 id="đề-tài-nghiên-cứu">Đề tài nghiên cứu</h2> <ul class="grant-list"> <li> <strong>Nghiên cứu ứng dụng mô hình N-BEATS trong dự báo chuỗi thời gian tài chính</strong><br> <span class="text-muted"> Chủ nhiệm · 2026–2027 · Mã số: ĐHKH2026D-002 <br>Thành viên: Nguyễn Thanh Nam, Dương Đức Hưng </span> </li> <li> <strong>Nghiên cứu các phương pháp và xây dựng một số mô hình phát hiện tính cách trong văn bản</strong><br> <span class="text-muted"> Thành viên · 2025–2027 · Mã số: DHH2025-08-22 <br>Chủ nhiệm: Nguyễn Thanh Nam </span> </li> <li> <strong>Nghiên cứu cải tiến các mô hình học sâu nhằm nâng cao hiệu quả dự đoán giá tiền điện tử</strong><br> <span class="text-muted"> Chủ nhiệm · 2025–2027 · Mã số: DHH2025-06-164 <br>Thành viên: Trương Tấn Quân, Phan Thị Thu Hương, Nguyễn Thanh Tuấn, Hồ Minh Toàn, Nguyễn Thanh Nam, Dương Thị Hải Phương </span> </li> <li> <strong>Xây dựng mô hình ứng dụng công nghệ blockchain trong quản lý chuỗi cung ứng: Trường hợp sản phẩm dầu tràm ở Huế</strong><br> <span class="text-muted"> Chủ nhiệm · 2021–2024 · Mã số: DHH2021-06-107 <br>Thành viên: Trương Tấn Quân, Dương Đắc Quang Hảo, Mai Thu Giang </span> </li> <li> <strong>Xác định và kiểm soát các nhân tố ảnh hưởng đến việc triển khai thành công hệ thống Hoạch định tài nguyên doanh nghiệp (ERP) tại các doanh nghiệp Việt Nam</strong><br> <span class="text-muted"> Thành viên · 2018–2020 · Mã số: DHH2018-06-54 <br>Chủ nhiệm: Dương Thị Hải Phương </span> </li> <li> <strong>Ứng dụng các kỹ thuật khai phá dữ liệu để dự báo điểm của sinh viên Trường Đại học Kinh tế, Đại học Huế</strong><br> <span class="text-muted"> Chủ nhiệm · 2017 · Mã số: CS-DT </span> </li> <li> <strong>Nghiên cứu ứng dụng mô hình ERP (Enterprise Resource Planning) vào công tác quản lý trường đại học ở Việt Nam — Trường hợp Trường Đại học Kinh tế, Đại học Huế</strong><br> <span class="text-muted"> Thành viên · 2013–2014 · Mã số: DHH12324 </span> </li> <li> <strong>Nghiên cứu ứng dụng tài khoản vệ tinh du lịch tại Thừa Thiên Huế</strong><br> <span class="text-muted"> Thành viên · 2013–2015 · Mã số: DHH2013-06-22 <br>Chủ nhiệm: Phan Thị Thu Hương </span> </li> <li> <strong>Đánh giá mức độ hài lòng của sinh viên về hoạt động đào tạo theo học chế tín chỉ tại Trường Đại học Kinh tế, Đại học Huế</strong><br> <span class="text-muted"> Chủ nhiệm · 2012 · Mã số: CS-DT </span> </li> <li> <strong>Hệ thống quản lý phòng máy thực hành và thiết bị</strong><br> <span class="text-muted"> Chủ nhiệm · 2009 · Mã số: CS-DT </span> </li> <li> <strong>Xây dựng hệ thống tra cứu trực tuyến</strong><br> <span class="text-muted"> Chủ nhiệm · 2005 · Mã số: CS-DT </span> </li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Trần Thái Hòa. Nội dung trên trang được chia sẻ cho mục đích học thuật. Xây dựng bằng <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> với giao diện <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Lưu trữ trên <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: September 20, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-nghiên-cứu-khoa-học",
+          title: "Nghiên cứu khoa học",
+          description: "Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/nghien-cuu/";
+          },
+        },{id: "nav-research",
+          title: "Research",
+          description: "Journal articles, conference papers, books and funded projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-giảng-dạy",
+          title: "Giảng dạy",
+          description: "Học phần phụ trách, đề cương, bài giảng và tài liệu thực hành.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/giang-day/";
+          },
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "Courses I teach, with syllabi, lecture slides and lab materials.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-dự-án",
+          title: "Dự án",
+          description: "Mã nguồn, dữ liệu và các sản phẩm ứng dụng.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/du-an/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Code, data and applied work.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "post-chào-mừng-đến-với-trang-cá-nhân-của-tôi",
+        
+          title: "Chào mừng đến với trang cá nhân của tôi",
+        
+        description: "Bài viết đầu tiên — giới thiệu về mục đích của trang và những nội dung sẽ được chia sẻ tại đây.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/chao-mung/";
+          
+        },
+      },{id: "news-trang-cá-nhân-chính-thức-hoạt-động",
+          title: 'Trang cá nhân chính thức hoạt động.',
+          description: "",
+          section: "News",},{id: "news-bài-báo-về-mô-hình-lai-1d-cnn-và-lstm-dự-báo-giá-ethereum-đăng-trên-international-journal-of-information-technology",
+          title: 'Bài báo về mô hình lai 1D-CNN và LSTM dự báo giá Ethereum...',
+          description: "",
+          section: "News",},{id: "projects-hue-heritage-visitors-forecasting",
+          title: 'Hue Heritage Visitors Forecasting',
+          description: "Forecasting visitor numbers to the Hue Monuments Complex with time series and machine learning models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_hue_heritage/";
+            },},{id: "projects-tourist-demand-forecasting",
+          title: 'Tourist Demand Forecasting',
+          description: "Forecasting tourism demand from time series data and exogenous variables.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_tourist_demand/";
+            },},{id: "projects-decomposition-ensemble-for-bitcoin-price-forecasting",
+          title: 'Decomposition–Ensemble for Bitcoin Price Forecasting',
+          description: "Combining signal decomposition with machine learning models to forecast Bitcoin prices.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_decomposition_ensemble/";
+            },},{id: "teachings-công-nghệ-phần-mềm",
+          title: 'Công nghệ phần mềm',
+          description: "Các nguyên lý và kỹ thuật của công nghệ phần mềm: quy trình phát triển, quản lý yêu cầu, thiết kế, kiểm thử và đảm bảo chất lượng.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/cong-nghe-phan-mem/";
+            },},{id: "teachings-công-nghệ-số-trí-tuệ-nhân-tạo-và-ứng-dụng",
+          title: 'Công nghệ số, Trí tuệ nhân tạo và ứng dụng',
+          description: "Tổng quan các công nghệ số và trí tuệ nhân tạo cùng ứng dụng của chúng trong kinh tế và quản trị.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/cong-nghe-so-tri-tue-nhan-tao-va-ung-dung/";
+            },},{id: "teachings-khởi-nghiệp-và-đổi-mới-sáng-tạo",
+          title: 'Khởi nghiệp và đổi mới sáng tạo',
+          description: "Hình thành tư duy khởi nghiệp và đổi mới sáng tạo: nhận diện cơ hội, xây dựng mô hình kinh doanh, kiểm chứng ý tưởng và trình bày dự án.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/khoi-nghiep-doi-moi-sang-tao/";
+            },},{id: "teachings-phát-triển-hệ-thống-thông-tin",
+          title: 'Phát triển hệ thống thông tin',
+          description: "Quy trình phát triển hệ thống thông tin trong tổ chức: khảo sát, phân tích, thiết kế, triển khai và bảo trì.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/phat-trien-he-thong-thong-tin/";
+            },},{id: "teachings-phát-triển-website-thương-mại-điện-tử",
+          title: 'Phát triển Website Thương mại điện tử',
+          description: "Thiết kế và xây dựng website thương mại điện tử: kiến trúc ứng dụng web, quản trị sản phẩm, giỏ hàng, thanh toán và bảo mật.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/phat-trien-website-thuong-mai-dien-tu/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%74%72%61%6E%74%68%61%69%68%6F%61@%68%75%65%75%6E%69.%65%64%75.%76%6E", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0006-2405-4697", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=mYEjZ20AAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/HOAHCE", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://csdlkhoahoc.hueuni.edu.vn/index.php/scientist/detail/id/2119", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

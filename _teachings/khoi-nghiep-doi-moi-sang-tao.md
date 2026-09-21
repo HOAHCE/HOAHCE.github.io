@@ -51,18 +51,18 @@ schedule:
         url: /assets/pdf/knst/Demo-Day-Kich-ban-dieu-hanh.pdf
 ---
 
-## Giáo trình
+## Bài giảng
 
-Giáo trình của học phần được biên soạn theo nguyên tắc **chơi trước – hiểu sau – làm ngay**. Mỗi chương gồm phần lý thuyết cô đọng vừa đủ để cả lớp có ngôn ngữ chung, một trò chơi mô phỏng buộc sinh viên ra quyết định dưới sức ép thời gian và nguồn lực hữu hạn, phần giải mã biến trải nghiệm thành quy luật, và hệ thống bài tập đưa quy luật ấy vào chính dự án của nhóm.
+Bài giảng của học phần được biên soạn theo nguyên tắc **chơi trước – hiểu sau – làm ngay**. Mỗi chương gồm phần lý thuyết cô đọng vừa đủ để cả lớp có ngôn ngữ chung, một trò chơi mô phỏng buộc sinh viên ra quyết định dưới sức ép thời gian và nguồn lực hữu hạn, phần giải mã biến trải nghiệm thành quy luật, và hệ thống bài tập đưa quy luật ấy vào chính dự án của nhóm.
 
 Điểm khác biệt so với tài liệu khởi nghiệp thông thường: sinh viên không học về một dự án giả định của người khác mà xây dựng dự án của chính mình xuyên suốt năm chương. Đầu ra của chương trước là đầu vào bắt buộc của chương sau — phát biểu vấn đề ở Chương 1 được kiểm chứng bằng phỏng vấn ở Chương 2, chuyển thành mô hình kinh doanh ở Chương 3 và trở thành bài pitch gọi vốn ở Chương 4. Đến buổi cuối, mỗi nhóm có một hồ sơ dự án hoàn chỉnh chứ không phải một tập bài tập rời rạc.
 
-<a href="/assets/pdf/knst/Giao_trinh_Khoi_nghiep_Doi_moi_Sang_tao.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Tải giáo trình (PDF, 72 trang)</a>
+<a href="/assets/pdf/knst/Giao_trinh_Khoi_nghiep_Doi_moi_Sang_tao.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Tải bài giảng (PDF, 72 trang)</a>
 <a href="/assets/pdf/knst/Giao_trinh_Khoi_nghiep_Doi_moi_Sang_tao.docx" class="btn btn-sm z-depth-0" role="button">Bản Word (.docx)</a>
 
 ## Cách sử dụng tài liệu
 
-- **Trước mỗi buổi học:** đọc phần lý thuyết của chương tương ứng trong giáo trình. Slide chỉ là bản tóm lược dùng trên lớp, không thay thế giáo trình.
+- **Trước mỗi buổi học:** đọc phần lý thuyết của chương tương ứng trong bài giảng. Slide chỉ là bản tóm lược dùng trên lớp, không thay thế bài giảng.
 - **Sau mỗi buổi học:** hoàn thành bài tập cuối chương và bổ sung vào hồ sơ dự án của nhóm. Hồ sơ này là căn cứ chấm điểm ở buổi Demo Day.
 - **Trò chơi trong lớp** dùng đồng tiền quy ước Xu Khởi Nghiệp (XU). Nhóm nào tiêu hết vốn trước khi kiểm chứng được nhu cầu sẽ thấy rõ cái giá của việc xây trước, hỏi sau.
 - Phát hiện lỗi hoặc có góp ý về tài liệu, sinh viên gửi email cho giảng viên để cập nhật ở bản sau.

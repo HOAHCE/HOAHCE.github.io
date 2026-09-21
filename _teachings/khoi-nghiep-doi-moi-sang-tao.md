@@ -57,8 +57,8 @@ Bài giảng của học phần được biên soạn theo nguyên tắc **chơi
 
 Điểm khác biệt so với tài liệu khởi nghiệp thông thường: sinh viên không học về một dự án giả định của người khác mà xây dựng dự án của chính mình xuyên suốt năm chương. Đầu ra của chương trước là đầu vào bắt buộc của chương sau — phát biểu vấn đề ở Chương 1 được kiểm chứng bằng phỏng vấn ở Chương 2, chuyển thành mô hình kinh doanh ở Chương 3 và trở thành bài pitch gọi vốn ở Chương 4. Đến buổi cuối, mỗi nhóm có một hồ sơ dự án hoàn chỉnh chứ không phải một tập bài tập rời rạc.
 
-<a href="/assets/pdf/knst/Giao_trinh_Khoi_nghiep_Doi_moi_Sang_tao.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Tải bài giảng (PDF, 72 trang)</a>
-<a href="/assets/pdf/knst/Giao_trinh_Khoi_nghiep_Doi_moi_Sang_tao.docx" class="btn btn-sm z-depth-0" role="button">Bản Word (.docx)</a>
+<a href="/assets/pdf/knst/Bai_giang_Khoi_nghiep_Doi_moi_Sang_tao.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Tải bài giảng (PDF, 72 trang)</a>
+<a href="/assets/pdf/knst/Bai_giang_Khoi_nghiep_Doi_moi_Sang_tao.docx" class="btn btn-sm z-depth-0" role="button">Bản Word (.docx)</a>
 
 ## Cách sử dụng tài liệu
 

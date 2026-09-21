@@ -59,6 +59,7 @@ Bài giảng của học phần được biên soạn theo nguyên tắc **chơi
 
 <a href="/assets/pdf/knst/Bai_giang_Khoi_nghiep_Doi_moi_Sang_tao.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Tải bài giảng (PDF, 72 trang)</a>
 <a href="/assets/pdf/knst/Bai_giang_Khoi_nghiep_Doi_moi_Sang_tao.docx" class="btn btn-sm z-depth-0" role="button">Bản Word (.docx)</a>
+<a href="https://notebooklm.google.com/notebook/f4258589-e52d-434e-9306-7b70c3b47032" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Trao đổi – Hỏi đáp (NotebookLM)</a>
 
 ## Cách sử dụng tài liệu
 

@@ -15,8 +15,8 @@ hero:
   title: Trần Thái Hòa
   # highlight: ...   # chữ nhấn màu xanh nối sau tên, bỏ trống thì chỉ hiện tên
   role: >
-    Giảng viên · Nghiên cứu sinh ngành Khoa học Máy tính, Khoa Công nghệ thông tin,
-    Trường Đại học Khoa học, Đại học Huế.
+    Giảng viên Khoa Hệ thống thông tin kinh tế, Trường Đại học Kinh tế, Đại học Huế<br>
+    NCS Khoa học máy tính, Khoa CNTT, Trường Đại học Khoa học, Đại học Huế
   image: prof_pic.png
   stats:
     - num: "18"

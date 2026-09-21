@@ -10,8 +10,8 @@ hero:
   title: Hoa Tran Thai
   # highlight: ...   # chữ nhấn màu xanh nối sau tên, bỏ trống thì chỉ hiện tên
   role: >
-    PhD student in Computer Science · Lecturer, Faculty of Economic Information Systems,
-    University of Economics, Hue University.
+    Lecturer · PhD student in Computer Science, Faculty of Information Technology,
+    University of Sciences, Hue University.
   image: prof_pic.png
   stats:
     - num: "18"

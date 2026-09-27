@@ -1,0 +1,1055 @@
+---
+layout: page
+permalink: /ai-tools/loc-ky-tu-an/
+title: Lọc ký tự ẩn
+lang: vi
+lang_alt: /
+description: Tìm và loại bỏ ký tự Unicode vô hình, khoảng trắng đặc biệt trong văn bản, kèm báo cáo từng ký tự đã xử lý. Văn bản được xử lý ngay trên trình duyệt, không gửi đi đâu.
+---
+
+{% raw %}
+<style>
+  .lkta {
+    --lk-del: #b3204f;
+    --lk-del-bg: #fbe3eb;
+    --lk-rep: #8a5200;
+    --lk-rep-bg: #fdf0d8;
+    --lk-keep: #4b5563;
+    --lk-keep-bg: #eceef1;
+    --lk-ok: #1d7244;
+    --lk-ok-bg: #e0f2e8;
+    --lk-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  html[data-theme="dark"] .lkta {
+    --lk-del: #ff8fb1;
+    --lk-del-bg: #3a1a26;
+    --lk-rep: #f2bb55;
+    --lk-rep-bg: #33270f;
+    --lk-keep: #b8bec6;
+    --lk-keep-bg: #262a2f;
+    --lk-ok: #74d6a0;
+    --lk-ok-bg: #16301f;
+  }
+  .lkta .lk-notice {
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    background: var(--global-card-bg-color);
+  }
+  .lkta .lk-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--global-text-color-light);
+    font-weight: 600;
+    margin: 0;
+  }
+  /* Tuỳ chọn */
+  .lkta .lk-opts {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .lkta .lk-opts legend {
+    all: unset;
+  }
+  .lkta .lk-opts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+  }
+  .lkta .lk-opts label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.92rem;
+    cursor: pointer;
+    margin: 0;
+  }
+  .lkta .lk-opts input {
+    accent-color: var(--global-theme-color);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+  .lkta .lk-all {
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-weight: 600;
+  }
+  /* Hai ô văn bản */
+  .lkta .lk-panes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  @media (min-width: 768px) {
+    .lkta .lk-panes {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .lkta .lk-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    min-width: 0;
+  }
+  .lkta .lk-pane-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    min-height: 2.1rem;
+  }
+  .lkta textarea,
+  .lkta .lk-marked {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    font: inherit;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 0.75rem 0.85rem;
+    overflow: auto;
+    resize: vertical;
+  }
+  .lkta textarea:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 1px;
+  }
+  .lkta .lk-marked {
+    white-space: pre-wrap;
+    word-break: break-word;
+    resize: none;
+  }
+  .lkta .lk-count {
+    font-family: var(--lk-mono);
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+    font-variant-numeric: tabular-nums;
+  }
+  .lkta .lk-btns {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .lkta .lk-btn {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.2;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+  }
+  .lkta .lk-btn:hover {
+    background: var(--global-card-bg-color);
+  }
+  .lkta .lk-btn.lk-primary {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color, #fff);
+  }
+  .lkta .lk-btn.lk-primary:hover {
+    filter: brightness(1.08);
+  }
+  .lkta .lk-btn:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+  .lkta .lk-tabs {
+    display: inline-flex;
+    background: var(--global-card-bg-color);
+    border-radius: 6px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .lkta .lk-tabs .lk-btn {
+    border: 0;
+    background: transparent;
+    padding: 0.3rem 0.65rem;
+    color: var(--global-text-color-light);
+  }
+  .lkta .lk-tabs .lk-btn[aria-selected="true"] {
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .lkta .lk-toast {
+    font-size: 0.82rem;
+    color: var(--lk-ok);
+  }
+  /* Nhãn đánh dấu trong văn bản */
+  .lkta .mk {
+    font-family: var(--lk-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 0 0.25rem;
+    margin: 0 1px;
+    vertical-align: 1px;
+    white-space: nowrap;
+  }
+  .lkta .mk-del {
+    color: var(--lk-del);
+    background: var(--lk-del-bg);
+  }
+  .lkta .mk-rep {
+    color: var(--lk-rep);
+    background: var(--lk-rep-bg);
+  }
+  .lkta .mk-keep {
+    color: var(--lk-keep);
+    background: var(--lk-keep-bg);
+  }
+  .lkta .lk-muted {
+    color: var(--global-text-color-light);
+  }
+  /* Báo cáo */
+  .lkta .lk-report {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .lkta .lk-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .lkta .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+  .lkta .pill b {
+    font-family: var(--lk-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .lkta .pill.del,
+  .lkta .act.del {
+    background: var(--lk-del-bg);
+    color: var(--lk-del);
+  }
+  .lkta .pill.rep,
+  .lkta .act.rep {
+    background: var(--lk-rep-bg);
+    color: var(--lk-rep);
+  }
+  .lkta .pill.keep,
+  .lkta .act.keep {
+    background: var(--lk-keep-bg);
+    color: var(--lk-keep);
+  }
+  .lkta .pill.ok {
+    background: var(--lk-ok-bg);
+    color: var(--lk-ok);
+  }
+  .lkta .lk-secret {
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--lk-del);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  .lkta .lk-secret code {
+    font-family: var(--lk-mono);
+    background: var(--lk-del-bg);
+    color: var(--lk-del);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+  .lkta .lk-tbl {
+    overflow-x: auto;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+  }
+  .lkta .lk-tbl table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 680px;
+    font-size: 0.88rem;
+    margin: 0;
+  }
+  .lkta .lk-tbl th,
+  .lkta .lk-tbl td {
+    text-align: left;
+    padding: 0.5rem 0.7rem;
+    border: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    vertical-align: top;
+    color: var(--global-text-color);
+  }
+  .lkta .lk-tbl th {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--global-text-color-light);
+    font-weight: 600;
+    background: var(--global-card-bg-color);
+  }
+  .lkta .lk-tbl tr:last-child td {
+    border-bottom: 0;
+  }
+  .lkta td.code {
+    font-family: var(--lk-mono);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .lkta td.num,
+  .lkta th.num {
+    font-family: var(--lk-mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .lkta td.pos,
+  .lkta td .nm {
+    font-family: var(--lk-mono);
+    font-size: 0.8rem;
+  }
+  .lkta td.pos {
+    color: var(--global-text-color-light);
+  }
+  .lkta .act {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .lkta .lk-empty {
+    color: var(--global-text-color-light);
+  }
+  /* Giới hạn & trách nhiệm */
+  .lkta .lk-duty {
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1.2rem;
+  }
+  .lkta .lk-duty h2 {
+    font-size: 1.35rem;
+    margin: 0 0 0.8rem;
+  }
+  .lkta .lk-duty h3 {
+    font-size: 1.05rem;
+    margin: 1rem 0 0.4rem;
+  }
+  .lkta .lk-duty ul {
+    margin: 0 0 0.4rem;
+    padding-left: 1.3rem;
+  }
+  .lkta .lk-duty li {
+    margin-bottom: 0.35rem;
+  }
+  .lkta .lk-duty blockquote {
+    margin: 0.4rem 0 0;
+    padding: 0.6rem 0.9rem;
+    border-left: 3px solid var(--global-theme-color);
+    background: var(--global-card-bg-color);
+    font-size: 0.92rem;
+  }
+  .lkta .lk-source {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lkta * {
+      transition: none !important;
+    }
+  }
+</style>
+
+<div class="lkta">
+  <p class="lk-notice">
+    Công cụ chỉ dọn các <strong>ký tự ẩn</strong> chèn trong văn bản. Nó không biến văn bản do AI viết thành bài của bạn, cũng không gỡ được watermark
+    thống kê. Đọc phần <a href="#gioi-han-va-trach-nhiem">Giới hạn và trách nhiệm sử dụng AI</a> trước khi dùng.
+  </p>
+
+  <fieldset class="lk-opts">
+    <legend class="lk-label">Tuỳ chọn xử lý</legend>
+    <label class="lk-all"><input type="checkbox" id="optAll" /> Chọn tất cả</label>
+    <div class="lk-opts-list">
+      <label><input type="checkbox" class="lk-opt" id="optSpaces" checked /> Đổi khoảng trắng đặc biệt thành dấu cách thường</label>
+      <label><input type="checkbox" class="lk-opt" id="optBidi" /> Xoá cả dấu hướng chữ RTL</label>
+      <label><input type="checkbox" class="lk-opt" id="optConf" /> Thay chữ Cyrillic/toàn độ rộng giả dạng Latin</label>
+      <label><input type="checkbox" class="lk-opt" id="optEmoji" /> Xoá cả ký tự nối emoji</label>
+      <label><input type="checkbox" class="lk-opt" id="optNfkc" /> Chuẩn hoá NFKC</label>
+    </div>
+  </fieldset>
+
+  <div class="lk-panes">
+    <div class="lk-pane">
+      <div class="lk-pane-head">
+        <p class="lk-label">Văn bản gốc</p>
+        <div class="lk-btns">
+          <button id="btnSample" class="lk-btn" type="button">Nạp ví dụ</button>
+          <button id="btnClear" class="lk-btn" type="button">Xoá trắng</button>
+        </div>
+      </div>
+      <textarea id="lkInput" spellcheck="false" aria-label="Văn bản gốc" placeholder="Dán văn bản cần làm sạch vào đây…"></textarea>
+      <span class="lk-count" id="inCount"></span>
+    </div>
+    <div class="lk-pane">
+      <div class="lk-pane-head">
+        <div class="lk-tabs" role="tablist" aria-label="Chế độ xem kết quả">
+          <button type="button" class="lk-btn" role="tab" id="tabClean" aria-selected="true">Kết quả sạch</button>
+          <button type="button" class="lk-btn" role="tab" id="tabMarked" aria-selected="false">Đánh dấu vị trí</button>
+        </div>
+        <div class="lk-btns">
+          <span class="lk-toast" id="lkToast" aria-live="polite"></span>
+          <button id="btnCopy" class="lk-btn lk-primary" type="button">Sao chép kết quả</button>
+        </div>
+      </div>
+      <textarea id="lkOutput" readonly aria-label="Văn bản đã làm sạch"></textarea>
+      <div id="lkMarked" class="lk-marked" hidden aria-label="Văn bản gốc có đánh dấu ký tự ẩn"></div>
+      <span class="lk-count" id="outCount"></span>
+    </div>
+  </div>
+
+  <section class="lk-report" aria-label="Báo cáo">
+    <p class="lk-label">Báo cáo</p>
+    <div class="lk-summary" id="lkSummary"></div>
+    <div id="lkSecret"></div>
+    <div class="lk-tbl">
+      <table>
+        <thead>
+          <tr>
+            <th>Mã</th>
+            <th>Tên ký tự</th>
+            <th>Nhóm</th>
+            <th class="num">Số lần</th>
+            <th>Vị trí (ký tự thứ)</th>
+            <th>Xử lý</th>
+          </tr>
+        </thead>
+        <tbody id="lkRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="lk-duty" id="gioi-han-va-trach-nhiem">
+    <h2>Giới hạn và trách nhiệm sử dụng AI</h2>
+
+    <h3>Công cụ làm được gì, không làm được gì</h3>
+    <ul>
+      <li>
+        Công cụ chỉ xử lý dấu vết dạng <strong>ký tự chèn thêm</strong>: ký tự độ rộng bằng 0 (ZWSP, BOM, WJ), gạch nối mềm, ký tự thẻ (tag), điều
+        khiển hướng chữ, vùng dùng riêng và các khoảng trắng đặc biệt.
+      </li>
+      <li>
+        Công cụ <strong>không phát hiện và không gỡ được watermark thống kê</strong>, loại watermark được cài vào cách mô hình chọn từ (như
+        SynthID-Text). Loại này nằm trong chính câu chữ, lọc ký tự không chạm tới được.
+      </li>
+      <li>
+        Đây <strong>không phải công cụ phát hiện AI</strong>. Tìm thấy hay không tìm thấy ký tự ẩn đều không cho biết văn bản do người hay AI viết, và
+        không bảo đảm kết quả của bất kỳ phần mềm kiểm tra nào.
+      </li>
+      <li>
+        Mặc định, các ký tự vô hình có vai trò thật được giữ lại: ký tự nối trong emoji, cờ vùng, dấu hướng chữ trong văn bản Ả Rập, Do Thái, ký tự
+        nối trong chữ Ấn Độ, Ba Tư, Mông Cổ, Khmer, Hàn. Các tuỳ chọn mạnh (xoá dấu hướng chữ, ký tự nối emoji, chuẩn hoá NFKC) có thể làm hỏng những
+        văn bản này. Hãy xem lại ở tab <em>Đánh dấu vị trí</em>.
+      </li>
+      <li>Văn bản được xử lý ngay trên trình duyệt của bạn, không được gửi hay lưu ở đâu.</li>
+    </ul>
+
+    <h3>Dùng AI có trách nhiệm</h3>
+    <ul>
+      <li>
+        Dùng công cụ để <strong>vệ sinh văn bản</strong>: bỏ ký tự rác khi dán từ chatbot sang Word, trang web, mã nguồn, tránh lỗi tìm kiếm, đếm từ,
+        so khớp chuỗi. Không dùng để che giấu việc đã sử dụng AI.
+      </li>
+      <li>
+        Tuân thủ quy định về sử dụng AI của học phần, nhà trường, tạp chí hay nơi bạn nộp bài. Nếu được yêu cầu khai báo thì khai báo đầy đủ: công cụ
+        nào, dùng cho khâu nào.
+      </li>
+      <li>
+        Người nộp bài chịu trách nhiệm về nội dung: tự kiểm chứng số liệu, dữ kiện, trích dẫn đúng nguồn. AI có thể bịa tài liệu tham khảo trông rất
+        thật.
+      </li>
+      <li>
+        Làm sạch ký tự không thay đổi tác giả thực sự của văn bản. Phần đóng góp của bạn là ý tưởng, lập luận, phân tích và cách diễn đạt do bạn tự
+        viết.
+      </li>
+    </ul>
+    <p>Một câu khai báo mẫu có thể điều chỉnh theo thực tế:</p>
+    <blockquote>
+      Tác giả sử dụng [tên công cụ AI] để [gợi ý dàn ý / sửa lỗi ngữ pháp / dịch thuật] trong quá trình thực hiện bài viết. Toàn bộ nội dung đã được
+      tác giả kiểm tra, chỉnh sửa và tác giả chịu hoàn toàn trách nhiệm về nội dung này.
+    </blockquote>
+
+    <p class="lk-source">
+      Quy tắc lọc chuyển từ mô-đun <code>text_unicode.py</code> (Layer A) của dự án mã nguồn mở
+      <a href="https://github.com/guillaumemeyer/watermarks-remover" target="_blank" rel="noopener">guillaumemeyer/watermarks-remover</a>
+      (giấy phép MIT).
+    </p>
+  </section>
+</div>
+
+<script>
+  (function () {
+    "use strict";
+    // ---------- Bảng mã (chuyển từ text_unicode.py của watermarks-remover) ----------
+    const STRIP = new Set([
+      0x00ad, 0x034f, 0x061c, 0x115f, 0x1160, 0x17b4, 0x17b5, 0x180b, 0x180c, 0x180d, 0x180e, 0x180f, 0x200b, 0x200c, 0x200d, 0x200e, 0x200f, 0x202a,
+      0x202b, 0x202c, 0x202d, 0x202e, 0x2060, 0x2061, 0x2062, 0x2063, 0x2064, 0x2066, 0x2067, 0x2068, 0x2069, 0x206a, 0x206b, 0x206c, 0x206d, 0x206e,
+      0x206f, 0xfeff, 0xfe00, 0xfe01, 0xfe02, 0xfe03, 0xfe04, 0xfe05, 0xfe06, 0xfe07, 0xfe08, 0xfe09, 0xfe0a, 0xfe0b, 0xfe0c, 0xfe0d, 0xfe0e, 0xfe0f,
+      0x3164, 0xffa0, 0xfff9, 0xfffa, 0xfffb,
+    ]);
+    const SPACES = new Set([
+      0x00a0, 0x1680, 0x2000, 0x2001, 0x2002, 0x2003, 0x2004, 0x2005, 0x2006, 0x2007, 0x2008, 0x2009, 0x200a, 0x202f, 0x205f, 0x3000,
+    ]);
+    const CONF = new Map([
+      [0x0410, "A"],
+      [0x0412, "B"],
+      [0x0415, "E"],
+      [0x041a, "K"],
+      [0x041c, "M"],
+      [0x041d, "H"],
+      [0x041e, "O"],
+      [0x0420, "P"],
+      [0x0421, "C"],
+      [0x0422, "T"],
+      [0x0425, "X"],
+      [0x0430, "a"],
+      [0x0435, "e"],
+      [0x043e, "o"],
+      [0x0440, "p"],
+      [0x0441, "c"],
+      [0x0443, "y"],
+      [0x0445, "x"],
+      [0x0456, "i"],
+    ]);
+    for (let i = 0; i < 26; i++) {
+      CONF.set(0xff21 + i, String.fromCharCode(65 + i));
+      CONF.set(0xff41 + i, String.fromCharCode(97 + i));
+    }
+
+    const isVSSupp = (cp) => cp >= 0xe0100 && cp < 0xe01f0;
+    const isReservedIgn = (cp) =>
+      cp === 0x2065 || cp === 0xe0000 || (cp >= 0xfff0 && cp < 0xfff9) || (cp >= 0xe0080 && cp < 0xe0100) || (cp >= 0xe01f0 && cp < 0xe1000);
+    const isNonchar = (cp) => (cp >= 0xfdd0 && cp <= 0xfdef) || (cp & 0xfffe) === 0xfffe;
+    const BIDI = new Set([0x061c, 0x200e, 0x200f, 0x202a, 0x202b, 0x202c, 0x202d, 0x202e, 0x2066, 0x2067, 0x2068, 0x2069]);
+    const PRES_BIDI = new Set([0x061c, 0x200e, 0x200f, 0x2066, 0x2067, 0x2068, 0x2069]);
+    const LAYOUT_CF = [
+      [0x13430, 0x13440, 0x13000, 0x14400],
+      [0x1bca0, 0x1bca4, 0x1bc00, 0x1bca4],
+      [0x1d173, 0x1d17b, 0x1d100, 0x1d200],
+    ];
+    const layoutScript = (cp) => {
+      for (const [a, b, s, e] of LAYOUT_CF) if (cp >= a && cp < b) return [s, e];
+      return null;
+    };
+    const ZW = new Set([0x200b, 0x200c, 0x200d, 0x2060, 0xfeff, 0x180e]);
+    const isPUA = (cp) => (cp >= 0xe000 && cp <= 0xf8ff) || (cp >= 0xf0000 && cp <= 0xffffd) || (cp >= 0x100000 && cp <= 0x10fffd);
+    const MONG_FVS = new Set([0x180b, 0x180c, 0x180d, 0x180f]);
+    const KHMER_V = new Set([0x17b4, 0x17b5]);
+    const HANGUL_F = new Set([0x115f, 0x1160, 0x3164, 0xffa0]);
+    const EMOJI_GLUE = new Set([0x200d, 0xfe0e, 0xfe0f]);
+    const JOINERS = new Set([0x200c, 0x200d]);
+    const ORTHO_CF = new Set([0x0600, 0x0601, 0x0602, 0x0603, 0x0604, 0x0605, 0x06dd, 0x070f, 0x08e2, 0x110bd, 0x110cd]);
+    const inTag = (cp) => cp >= 0xe0020 && cp < 0xe0080;
+
+    const reCf = /\p{Cf}/u;
+    const reLM = /[\p{L}\p{M}]/u;
+    const reL = /\p{L}/u;
+    const ch = (cp) => String.fromCodePoint(cp);
+    const isCf = (cp) => reCf.test(ch(cp));
+
+    function isStripCp(cp) {
+      return STRIP.has(cp) || isVSSupp(cp) || (cp >= 0xe0001 && cp <= 0xe007f) || isNonchar(cp) || isReservedIgn(cp) || isPUA(cp);
+    }
+    function stripKind(cp) {
+      if (cp >= 0xe0001 && cp <= 0xe007f) return "tag_chars";
+      if (isNonchar(cp)) return "noncharacter";
+      if (isReservedIgn(cp)) return "reserved_ignorable";
+      if (isVSSupp(cp) || (cp >= 0xfe00 && cp <= 0xfe0f) || MONG_FVS.has(cp)) return "variation_selector";
+      if (BIDI.has(cp)) return "bidi";
+      if (ZW.has(cp)) return "zwj_family";
+      if (isPUA(cp)) return "private_use";
+      return "strip";
+    }
+    function isEmojiBase(cp) {
+      if (cp >= 0x1f000 && cp <= 0x1faff) return true;
+      if (cp >= 0x2190 && cp <= 0x25ff) return true;
+      if (cp >= 0x2600 && cp <= 0x27bf) return true;
+      if (cp >= 0x2b00 && cp <= 0x2bff) return true;
+      if ([0x203c, 0x2049, 0x2139, 0x2934, 0x2935, 0x00a9, 0x00ae, 0x2122, 0x3030, 0x303d, 0x3297, 0x3299].includes(cp)) return true;
+      return cp === 0x23 || cp === 0x2a || (cp >= 0x30 && cp <= 0x39);
+    }
+    function joiningScript(cp) {
+      const R = [
+        [0x0600, 0x08ff, "arabic"],
+        [0x0900, 0x0dff, "indic"],
+        [0x0f00, 0x109f, "south-asian"],
+        [0x1780, 0x17ff, "khmer"],
+        [0x1800, 0x18af, "mongolian"],
+      ];
+      for (const [s, e, n] of R) if (cp >= s && cp <= e && reLM.test(ch(cp))) return n;
+      return null;
+    }
+    const isCJK = (cp) =>
+      (cp >= 0x3400 && cp <= 0x4dbf) || (cp >= 0x4e00 && cp <= 0x9fff) || (cp >= 0xf900 && cp <= 0xfaff) || (cp >= 0x20000 && cp <= 0x323af);
+    const isVS = (cp) => isVSSupp(cp) || (cp >= 0xfe00 && cp <= 0xfe0f) || MONG_FVS.has(cp);
+    const isMongLetter = (cp) => cp >= 0x1800 && cp <= 0x18af && reL.test(ch(cp));
+    const isKhmerLetter = (cp) => cp >= 0x1780 && cp <= 0x17ff && reL.test(ch(cp));
+    const isHangulJamo = (cp) =>
+      (cp >= 0x1100 && cp <= 0x11ff) ||
+      (cp >= 0xa960 && cp <= 0xa97c) ||
+      (cp >= 0xd7b0 && cp <= 0xd7c6) ||
+      (cp >= 0x3131 && cp <= 0x318e) ||
+      (cp >= 0xffa1 && cp <= 0xffdc);
+    const isGlue = (cp) => EMOJI_GLUE.has(cp) || isVS(cp) || JOINERS.has(cp) || inTag(cp) || MONG_FVS.has(cp) || KHMER_V.has(cp) || HANGUL_F.has(cp);
+
+    function validFlagTags(cps) {
+      const v = new Set();
+      let i = 0;
+      while (i < cps.length) {
+        if (cps[i] !== 0x1f3f4) {
+          i++;
+          continue;
+        }
+        let j = i + 1;
+        while (j < cps.length && cps[j] >= 0xe0020 && cps[j] <= 0xe007e) j++;
+        if (j > i + 1 && j < cps.length && cps[j] === 0xe007f) {
+          for (let k = i + 1; k <= j; k++) v.add(k);
+          i = j + 1;
+        } else i++;
+      }
+      return v;
+    }
+    function validBidiEmb(cps) {
+      const v = new Set();
+      const st = [];
+      cps.forEach((cp, i) => {
+        if (cp === 0x202a || cp === 0x202b || cp === 0x202d || cp === 0x202e) st.push([cp, i]);
+        else if (cp === 0x202c) {
+          if (!st.length) return;
+          const [op, oi] = st.pop();
+          if (op === 0x202a || op === 0x202b) {
+            v.add(oi);
+            v.add(i);
+          }
+        }
+      });
+      return v;
+    }
+
+    // Trả về [hành động, ký tự đầu ra]
+    function decide(cp, prevKept, prevIn, nextIn, o) {
+      const c = ch(cp);
+      if (o.validBidi && !o.stripBidi) return ["keep", c];
+      if (PRES_BIDI.has(cp) && !o.stripBidi) return ["keep", c];
+      if (prevIn != null && !o.stripGlue) {
+        if (isVSSupp(cp) && isCJK(prevIn)) return ["keep", c];
+        if (MONG_FVS.has(cp) && prevIn >= 0x1800 && prevIn <= 0x18af) return ["keep", c];
+        if (cp >= 0xfe00 && cp <= 0xfe0d && isCJK(prevIn)) return ["keep", c];
+      }
+      if (EMOJI_GLUE.has(cp) && !o.stripGlue) {
+        if ((cp === 0xfe0e || cp === 0xfe0f) && prevIn != null && isEmojiBase(prevIn)) return ["keep", c];
+        if (cp === 0x200d && prevKept != null && nextIn != null && isEmojiBase(prevKept) && isEmojiBase(nextIn)) return ["keep", c];
+      }
+      if (!o.stripGlue) {
+        if (JOINERS.has(cp) && prevIn != null && nextIn != null) {
+          const a = joiningScript(prevIn);
+          const b = joiningScript(nextIn);
+          if (a !== null && a === b) return ["keep", c];
+        }
+        if (inTag(cp) && o.validFlag) return ["keep", c];
+        if (MONG_FVS.has(cp) && prevKept != null && isMongLetter(prevKept)) return ["keep", c];
+        if (KHMER_V.has(cp) && prevKept != null && isKhmerLetter(prevKept)) return ["keep", c];
+        if (HANGUL_F.has(cp) && prevKept != null && isHangulJamo(prevKept)) return ["keep", c];
+        if (ORTHO_CF.has(cp)) return ["keep", c];
+        const sc = layoutScript(cp);
+        if (sc && ((prevIn != null && prevIn >= sc[0] && prevIn < sc[1]) || (nextIn != null && nextIn >= sc[0] && nextIn < sc[1])))
+          return ["keep", c];
+      }
+      if (isStripCp(cp)) return ["strip", ""];
+      if (o.normSpaces && SPACES.has(cp)) return ["replace", " "];
+      if (o.conf && CONF.has(cp)) return ["replace", CONF.get(cp)];
+      if (isCf(cp) && !SPACES.has(cp)) return ["strip", ""];
+      return ["keep", c];
+    }
+
+    // ---------- Tên & nhãn hiển thị ----------
+    const NAMES = {
+      0x00ad: "SOFT HYPHEN",
+      0x034f: "COMBINING GRAPHEME JOINER",
+      0x061c: "ARABIC LETTER MARK",
+      0x115f: "HANGUL CHOSEONG FILLER",
+      0x1160: "HANGUL JUNGSEONG FILLER",
+      0x17b4: "KHMER VOWEL INHERENT AQ",
+      0x17b5: "KHMER VOWEL INHERENT AA",
+      0x180b: "MONGOLIAN FREE VARIATION SELECTOR ONE",
+      0x180c: "MONGOLIAN FREE VARIATION SELECTOR TWO",
+      0x180d: "MONGOLIAN FREE VARIATION SELECTOR THREE",
+      0x180e: "MONGOLIAN VOWEL SEPARATOR",
+      0x180f: "MONGOLIAN FREE VARIATION SELECTOR FOUR",
+      0x200b: "ZERO WIDTH SPACE",
+      0x200c: "ZERO WIDTH NON-JOINER",
+      0x200d: "ZERO WIDTH JOINER",
+      0x200e: "LEFT-TO-RIGHT MARK",
+      0x200f: "RIGHT-TO-LEFT MARK",
+      0x202a: "LEFT-TO-RIGHT EMBEDDING",
+      0x202b: "RIGHT-TO-LEFT EMBEDDING",
+      0x202c: "POP DIRECTIONAL FORMATTING",
+      0x202d: "LEFT-TO-RIGHT OVERRIDE",
+      0x202e: "RIGHT-TO-LEFT OVERRIDE",
+      0x2060: "WORD JOINER",
+      0x2061: "FUNCTION APPLICATION",
+      0x2062: "INVISIBLE TIMES",
+      0x2063: "INVISIBLE SEPARATOR",
+      0x2064: "INVISIBLE PLUS",
+      0x2066: "LEFT-TO-RIGHT ISOLATE",
+      0x2067: "RIGHT-TO-LEFT ISOLATE",
+      0x2068: "FIRST STRONG ISOLATE",
+      0x2069: "POP DIRECTIONAL ISOLATE",
+      0x206a: "INHIBIT SYMMETRIC SWAPPING",
+      0x206b: "ACTIVATE SYMMETRIC SWAPPING",
+      0x206c: "INHIBIT ARABIC FORM SHAPING",
+      0x206d: "ACTIVATE ARABIC FORM SHAPING",
+      0x206e: "NATIONAL DIGIT SHAPES",
+      0x206f: "NOMINAL DIGIT SHAPES",
+      0xfeff: "ZERO WIDTH NO-BREAK SPACE (BOM)",
+      0x3164: "HANGUL FILLER",
+      0xffa0: "HALFWIDTH HANGUL FILLER",
+      0xfff9: "INTERLINEAR ANNOTATION ANCHOR",
+      0xfffa: "INTERLINEAR ANNOTATION SEPARATOR",
+      0xfffb: "INTERLINEAR ANNOTATION TERMINATOR",
+      0x00a0: "NO-BREAK SPACE",
+      0x1680: "OGHAM SPACE MARK",
+      0x2000: "EN QUAD",
+      0x2001: "EM QUAD",
+      0x2002: "EN SPACE",
+      0x2003: "EM SPACE",
+      0x2004: "THREE-PER-EM SPACE",
+      0x2005: "FOUR-PER-EM SPACE",
+      0x2006: "SIX-PER-EM SPACE",
+      0x2007: "FIGURE SPACE",
+      0x2008: "PUNCTUATION SPACE",
+      0x2009: "THIN SPACE",
+      0x200a: "HAIR SPACE",
+      0x202f: "NARROW NO-BREAK SPACE",
+      0x205f: "MEDIUM MATHEMATICAL SPACE",
+      0x3000: "IDEOGRAPHIC SPACE",
+      0xe0001: "LANGUAGE TAG",
+      0xe0020: "TAG SPACE",
+      0xe007f: "CANCEL TAG",
+    };
+    const ABBR = {
+      0x200b: "ZWSP",
+      0x200c: "ZWNJ",
+      0x200d: "ZWJ",
+      0x2060: "WJ",
+      0xfeff: "BOM",
+      0x00ad: "SHY",
+      0x00a0: "NBSP",
+      0x202f: "NNBSP",
+      0x2009: "THSP",
+      0x200a: "HSP",
+      0x2002: "ENSP",
+      0x2003: "EMSP",
+      0x3000: "IDSP",
+      0x200e: "LRM",
+      0x200f: "RLM",
+      0x202a: "LRE",
+      0x202b: "RLE",
+      0x202c: "PDF",
+      0x202d: "LRO",
+      0x202e: "RLO",
+      0x2066: "LRI",
+      0x2067: "RLI",
+      0x2068: "FSI",
+      0x2069: "PDI",
+      0x2061: "FA",
+      0x2062: "IT",
+      0x2063: "IS",
+      0x2064: "IP",
+      0x180e: "MVS",
+      0x034f: "CGJ",
+      0x061c: "ALM",
+    };
+    const hex = (cp) => "U+" + cp.toString(16).toUpperCase().padStart(4, "0");
+    function charName(cp) {
+      if (NAMES[cp]) return NAMES[cp];
+      if (cp >= 0xfe00 && cp <= 0xfe0f) return "VARIATION SELECTOR-" + (cp - 0xfe00 + 1);
+      if (isVSSupp(cp)) return "VARIATION SELECTOR-" + (cp - 0xe0100 + 17);
+      if (cp > 0xe0020 && cp < 0xe007f) return "TAG “" + String.fromCharCode(cp - 0xe0000) + "”";
+      if (cp >= 0xff21 && cp <= 0xff5a) return "FULLWIDTH LATIN LETTER " + String.fromCharCode(cp - 0xfee0);
+      if (cp >= 0x0400 && cp <= 0x04ff) return "CYRILLIC LETTER (giống “" + (CONF.get(cp) || "?") + "”)";
+      if (isPUA(cp)) return "PRIVATE USE";
+      if (isNonchar(cp)) return "NONCHARACTER";
+      if (isReservedIgn(cp)) return "RESERVED DEFAULT-IGNORABLE";
+      return "FORMAT CHARACTER";
+    }
+    function abbr(cp) {
+      if (ABBR[cp]) return ABBR[cp];
+      if (cp >= 0xfe00 && cp <= 0xfe0f) return "VS" + (cp - 0xfe00 + 1);
+      if (isVSSupp(cp)) return "VS" + (cp - 0xe0100 + 17);
+      if (cp >= 0xe0020 && cp < 0xe007f) return "TAG:" + String.fromCharCode(cp - 0xe0000);
+      return hex(cp);
+    }
+    const KIND_VI = {
+      zwj_family: "Độ rộng bằng 0",
+      bidi: "Điều khiển hướng chữ",
+      tag_chars: "Ký tự thẻ (tag)",
+      variation_selector: "Bộ chọn biến thể",
+      private_use: "Vùng dùng riêng",
+      noncharacter: "Phi ký tự",
+      reserved_ignorable: "Mã dự trữ vô hình",
+      strip: "Định dạng ẩn",
+      other_cf: "Định dạng khác (Cf)",
+      space: "Khoảng trắng đặc biệt",
+      confusable: "Chữ giả dạng Latin",
+      kept: "Có vai trò trong chữ viết",
+    };
+    function kindOf(cp) {
+      if (SPACES.has(cp)) return "space";
+      if (CONF.has(cp)) return "confusable";
+      if (isStripCp(cp)) return stripKind(cp);
+      return "other_cf";
+    }
+
+    // ---------- Làm sạch + báo cáo ----------
+    function run(text, o) {
+      const cps = Array.from(text, (c) => c.codePointAt(0));
+      const flags = validFlagTags(cps);
+      const emb = validBidiEmb(cps);
+      const out = [];
+      const marks = [];
+      const buckets = new Map();
+      const tagRuns = [];
+      let prevKept = null;
+      let curRun = "";
+      cps.forEach((cp, i) => {
+        const [act, oc] = decide(cp, prevKept, i > 0 ? cps[i - 1] : null, i + 1 < cps.length ? cps[i + 1] : null, {
+          validFlag: flags.has(i),
+          validBidi: emb.has(i),
+          normSpaces: o.normSpaces,
+          conf: o.conf,
+          stripGlue: o.stripGlue,
+          stripBidi: o.stripBidi,
+        });
+        let tag = null;
+        if (act === "keep") {
+          out.push(oc);
+          if (!isGlue(cp)) prevKept = cp;
+          if (isStripCp(cp) || isCf(cp) || SPACES.has(cp)) tag = "keep";
+        } else if (act === "replace") {
+          out.push(oc);
+          prevKept = oc.codePointAt(0);
+          tag = "rep";
+        } else tag = "del";
+        if (act === "strip" && cp >= 0xe0020 && cp < 0xe007f) curRun += String.fromCharCode(cp - 0xe0000);
+        else if (curRun && !(act === "strip" && (cp === 0xe0001 || cp === 0xe007f))) {
+          tagRuns.push(curRun);
+          curRun = "";
+        }
+        marks.push([cp, tag, act === "replace" ? oc : null]);
+        if (tag) {
+          const key = cp + "|" + tag;
+          if (!buckets.has(key))
+            buckets.set(key, { cp, tag, kind: tag === "keep" && !SPACES.has(cp) ? "kept" : kindOf(cp), pos: [], to: act === "replace" ? oc : null });
+          buckets.get(key).pos.push(i + 1);
+        }
+      });
+      if (curRun) tagRuns.push(curRun);
+      let result = out.join("");
+      let nfkc = false;
+      if (o.nfkc) {
+        const n = result.normalize("NFKC");
+        if (n !== result) {
+          nfkc = true;
+          result = n;
+        }
+      }
+      const ord = { del: 0, rep: 1, keep: 2 };
+      const rows = [...buckets.values()].sort((a, b) => ord[a.tag] - ord[b.tag] || b.pos.length - a.pos.length || a.cp - b.cp);
+      return { result, marks, rows, tagRuns, nfkc, inLen: cps.length };
+    }
+
+    // ---------- Giao diện ----------
+    const $ = (id) => document.getElementById(id);
+    const inp = $("lkInput");
+    const outp = $("lkOutput");
+    const marked = $("lkMarked");
+    const optBoxes = Array.from(document.querySelectorAll(".lkta .lk-opt"));
+    const optAll = $("optAll");
+    const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+    const opts = () => ({
+      normSpaces: $("optSpaces").checked,
+      stripBidi: $("optBidi").checked,
+      conf: $("optConf").checked,
+      stripGlue: $("optEmoji").checked,
+      nfkc: $("optNfkc").checked,
+    });
+    function syncAll() {
+      const n = optBoxes.filter((b) => b.checked).length;
+      optAll.checked = n === optBoxes.length;
+      optAll.indeterminate = n > 0 && n < optBoxes.length;
+    }
+
+    function render() {
+      const text = inp.value;
+      const r = run(text, opts());
+      outp.value = r.result;
+      $("inCount").textContent = r.inLen.toLocaleString("vi-VN") + " ký tự";
+      $("outCount").textContent = Array.from(r.result).length.toLocaleString("vi-VN") + " ký tự";
+
+      let h = "";
+      for (const [cp, tag, to] of r.marks) {
+        const t = hex(cp) + " " + esc(charName(cp));
+        if (tag === "del") h += '<span class="mk mk-del" title="' + t + ' — đã xoá">' + esc(abbr(cp)) + "</span>";
+        else if (tag === "rep")
+          h +=
+            '<span class="mk mk-rep" title="' +
+            t +
+            ' — đã thay">' +
+            esc(abbr(cp)) +
+            "→" +
+            (to === " " ? "␠" : esc(to)) +
+            "</span>" +
+            (to === " " ? " " : "");
+        else if (tag === "keep") h += esc(ch(cp)) + '<span class="mk mk-keep" title="' + t + ' — giữ lại">' + esc(abbr(cp)) + "</span>";
+        else h += esc(ch(cp));
+      }
+      marked.innerHTML = h || '<span class="lk-muted">Chưa có văn bản.</span>';
+
+      const sum = (t) => r.rows.filter((x) => x.tag === t).reduce((a, x) => a + x.pos.length, 0);
+      const nd = sum("del");
+      const nr = sum("rep");
+      const nk = sum("keep");
+      let s = "";
+      if (!text) s = '<span class="pill keep">Dán văn bản để bắt đầu</span>';
+      else if (nd + nr === 0 && !r.nfkc) s = '<span class="pill ok">Không phát hiện ký tự ẩn hay khoảng trắng lạ</span>';
+      else {
+        s += '<span class="pill del">Đã xoá <b>' + nd + "</b> ký tự ẩn</span>";
+        s += '<span class="pill rep">Đã thay <b>' + nr + "</b> ký tự</span>";
+      }
+      if (nk) s += '<span class="pill keep">Giữ lại <b>' + nk + "</b> ký tự đặc biệt (xem bảng)</span>";
+      if (r.nfkc) s += '<span class="pill rep">Đã chuẩn hoá NFKC</span>';
+      $("lkSummary").innerHTML = s;
+
+      const runs = r.tagRuns.filter((x) => x.trim());
+      $("lkSecret").innerHTML = runs.length
+        ? '<div class="lk-secret">Ký tự thẻ ẩn chứa chữ ASCII. Giải mã được: ' + runs.map((x) => "<code>" + esc(x) + "</code>").join(" ") + "</div>"
+        : "";
+
+      const tb = $("lkRows");
+      if (!r.rows.length) {
+        tb.innerHTML = '<tr><td colspan="6" class="lk-empty">Không có ký tự nào cần báo cáo.</td></tr>';
+        return;
+      }
+      tb.innerHTML = r.rows
+        .map((x) => {
+          const act =
+            x.tag === "del"
+              ? '<span class="act del">Đã xoá</span>'
+              : x.tag === "rep"
+                ? '<span class="act rep">Thay bằng ' + (x.to === " " ? "dấu cách" : "“" + esc(x.to) + "”") + "</span>"
+                : '<span class="act keep">Giữ lại</span>';
+          const pos = x.pos.slice(0, 6).join(", ") + (x.pos.length > 6 ? " … (+" + (x.pos.length - 6) + ")" : "");
+          return (
+            '<tr><td class="code">' +
+            hex(x.cp) +
+            '</td><td><span class="nm">' +
+            esc(charName(x.cp)) +
+            "</span></td><td>" +
+            KIND_VI[x.kind] +
+            '</td><td class="num">' +
+            x.pos.length +
+            '</td><td class="pos">' +
+            pos +
+            "</td><td>" +
+            act +
+            "</td></tr>"
+          );
+        })
+        .join("");
+    }
+
+    // Văn bản ví dụ: ký tự ẩn được viết bằng mã \u để tệp nguồn không chứa ký tự vô hình.
+    const tagStr = (s) => Array.from(s, (c) => String.fromCodePoint(0xe0000 + c.charCodeAt(0))).join("");
+    const SAMPLE =
+      "Trí tuệ nhân tạo\u200B đang thay đổi cách sinh viên học tập.\u00A0Mô hình ngôn ngữ lớn có thể tóm\u00ADtắt tài liệu, " +
+      "gợi ý dàn ý và giải thích những khái niệm\u202Fkhó.\uFEFF Tuy vậy, người học vẫn cần tự kiểm chứng nguồn \u2705 và " +
+      "trích dẫn đúng quy định \u2696\uFE0F.\n\nNói ngắn gọn:\u2063 công cụ hỗ trợ tư duy, không thay thế tư duy." +
+      tagStr("src:demo") +
+      "\u2060\n\nKết luận\u2009\u2014\u2009hãy dùng AI có trách nhiệm.\u200D";
+
+    let timer;
+    inp.addEventListener("input", () => {
+      clearTimeout(timer);
+      timer = setTimeout(render, 120);
+    });
+    optBoxes.forEach((b) =>
+      b.addEventListener("change", () => {
+        syncAll();
+        render();
+      })
+    );
+    optAll.addEventListener("change", () => {
+      optBoxes.forEach((b) => (b.checked = optAll.checked));
+      syncAll();
+      render();
+    });
+    $("btnSample").addEventListener("click", () => {
+      inp.value = SAMPLE;
+      render();
+    });
+    $("btnClear").addEventListener("click", () => {
+      inp.value = "";
+      render();
+      inp.focus();
+    });
+    function setTab(showMarked) {
+      $("tabClean").setAttribute("aria-selected", String(!showMarked));
+      $("tabMarked").setAttribute("aria-selected", String(showMarked));
+      outp.hidden = showMarked;
+      marked.hidden = !showMarked;
+    }
+    $("tabClean").addEventListener("click", () => setTab(false));
+    $("tabMarked").addEventListener("click", () => setTab(true));
+    $("btnCopy").addEventListener("click", () => {
+      const t = $("lkToast");
+      const fallback = () => {
+        setTab(false);
+        outp.select();
+        t.textContent = "Nhấn Ctrl+C để sao chép";
+      };
+      try {
+        navigator.clipboard.writeText(outp.value).then(() => {
+          t.textContent = "Đã sao chép";
+          setTimeout(() => (t.textContent = ""), 1800);
+        }, fallback);
+      } catch (e) {
+        fallback();
+      }
+    });
+
+    inp.value = SAMPLE;
+    syncAll();
+    render();
+  })();
+</script>
+{% endraw %}

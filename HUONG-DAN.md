@@ -469,3 +469,43 @@ Còn lại:
   YAML dùng dấu cách, **không dùng tab**.
 - Tài liệu gốc của theme nằm trong thư mục `docs/`, đặc biệt là `docs/FAQ.md`
   và `docs/TROUBLESHOOTING.md`.
+
+---
+
+## 10. Máy chủ cho công cụ AI Tools › Trợ lý nghiên cứu
+
+Trang `/ai-tools/tro-ly-nghien-cuu/` chạy [GPT Researcher](https://github.com/assafelovic/gpt-researcher).
+GitHub Pages chỉ phục vụ file tĩnh, nên phần xử lý chạy trên một **Hugging Face Space**
+miễn phí. Mã của máy chủ nằm trong thư mục `hf-space/` (không nằm trong trang web).
+Người dùng tự nhập API key của họ, nên anh **không cần đặt key nào** lên Space.
+
+### Tạo Space (làm một lần)
+
+1. Đăng ký/đăng nhập https://huggingface.co → **New Space**.
+   - **Space name**: `tro-ly-nghien-cuu` · **SDK**: `Docker` (Blank) · **Hardware**: `CPU basic (free)` · **Public**.
+2. Tạo access token: ảnh đại diện → **Settings → Access Tokens → Create new token**,
+   loại **Write**. Chép token lại.
+3. Trong repo GitHub → **Settings → Secrets and variables → Actions**:
+   - Tab **Secrets** → *New repository secret*: tên `HF_TOKEN`, giá trị là token vừa tạo.
+   - Tab **Variables** → *New repository variable*: tên `HF_SPACE`, giá trị
+     `<tên-tài-khoản-HF>/tro-ly-nghien-cuu`.
+4. Tab **Actions** → chọn *Sync Hugging Face Space* → **Run workflow**. Từ đó, mỗi lần
+   sửa file trong `hf-space/` và đẩy lên, Space tự cập nhật.
+5. Mở trang Space, đợi build xong (lần đầu 5–10 phút, trạng thái chuyển **Running**).
+   Địa chỉ máy chủ có dạng `https://<tên-tài-khoản-HF>-tro-ly-nghien-cuu.hf.space`
+   (chữ thường). Mở thêm `/api/health` phía sau để kiểm tra, thấy `"ok":true` là được.
+6. Nếu tên tài khoản HF **khác** `hoahce`, sửa dòng `research_api:` ở đầu file
+   `_pages/ai-tools/tro-ly-nghien-cuu.html` cho đúng địa chỉ ở bước 5.
+
+> Không muốn dùng GitHub Actions? Ở bước 4 có thể tải thẳng 5 file trong `hf-space/`
+> lên tab **Files** của Space (*Add file → Upload files*).
+
+### Lưu ý vận hành
+
+- Space miễn phí **ngủ** sau khoảng 48 giờ không có ai dùng; người vào trang sẽ thấy
+  "Máy chủ đang khởi động" khoảng 1–3 phút rồi dùng bình thường.
+- Khi Google/OpenAI/Anthropic đổi tên mô hình: vào Space → **Settings → Variables and
+  secrets**, thêm biến như `GOOGLE_SMART_LLM` (xem bảng trong `hf-space/README.md`)
+  rồi **Restart**. Người dùng cũng có thể tự nhập tên mô hình ở *Tuỳ chọn nâng cao*.
+- Giới hạn mặc định: 2 lượt chạy cùng lúc, 8 lượt/giờ cho mỗi địa chỉ IP, tối đa
+  15 phút/lượt — đổi bằng các biến `MAX_CONCURRENT`, `RATE_LIMIT_PER_HOUR`, `RUN_TIMEOUT`.

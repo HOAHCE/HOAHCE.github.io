@@ -1,0 +1,53 @@
+name: Sync Hugging Face Space
+
+# Tự đẩy thư mục hf-space/ lên Hugging Face Space mỗi khi thư mục này thay đổi.
+# Cần khai báo một lần trong repo GitHub (Settings → Secrets and variables → Actions):
+#   - Secret   HF_TOKEN : access token Hugging Face có quyền "Write"
+#   - Variable HF_SPACE : tên Space, ví dụ  hoahce/tro-ly-nghien-cuu
+# Chưa khai báo thì workflow tự bỏ qua, không báo lỗi.
+
+on:
+  push:
+    branches: [main]
+    paths: ["hf-space/**"]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check configuration
+        id: cfg
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          if [ -n "$HF_TOKEN" ] && [ -n "$HF_SPACE" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::HF_TOKEN hoặc HF_SPACE chưa được khai báo — bỏ qua bước đồng bộ."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.cfg.outputs.ready == 'true'
+
+      - name: Push hf-space/ to the Space
+        if: steps.cfg.outputs.ready == 'true'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          HF_USER="${HF_SPACE%%/*}"
+          git clone "https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}" space
+          find space -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
+          cp -r hf-space/. space/
+          cd space
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Space đã cập nhật, không có gì mới."
+          else
+            git commit -m "Sync from ${GITHUB_REPOSITORY}@${GITHUB_SHA::7}"
+            git push
+          fi

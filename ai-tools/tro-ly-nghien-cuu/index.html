@@ -1,0 +1,1098 @@
+<!DOCTYPE html> <html lang="vi"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Trợ lý nghiên cứu | Trần Thái Hòa </title> <meta name="author" content="Hoa Tran Thai"> <meta name="description" content="Tự động tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo có trích dẫn nguồn. Dựa trên GPT Researcher; bạn dùng API key của chính mình."> <meta name="keywords" content="Trần Thái Hòa, Tran Thai Hoa, Đại học Kinh tế Huế, Hue University, dự báo du lịch, tourism demand forecasting, time series, machine learning"> <meta property="og:site_name" content="Trần Thái Hòa"> <meta property="og:type" content="website"> <meta property="og:title" content="Trần Thái Hòa | Trợ lý nghiên cứu"> <meta property="og:url" content="https://tranthaihoa.id.vn/ai-tools/tro-ly-nghien-cuu/"> <meta property="og:description" content="Tự động tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo có trích dẫn nguồn. Dựa trên GPT Researcher; bạn dùng API key của chính mình."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Trợ lý nghiên cứu"> <meta name="twitter:description" content="Tự động tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo có trích dẫn nguồn. Dựa trên GPT Researcher; bạn dùng API key của chính mình."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Hoa Tran Thai"
+        },
+        "url": "https://tranthaihoa.id.vn/ai-tools/tro-ly-nghien-cuu/",
+        "@type": "WebSite",
+        "description": "Tự động tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo có trích dẫn nguồn. Dựa trên GPT Researcher; bạn dùng API key của chính mình.",
+        "headline": "Trợ lý nghiên cứu",
+        
+        "sameAs": ["https://orcid.org/0009-0006-2405-4697","https://scholar.google.com/citations?user=mYEjZ20AAAAJ","https://github.com/HOAHCE","https://csdlkhoahoc.hueuni.edu.vn/index.php/scientist/detail/id/2119"],
+        
+        "name": "Hoa Tran Thai",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Material+Icons&amp;subset=latin,latin-ext,vietnamese&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.ico?v=847139dece680c23c8786ff05cc89e32"> <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=0f9b2d98c810b6876155d5c7696f996a"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://tranthaihoa.id.vn/ai-tools/tro-ly-nghien-cuu/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/vi/"> Trần Thái Hòa </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/vi/">Trang chủ </a> </li> <li class="nav-item "> <a class="nav-link" href="/vi/nghien-cuu/">Nghiên cứu </a> </li> <li class="nav-item "> <a class="nav-link" href="/vi/giang-day/">Giảng dạy </a> </li> <li class="nav-item "> <a class="nav-link" href="/vi/du-an/">Dự án </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">Blog </a> </li> <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">AI Tools <span class="sr-only">(current)</span> </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/ai-tools/loc-ky-tu-an/">Lọc ký tự ẩn</a> <a class="dropdown-item active" href="/ai-tools/tro-ly-nghien-cuu/">Trợ lý nghiên cứu</a> </div> </li> <li class="nav-item lang-switch"> <a class="lang-opt" href="/" hreflang="en" title="English">EN</a><span class="lang-sep">/</span><a class="lang-opt is-active" href="/ai-tools/tro-ly-nghien-cuu/" hreflang="vi" title="Tiếng Việt">VI</a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Trợ lý nghiên cứu</h1> <p class="post-description">Tự động tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo có trích dẫn nguồn. Dựa trên GPT Researcher; bạn dùng API key của chính mình.</p> </header> <article> <div id="gr-config" data-api="https://hoahce-tro-ly-nghien-cuu.hf.space" hidden></div> <style>
+  .gr {
+    --gr-ok: #1d7244;
+    --gr-ok-bg: #e0f2e8;
+    --gr-warn: #8a5200;
+    --gr-warn-bg: #fdf0d8;
+    --gr-err: #b3204f;
+    --gr-err-bg: #fbe3eb;
+    --gr-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .gr [hidden] {
+    display: none !important;
+  }
+  html[data-theme="dark"] .gr {
+    --gr-ok: #74d6a0;
+    --gr-ok-bg: #16301f;
+    --gr-warn: #f2bb55;
+    --gr-warn-bg: #33270f;
+    --gr-err: #ff8fb1;
+    --gr-err-bg: #3a1a26;
+  }
+  .gr .gr-notice {
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    background: var(--global-card-bg-color);
+    margin: 0;
+  }
+  .gr .gr-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--global-text-color-light);
+    font-weight: 600;
+    margin: 0;
+  }
+  /* Trạng thái máy chủ */
+  .gr .gr-status {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+    margin: 0;
+  }
+  .gr .gr-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--global-divider-color);
+    flex: none;
+  }
+  .gr .gr-status[data-state="ok"] .gr-dot {
+    background: var(--gr-ok);
+  }
+  .gr .gr-status[data-state="wait"] .gr-dot {
+    background: var(--gr-warn);
+    animation: gr-pulse 1.4s ease-in-out infinite;
+  }
+  .gr .gr-status[data-state="err"] .gr-dot {
+    background: var(--gr-err);
+  }
+  @keyframes gr-pulse {
+    50% {
+      opacity: 0.35;
+    }
+  }
+  /* Biểu mẫu */
+  .gr form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin: 0;
+  }
+  .gr .gr-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+  .gr .gr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.9rem 1rem;
+  }
+  .gr fieldset {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 0.85rem 1rem 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 0;
+  }
+  .gr fieldset legend {
+    all: unset;
+  }
+  .gr textarea,
+  .gr select,
+  .gr input[type="text"],
+  .gr input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    margin: 0;
+  }
+  .gr textarea {
+    min-height: 96px;
+    line-height: 1.6;
+    resize: vertical;
+  }
+  .gr input.gr-key {
+    font-family: var(--gr-mono);
+    font-size: 0.88rem;
+  }
+  .gr textarea:focus-visible,
+  .gr select:focus-visible,
+  .gr input:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 1px;
+  }
+  .gr .gr-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1.3rem;
+  }
+  .gr .gr-choices label,
+  .gr .gr-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.92rem;
+    cursor: pointer;
+    margin: 0;
+  }
+  .gr input[type="radio"],
+  .gr input[type="checkbox"] {
+    accent-color: var(--global-theme-color);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+  .gr .gr-hint {
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+    margin: 0;
+  }
+  .gr .gr-keyrow {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .gr .gr-keyrow input {
+    flex: 1;
+    min-width: 0;
+  }
+  .gr details summary {
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+  .gr details[open] summary {
+    margin-bottom: 0.7rem;
+  }
+  /* Nút */
+  .gr .gr-btns {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .gr .gr-btn {
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.2;
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    white-space: nowrap;
+  }
+  .gr .gr-btn:hover {
+    background: var(--global-card-bg-color);
+  }
+  .gr .gr-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .gr .gr-btn.gr-primary {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color, #fff);
+    padding: 0.6rem 1.2rem;
+  }
+  .gr .gr-btn.gr-primary:hover:not(:disabled) {
+    filter: brightness(1.08);
+  }
+  .gr .gr-btn:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+  .gr .gr-toast {
+    font-size: 0.82rem;
+    color: var(--gr-ok);
+  }
+  /* Tiến độ */
+  .gr .gr-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .gr .gr-progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .gr .gr-timer {
+    font-family: var(--gr-mono);
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+    font-variant-numeric: tabular-nums;
+  }
+  .gr .gr-log {
+    list-style: none;
+    margin: 0;
+    padding: 0.6rem 0.85rem;
+    max-height: 220px;
+    overflow: auto;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: var(--global-card-bg-color);
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+  .gr .gr-log li {
+    padding: 0.12rem 0;
+    word-break: break-word;
+  }
+  .gr .gr-log li.gr-log-err {
+    color: var(--gr-err);
+    white-space: pre-wrap;
+  }
+  .gr .gr-alert {
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+    background: var(--gr-err-bg);
+    color: var(--gr-err);
+    white-space: pre-wrap;
+    margin: 0;
+  }
+  /* Kết quả */
+  .gr .gr-result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .gr .gr-result-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .gr .gr-tabs {
+    display: inline-flex;
+    background: var(--global-card-bg-color);
+    border-radius: 6px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .gr .gr-tabs .gr-btn {
+    border: 0;
+    background: transparent;
+    padding: 0.3rem 0.7rem;
+    color: var(--global-text-color-light);
+  }
+  .gr .gr-tabs .gr-btn[aria-selected="true"] {
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .gr .gr-report {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    overflow-wrap: anywhere;
+  }
+  .gr .gr-report.gr-streaming {
+    white-space: pre-wrap;
+    font-size: 0.92rem;
+    color: var(--global-text-color-light);
+  }
+  .gr .gr-report h1 {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+  .gr .gr-report h2 {
+    font-size: 1.25rem;
+  }
+  .gr .gr-report h3 {
+    font-size: 1.08rem;
+  }
+  .gr .gr-report table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .gr .gr-report th,
+  .gr .gr-report td {
+    border: 1px solid var(--global-divider-color);
+    padding: 0.35rem 0.6rem;
+  }
+  .gr .gr-md {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 420px;
+    font-family: var(--gr-mono);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 0.8rem;
+    resize: vertical;
+  }
+  .gr .gr-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .gr .gr-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    padding: 0.28rem 0.8rem;
+    font-size: 0.85rem;
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+  }
+  .gr .gr-pill b {
+    font-family: var(--gr-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .gr .gr-sources ol {
+    margin: 0.3rem 0 0;
+    padding-left: 1.4rem;
+    font-size: 0.88rem;
+  }
+  .gr .gr-sources li {
+    margin-bottom: 0.2rem;
+    word-break: break-all;
+  }
+  /* Giới hạn & trách nhiệm */
+  .gr .gr-duty {
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1.2rem;
+  }
+  .gr .gr-duty h2 {
+    font-size: 1.35rem;
+    margin: 0 0 0.8rem;
+  }
+  .gr .gr-duty h3 {
+    font-size: 1.05rem;
+    margin: 1rem 0 0.4rem;
+  }
+  .gr .gr-duty ul {
+    margin: 0 0 0.4rem;
+    padding-left: 1.3rem;
+  }
+  .gr .gr-duty li {
+    margin-bottom: 0.35rem;
+  }
+  .gr .gr-duty blockquote {
+    margin: 0.4rem 0 0;
+    padding: 0.6rem 0.9rem;
+    border-left: 3px solid var(--global-theme-color);
+    background: var(--global-card-bg-color);
+    font-size: 0.92rem;
+  }
+  .gr .gr-source {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gr * {
+      animation: none !important;
+    }
+  }
+  @media print {
+    .gr > :not(.gr-result),
+    .gr .gr-result-head,
+    .gr .gr-meta {
+      display: none !important;
+    }
+    .gr .gr-report {
+      border: 0;
+      padding: 0;
+    }
+  }
+</style> <div class="gr"> <p class="gr-notice"> Nhập một câu hỏi nghiên cứu, công cụ sẽ tự lập kế hoạch tìm kiếm, đọc các nguồn trên web và kho học thuật rồi viết thành báo cáo có trích dẫn. Chạy bằng <a href="https://github.com/assafelovic/gpt-researcher" target="_blank" rel="noopener">GPT Researcher</a> với <strong>API key của chính bạn</strong>: key chỉ dùng cho lượt chạy đó, không được lưu trên máy chủ. Đọc phần <a href="#gioi-han-va-trach-nhiem">Giới hạn và trách nhiệm sử dụng AI</a> trước khi dùng. </p> <p class="gr-status" id="grStatus" data-state="wait" role="status"> <span class="gr-dot" aria-hidden="true"></span><span id="grStatusText">Đang kiểm tra máy chủ…</span> </p> <form id="grForm" novalidate> <div class="gr-field"> <label class="gr-label" for="grQuery">Câu hỏi nghiên cứu</label> <textarea id="grQuery" maxlength="1500" required placeholder="Ví dụ: Các phương pháp phân rã tín hiệu (VMD, CEEMDAN) kết hợp học sâu trong dự báo giá tiền mã hoá: kết quả nổi bật và hạn chế"></textarea> <p class="gr-hint">Câu hỏi càng cụ thể (phạm vi, giai đoạn, phương pháp) thì báo cáo càng sát.</p> </div> <div class="gr-grid"> <div class="gr-field"> <label class="gr-label" for="grType">Loại báo cáo</label> <select id="grType"> <option value="research_report">Báo cáo nghiên cứu</option> <option value="resource_report">Danh mục tài liệu</option> <option value="outline_report">Dàn ý bài viết</option> <option value="detailed_report">Báo cáo chi tiết</option> </select> <p class="gr-hint" id="grTypeHint"></p> </div> <div class="gr-field"> <label class="gr-label" for="grLang">Ngôn ngữ</label> <select id="grLang"> <option value="vietnamese">Tiếng Việt</option> <option value="english">English</option> </select> </div> <div class="gr-field"> <label class="gr-label" for="grTone">Giọng văn</label> <select id="grTone"> <option value="Objective">Khách quan</option> <option value="Formal">Học thuật, trang trọng</option> <option value="Analytical">Phân tích</option> <option value="Critical">Phản biện</option> <option value="Explanatory">Giải thích dễ hiểu</option> </select> </div> <div class="gr-field"> <label class="gr-label" for="grCite">Kiểu trích dẫn</label> <select id="grCite"> <option>APA</option> <option>IEEE</option> <option>Harvard</option> <option>MLA</option> <option>Chicago</option> </select> </div> <div class="gr-field"> <label class="gr-label" for="grWords">Độ dài</label> <select id="grWords"> <option value="800">Khoảng 800 từ</option> <option value="1200" selected>Khoảng 1.200 từ</option> <option value="2000">Khoảng 2.000 từ</option> </select> </div> </div> <fieldset> <legend class="gr-label">Nguồn tìm kiếm</legend> <div class="gr-field"> <span class="gr-hint">Tìm trên web</span> <div class="gr-choices" role="radiogroup"> <label><input type="radio" name="grWeb" value="tavily" checked> Tavily (cần key, kết quả tốt nhất)</label> <label><input type="radio" name="grWeb" value="duckduckgo"> DuckDuckGo (miễn phí, đôi khi bị giới hạn)</label> <label><input type="radio" name="grWeb" value="none"> Không tìm trên web</label> </div> </div> <div class="gr-field"> <span class="gr-hint">Kho học thuật (miễn phí, không cần key)</span> <div class="gr-choices"> <label><input type="checkbox" class="grAcad" value="arxiv" checked> arXiv</label> <label><input type="checkbox" class="grAcad" value="semantic_scholar" checked> Semantic Scholar</label> <label><input type="checkbox" class="grAcad" value="pubmed_central"> PubMed Central</label> </div> </div> </fieldset> <fieldset> <legend class="gr-label">Mô hình AI và API key</legend> <div class="gr-grid"> <div class="gr-field"> <label class="gr-label" for="grProvider">Nhà cung cấp</label> <select id="grProvider"> <option value="google">Google Gemini</option> <option value="openai">OpenAI</option> <option value="anthropic">Anthropic Claude</option> </select> </div> <div class="gr-field"> <label class="gr-label" for="grKey" id="grKeyLabel">Gemini API key</label> <div class="gr-keyrow"> <input type="password" id="grKey" class="gr-key" autocomplete="off" spellcheck="false"> <button type="button" class="gr-btn" data-toggle="grKey" aria-label="Hiện hoặc ẩn key">Hiện</button> </div> <p class="gr-hint" id="grKeyHint"></p> </div> <div class="gr-field" id="grTavilyField"> <label class="gr-label" for="grTavily">Tavily API key</label> <div class="gr-keyrow"> <input type="password" id="grTavily" class="gr-key" autocomplete="off" spellcheck="false" placeholder="tvly-…"> <button type="button" class="gr-btn" data-toggle="grTavily" aria-label="Hiện hoặc ẩn key">Hiện</button> </div> <p class="gr-hint"> Lấy miễn phí tại <a href="https://app.tavily.com" target="_blank" rel="noopener">app.tavily.com</a> (1.000 lượt/tháng). </p> </div> </div> <details> <summary>Tuỳ chọn nâng cao: đổi tên mô hình</summary> <div class="gr-grid"> <div class="gr-field"> <label class="gr-label" for="grSmart">Mô hình chính (viết báo cáo)</label> <input type="text" id="grSmart" class="gr-key" spellcheck="false"> </div> <div class="gr-field"> <label class="gr-label" for="grFast">Mô hình nhanh (tóm tắt nguồn)</label> <input type="text" id="grFast" class="gr-key" spellcheck="false"> </div> </div> <p class="gr-hint">Để trống để dùng mặc định. Chỉ cần đổi khi nhà cung cấp ngừng một mô hình hoặc bạn muốn dùng bản mạnh hơn.</p> </details> <label class="gr-check"><input type="checkbox" id="grRemember"> Ghi nhớ key trên trình duyệt này (chỉ bật trên máy cá nhân)</label> </fieldset> <p class="gr-alert" id="grFormErr" hidden></p> <div class="gr-btns"> <button type="submit" class="gr-btn gr-primary" id="grStart">Bắt đầu nghiên cứu</button> <button type="button" class="gr-btn" id="grStop" hidden>Dừng</button> </div> </form> <section class="gr-progress" id="grProgress" hidden aria-live="polite"> <div class="gr-progress-head"> <p class="gr-label">Tiến độ</p> <span class="gr-timer" id="grTimer">00:00</span> </div> <ol class="gr-log" id="grLog"></ol> </section> <section class="gr-result" id="grResult" hidden> <div class="gr-result-head"> <div class="gr-tabs" role="tablist"> <button type="button" class="gr-btn" role="tab" aria-selected="true" data-tab="view">Báo cáo</button> <button type="button" class="gr-btn" role="tab" aria-selected="false" data-tab="md">Markdown</button> </div> <div class="gr-btns"> <span class="gr-toast" id="grToast" aria-live="polite"></span> <button type="button" class="gr-btn" id="grCopy">Sao chép Markdown</button> <button type="button" class="gr-btn" id="grDownload">Tải .md</button> <button type="button" class="gr-btn" id="grPrint">In / lưu PDF</button> </div> </div> <div class="gr-report" id="grReport"></div> <textarea class="gr-md" id="grMd" hidden readonly></textarea> <div class="gr-meta" id="grMeta"></div> <div class="gr-sources" id="grSources" hidden> <p class="gr-label">Nguồn đã đọc</p> <ol id="grSourceList"></ol> </div> </section> <section class="gr-duty" id="gioi-han-va-trach-nhiem"> <h2>Giới hạn và trách nhiệm sử dụng AI</h2> <h3>Công cụ làm được gì, không làm được gì</h3> <ul> <li> Công cụ giúp <strong>khảo sát nhanh</strong> một chủ đề: gợi ý hướng tìm, gom nguồn, tóm tắt và phác dàn ý. Nó không thay thế việc tự đọc tài liệu gốc và tổng quan tài liệu có hệ thống. </li> <li> Mô hình AI có thể <strong>hiểu sai, tóm tắt lệch hoặc bịa</strong> số liệu và tài liệu tham khảo. Mọi con số, trích dẫn, DOI trong báo cáo phải được mở nguồn gốc ra kiểm tra trước khi dùng. </li> <li> Kết quả phụ thuộc vào những gì công cụ tìm kiếm trả về. Bài báo nằm sau tường phí thường chỉ được đọc phần tóm tắt; nguồn tiếng Việt trên các kho học thuật quốc tế còn ít. </li> <li> Mỗi lượt chạy gọi API nhiều lần và <strong>tính phí vào key của bạn</strong> (thường vài xu đến vài chục xu USD; báo cáo chi tiết tốn hơn). Con số chi phí hiển thị sau khi chạy chỉ là ước tính. </li> <li> Câu hỏi và nội dung tìm được được gửi tới máy chủ của trang này và tới nhà cung cấp mô hình, công cụ tìm kiếm bạn chọn. Không nhập dữ liệu cá nhân, dữ liệu nghiên cứu chưa công bố hay thông tin mật. </li> <li> API key đi qua kết nối mã hoá, chỉ tồn tại trong tiến trình chạy lượt đó và không được ghi lại. Nếu bật <em>Ghi nhớ key</em>, key được lưu trong trình duyệt của bạn; hãy tắt và xoá khi dùng máy chung. </li> </ul> <h3>Dùng AI có trách nhiệm</h3> <ul> <li>Dùng báo cáo làm <strong>điểm xuất phát</strong> để tìm và đọc tài liệu, không nộp nguyên văn như bài làm của bạn.</li> <li> Chỉ trích dẫn những tài liệu bạn đã tự mở và đọc. Tài liệu tham khảo phải dẫn tới nguồn gốc (bài báo, sách), không dẫn tới báo cáo do AI tạo. </li> <li> Tuân thủ quy định về sử dụng AI của học phần, nhà trường, tạp chí hay nơi bạn nộp bài. Nếu được yêu cầu khai báo thì khai báo đầy đủ: công cụ nào, dùng cho khâu nào. </li> <li>Người đứng tên chịu trách nhiệm về toàn bộ nội dung: số liệu, lập luận, trích dẫn.</li> </ul> <p>Một câu khai báo mẫu có thể điều chỉnh theo thực tế:</p> <blockquote> Tác giả sử dụng công cụ GPT Researcher (mô hình […]) để khảo sát sơ bộ tài liệu về […]. Mọi nguồn được trích dẫn trong bài đã được tác giả trực tiếp đọc và kiểm chứng; tác giả chịu hoàn toàn trách nhiệm về nội dung. </blockquote> <p class="gr-source"> Mã nguồn: <a href="https://github.com/assafelovic/gpt-researcher" target="_blank" rel="noopener">assafelovic/gpt-researcher</a> (giấy phép Apache 2.0). </p> </section> </div> <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.16/dist/purify.min.js"></script> <script>
+  (function () {
+    "use strict";
+    const $ = (id) => document.getElementById(id);
+
+    // Địa chỉ máy chủ: lấy từ front matter; có thể thử máy chủ khác bằng ?api=https://...
+    const qsApi = new URLSearchParams(location.search).get("api");
+    const API = (qsApi && /^https?:\/\//.test(qsApi) ? qsApi : $("gr-config").dataset.api || "").replace(/\/+$/, "");
+
+    const PROVIDERS = {
+      google: {
+        key: "Gemini API key",
+        hint: 'Lấy miễn phí tại <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>.',
+        ph: "AIza…",
+      },
+      openai: {
+        key: "OpenAI API key",
+        hint: 'Tạo tại <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a> (trả phí theo lượt dùng).',
+        ph: "sk-…",
+      },
+      anthropic: {
+        key: "Anthropic API key",
+        hint: 'Tạo tại <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a> (trả phí theo lượt dùng).',
+        ph: "sk-ant-…",
+      },
+    };
+    const STORE = "gr-keys-v1";
+    const FIELD_NAMES = {
+      query: "Câu hỏi nghiên cứu",
+      llm_api_key: "API key",
+      tavily_api_key: "Tavily API key",
+      smart_model: "Mô hình chính",
+      fast_model: "Mô hình nhanh",
+    };
+
+    let defaults = {};
+    let running = null; // AbortController của lượt đang chạy
+    let markdown = "";
+    let timerId = null;
+
+    /* ---------- Lưu key (tuỳ chọn) ---------- */
+    const store = {
+      read() {
+        try {
+          return JSON.parse(localStorage.getItem(STORE) || "null");
+        } catch (e) {
+          return null;
+        }
+      },
+      write(v) {
+        try {
+          if (v) localStorage.setItem(STORE, JSON.stringify(v));
+          else localStorage.removeItem(STORE);
+        } catch (e) {}
+      },
+    };
+    const saved = store.read();
+    if (saved) {
+      $("grRemember").checked = true;
+      if (saved.provider && PROVIDERS[saved.provider]) $("grProvider").value = saved.provider;
+    }
+    function savedKeyFor(p) {
+      const cur = store.read();
+      return (cur && cur.keys && cur.keys[p]) || "";
+    }
+
+    /* ---------- Trạng thái máy chủ ---------- */
+    function setStatus(state, text) {
+      $("grStatus").dataset.state = state;
+      $("grStatusText").textContent = text;
+    }
+    async function checkHealth(attempt) {
+      if (!API) {
+        setStatus("err", "Chưa cấu hình địa chỉ máy chủ.");
+        return;
+      }
+      try {
+        const ctrl = new AbortController();
+        const t = setTimeout(() => ctrl.abort(), 10000);
+        const r = await fetch(API + "/api/health", { signal: ctrl.signal, cache: "no-store" });
+        clearTimeout(t);
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const info = await r.json();
+        defaults = info.providers || {};
+        updateProvider();
+        const busy = info.busy >= info.max_concurrent;
+        setStatus(busy ? "wait" : "ok", busy ? "Máy chủ đang bận, lượt của bạn có thể phải chờ." : "Máy chủ sẵn sàng.");
+      } catch (e) {
+        // Space miễn phí ngủ khi lâu không dùng; lần gọi đầu sẽ đánh thức nó.
+        if (attempt < 18) {
+          setStatus("wait", "Máy chủ đang khởi động (có thể mất 1–3 phút)…");
+          setTimeout(() => checkHealth(attempt + 1), 10000);
+        } else {
+          setStatus("err", "Không kết nối được máy chủ. Vui lòng thử lại sau.");
+        }
+      }
+    }
+
+    /* ---------- Biểu mẫu ---------- */
+    function webChoice() {
+      return document.querySelector('input[name="grWeb"]:checked').value;
+    }
+    function updateProvider() {
+      const p = $("grProvider").value;
+      const cfg = PROVIDERS[p];
+      $("grKeyLabel").textContent = cfg.key;
+      $("grKeyHint").innerHTML = cfg.hint;
+      $("grKey").placeholder = cfg.ph;
+      $("grKey").value = savedKeyFor(p) || ($("grKey").dataset.provider === p ? $("grKey").value : "");
+      $("grKey").dataset.provider = p;
+      const d = defaults[p] || {};
+      $("grSmart").placeholder = d.smart || "mặc định";
+      $("grFast").placeholder = d.fast || "mặc định";
+    }
+    const TYPE_HINTS = {
+      research_report: "Khoảng 3–5 phút.",
+      resource_report: "Liệt kê, mô tả các nguồn đáng đọc. Khoảng 3–5 phút.",
+      outline_report: "Dàn ý chi tiết để tự viết tiếp. Khoảng 2–4 phút.",
+      detailed_report: "Chia nhiều tiểu mục, dài hơn. Khoảng 10–15 phút, tốn phí hơn.",
+    };
+    function updateType() {
+      $("grTypeHint").textContent = TYPE_HINTS[$("grType").value] || "";
+    }
+    $("grType").addEventListener("change", updateType);
+    function updateWeb() {
+      $("grTavilyField").hidden = webChoice() !== "tavily";
+    }
+    $("grProvider").addEventListener("change", updateProvider);
+    document.querySelectorAll('input[name="grWeb"]').forEach((el) => el.addEventListener("change", updateWeb));
+    document.querySelectorAll("[data-toggle]").forEach((btn) =>
+      btn.addEventListener("click", () => {
+        const inp = $(btn.dataset.toggle);
+        const show = inp.type === "password";
+        inp.type = show ? "text" : "password";
+        btn.textContent = show ? "Ẩn" : "Hiện";
+      })
+    );
+    $("grRemember").addEventListener("change", () => {
+      if (!$("grRemember").checked) store.write(null);
+    });
+    if (saved && saved.tavily) $("grTavily").value = saved.tavily;
+
+    function showFormError(msg) {
+      $("grFormErr").textContent = msg;
+      $("grFormErr").hidden = !msg;
+    }
+
+    function collect() {
+      const body = {
+        query: $("grQuery").value.trim(),
+        report_type: $("grType").value,
+        language: $("grLang").value,
+        tone: $("grTone").value,
+        citation_style: $("grCite").value,
+        total_words: parseInt($("grWords").value, 10),
+        provider: $("grProvider").value,
+        llm_api_key: $("grKey").value.trim(),
+        web_search: webChoice(),
+        tavily_api_key: $("grTavily").value.trim() || null,
+        academic: Array.from(document.querySelectorAll(".grAcad:checked")).map((c) => c.value),
+        smart_model: $("grSmart").value.trim() || null,
+        fast_model: $("grFast").value.trim() || null,
+      };
+      if (body.query.length < 5) return [null, "Hãy nhập câu hỏi nghiên cứu (ít nhất vài từ)."];
+      if (body.llm_api_key.length < 8) return [null, "Hãy nhập " + PROVIDERS[body.provider].key + "."];
+      if (body.web_search === "tavily" && !body.tavily_api_key) return [null, "Chọn Tavily thì cần nhập Tavily API key, hoặc đổi sang DuckDuckGo."];
+      if (body.web_search === "none" && !body.academic.length) return [null, "Hãy chọn ít nhất một nguồn tìm kiếm."];
+      if (body.web_search !== "tavily") body.tavily_api_key = null;
+      return [body, ""];
+    }
+
+    function rememberKeys(body) {
+      if (!$("grRemember").checked) return;
+      const cur = store.read();
+      const keys = (cur && cur.keys) || {};
+      keys[body.provider] = body.llm_api_key;
+      store.write({ provider: body.provider, keys: keys, tavily: $("grTavily").value.trim() });
+    }
+
+    /* ---------- Hiển thị tiến độ, kết quả ---------- */
+    function log(text, isErr) {
+      const li = document.createElement("li");
+      li.textContent = text;
+      if (isErr) li.className = "gr-log-err";
+      const list = $("grLog");
+      list.appendChild(li);
+      list.scrollTop = list.scrollHeight;
+    }
+    function startTimer() {
+      const t0 = Date.now();
+      clearInterval(timerId);
+      timerId = setInterval(() => {
+        const s = Math.floor((Date.now() - t0) / 1000);
+        $("grTimer").textContent = String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+      }, 1000);
+    }
+    function renderMarkdown(md) {
+      const html = window.marked ? window.marked.parse(md) : md.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
+      const clean = window.DOMPurify ? window.DOMPurify.sanitize(html) : "";
+      const box = $("grReport");
+      box.classList.remove("gr-streaming");
+      box.innerHTML = clean || "";
+      if (!clean) box.textContent = md;
+      box.querySelectorAll("a[href]").forEach((a) => {
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+    }
+    function setTab(which) {
+      document.querySelectorAll(".gr-tabs [data-tab]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === which)));
+      $("grReport").hidden = which !== "view";
+      $("grMd").hidden = which !== "md";
+    }
+    document.querySelectorAll(".gr-tabs [data-tab]").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
+
+    function pill(label, value) {
+      const s = document.createElement("span");
+      s.className = "gr-pill";
+      s.append(label + " ");
+      const b = document.createElement("b");
+      b.textContent = value;
+      s.appendChild(b);
+      $("grMeta").appendChild(s);
+    }
+    function showSources(urls) {
+      const list = $("grSourceList");
+      list.innerHTML = "";
+      urls.forEach((u) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = u;
+        a.textContent = u;
+        a.target = "_blank";
+        a.rel = "noopener";
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      $("grSources").hidden = !urls.length;
+    }
+    function resetResult() {
+      markdown = "";
+      $("grLog").innerHTML = "";
+      $("grReport").textContent = "";
+      $("grReport").classList.add("gr-streaming");
+      $("grMd").value = "";
+      $("grMeta").innerHTML = "";
+      $("grSourceList").innerHTML = "";
+      $("grSources").hidden = true;
+      $("grResult").hidden = true;
+      setTab("view");
+    }
+    function setRunning(on) {
+      $("grStart").disabled = on;
+      $("grStart").textContent = on ? "Đang nghiên cứu…" : "Bắt đầu nghiên cứu";
+      $("grStop").hidden = !on;
+      if (!on) clearInterval(timerId);
+    }
+
+    function explainHttpError(status, data) {
+      const d = data && data.detail;
+      if (typeof d === "string") return d;
+      if (Array.isArray(d)) {
+        return d
+          .map((e) => {
+            const field = FIELD_NAMES[(e.loc || []).slice(-1)[0]] || (e.loc || []).slice(-1)[0];
+            return field + ": " + (e.msg || "không hợp lệ");
+          })
+          .join("\n");
+      }
+      if (status === 429) return "Bạn đã chạy quá nhiều lượt trong một giờ. Vui lòng thử lại sau.";
+      if (status === 503) return "Máy chủ đang bận. Vui lòng thử lại sau ít phút.";
+      return "Máy chủ trả về lỗi " + status + ".";
+    }
+    function explainRunError(msg) {
+      const m = msg.toLowerCase();
+      if (/api[_ ]?key|401|unauthor|permission|invalid.*key|authentication/.test(m))
+        return "API key không hợp lệ hoặc chưa được cấp quyền. Kiểm tra lại key.\n\nChi tiết: " + msg;
+      if (/quota|rate.?limit|429|resource.?exhausted|insufficient/.test(m))
+        return "Key đã hết hạn mức hoặc bị giới hạn tốc độ. Thử lại sau, hoặc kiểm tra số dư tài khoản.\n\nChi tiết: " + msg;
+      if (/not.?found|404|does not exist|model/.test(m))
+        return "Không tìm thấy mô hình. Có thể nhà cung cấp đã đổi tên; thử nhập tên mô hình khác ở Tuỳ chọn nâng cao.\n\nChi tiết: " + msg;
+      return msg;
+    }
+
+    /* ---------- Chạy ---------- */
+    async function run(body) {
+      resetResult();
+      $("grProgress").hidden = false;
+      $("grTimer").textContent = "00:00";
+      startTimer();
+      setRunning(true);
+      log("Đang gửi yêu cầu tới máy chủ…");
+      running = new AbortController();
+      let streamed = "";
+      let lastPaint = 0;
+      let gotReport = false;
+      let failed = false;
+
+      try {
+        const r = await fetch(API + "/api/research", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          signal: running.signal,
+        });
+        if (!r.ok) {
+          let data = null;
+          try {
+            data = await r.json();
+          } catch (e) {}
+          throw new Error(explainHttpError(r.status, data));
+        }
+        const reader = r.body.getReader();
+        const dec = new TextDecoder();
+        let buf = "";
+        for (;;) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buf += dec.decode(value, { stream: true });
+          let nl;
+          while ((nl = buf.indexOf("\n")) >= 0) {
+            const line = buf.slice(0, nl).trim();
+            buf = buf.slice(nl + 1);
+            if (!line) continue;
+            let ev;
+            try {
+              ev = JSON.parse(line);
+            } catch (e) {
+              continue;
+            }
+            switch (ev.type) {
+              case "log":
+                log(ev.text);
+                break;
+              case "chunk":
+                streamed += ev.text;
+                $("grResult").hidden = false;
+                if (Date.now() - lastPaint > 250) {
+                  $("grReport").textContent = streamed;
+                  lastPaint = Date.now();
+                }
+                break;
+              case "report":
+                gotReport = true;
+                markdown = ev.markdown || streamed;
+                $("grResult").hidden = false;
+                renderMarkdown(markdown);
+                $("grMd").value = markdown;
+                break;
+              case "sources":
+                showSources(ev.urls || []);
+                break;
+              case "cost":
+                if (typeof ev.usd === "number") pill("Chi phí API ước tính", "~$" + ev.usd.toFixed(3));
+                break;
+              case "error":
+                failed = true;
+                log(explainRunError(ev.message || "Có lỗi xảy ra."), true);
+                break;
+              case "done":
+                log("✅ Hoàn thành.");
+                break;
+            }
+          }
+        }
+        if (gotReport) {
+          rememberKeys(body);
+          const words = markdown.split(/\s+/).filter(Boolean).length;
+          pill("Độ dài", words.toLocaleString("vi-VN") + " từ");
+          pill("Thời gian", $("grTimer").textContent);
+        } else if (!failed) {
+          log("Kết nối bị ngắt trước khi có báo cáo. Vui lòng thử lại.", true);
+        }
+        if (!gotReport && streamed) {
+          markdown = streamed;
+          renderMarkdown(markdown);
+          $("grMd").value = markdown;
+        }
+      } catch (e) {
+        if (e.name === "AbortError") {
+          log("⏹ Đã dừng.", true);
+        } else if (e instanceof TypeError) {
+          log("Không kết nối được máy chủ. Có thể máy chủ đang khởi động — đợi 1–2 phút rồi thử lại.", true);
+          checkHealth(0);
+        } else {
+          log(e.message, true);
+        }
+      } finally {
+        running = null;
+        setRunning(false);
+      }
+    }
+
+    $("grForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (running) return;
+      const [body, err] = collect();
+      showFormError(err);
+      if (body) run(body);
+    });
+    $("grStop").addEventListener("click", () => running && running.abort());
+
+    /* ---------- Sao chép, tải về, in ---------- */
+    function toast(msg) {
+      $("grToast").textContent = msg;
+      setTimeout(() => ($("grToast").textContent = ""), 1800);
+    }
+    $("grCopy").addEventListener("click", () => {
+      const fallback = () => {
+        setTab("md");
+        $("grMd").select();
+        toast("Nhấn Ctrl+C để sao chép");
+      };
+      try {
+        navigator.clipboard.writeText(markdown).then(() => toast("Đã sao chép"), fallback);
+      } catch (e) {
+        fallback();
+      }
+    });
+    $("grDownload").addEventListener("click", () => {
+      const slug =
+        ($("grQuery").value || "bao-cao")
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/đ/gi, "d")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+          .slice(0, 60) || "bao-cao";
+      const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = slug + ".md";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    });
+    $("grPrint").addEventListener("click", () => {
+      setTab("view");
+      window.print();
+    });
+
+    updateProvider();
+    updateType();
+    updateWeb();
+    checkHealth(0);
+  })();
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Trần Thái Hòa. Nội dung trên trang được chia sẻ cho mục đích học thuật. Xây dựng bằng <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> với giao diện <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Lưu trữ trên <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: September 27, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-nghiên-cứu-khoa-học",
+          title: "Nghiên cứu khoa học",
+          description: "Bài báo, báo cáo hội thảo, sách, giáo trình và đề tài nghiên cứu.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/nghien-cuu/";
+          },
+        },{id: "nav-research",
+          title: "Research",
+          description: "Journal articles, conference papers, books and funded projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-giảng-dạy",
+          title: "Giảng dạy",
+          description: "Học phần phụ trách, đề cương, bài giảng và tài liệu thực hành.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/giang-day/";
+          },
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "Courses I teach, with syllabi, lecture slides and lab materials.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-dự-án",
+          title: "Dự án",
+          description: "Mã nguồn, dữ liệu và các sản phẩm ứng dụng.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/vi/du-an/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Code, data and applied work.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "dropdown-lọc-ký-tự-ẩn",
+              title: "Lọc ký tự ẩn",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ai-tools/loc-ky-tu-an/";
+              },
+            },{id: "dropdown-trợ-lý-nghiên-cứu",
+              title: "Trợ lý nghiên cứu",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ai-tools/tro-ly-nghien-cuu/";
+              },
+            },{id: "post-chào-mừng-đến-với-trang-cá-nhân-của-tôi",
+        
+          title: "Chào mừng đến với trang cá nhân của tôi",
+        
+        description: "Bài viết đầu tiên — giới thiệu về mục đích của trang và những nội dung sẽ được chia sẻ tại đây.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/chao-mung/";
+          
+        },
+      },{id: "news-trang-cá-nhân-chính-thức-hoạt-động",
+          title: 'Trang cá nhân chính thức hoạt động.',
+          description: "",
+          section: "News",},{id: "news-bài-báo-về-mô-hình-lai-1d-cnn-và-lstm-dự-báo-giá-ethereum-đăng-trên-international-journal-of-information-technology",
+          title: 'Bài báo về mô hình lai 1D-CNN và LSTM dự báo giá Ethereum...',
+          description: "",
+          section: "News",},{id: "projects-hue-heritage-visitors-forecasting",
+          title: 'Hue Heritage Visitors Forecasting',
+          description: "Forecasting visitor numbers to the Hue Monuments Complex with time series and machine learning models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_hue_heritage/";
+            },},{id: "projects-tourist-demand-forecasting",
+          title: 'Tourist Demand Forecasting',
+          description: "Forecasting tourism demand from time series data and exogenous variables.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_tourist_demand/";
+            },},{id: "projects-decomposition-ensemble-for-bitcoin-price-forecasting",
+          title: 'Decomposition–Ensemble for Bitcoin Price Forecasting',
+          description: "Combining signal decomposition with machine learning models to forecast Bitcoin prices.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_decomposition_ensemble/";
+            },},{id: "teachings-công-nghệ-phần-mềm",
+          title: 'Công nghệ phần mềm',
+          description: "Các nguyên lý và kỹ thuật của công nghệ phần mềm: quy trình phát triển, quản lý yêu cầu, thiết kế, kiểm thử và đảm bảo chất lượng.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/cong-nghe-phan-mem/";
+            },},{id: "teachings-công-nghệ-số-trí-tuệ-nhân-tạo-và-ứng-dụng",
+          title: 'Công nghệ số, Trí tuệ nhân tạo và ứng dụng',
+          description: "Tổng quan các công nghệ số và trí tuệ nhân tạo cùng ứng dụng của chúng trong kinh tế và quản trị.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/cong-nghe-so-tri-tue-nhan-tao-va-ung-dung/";
+            },},{id: "teachings-khởi-nghiệp-và-đổi-mới-sáng-tạo",
+          title: 'Khởi nghiệp và đổi mới sáng tạo',
+          description: "Hình thành tư duy khởi nghiệp và đổi mới sáng tạo: nhận diện cơ hội, xây dựng mô hình kinh doanh, kiểm chứng ý tưởng và trình bày dự án.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/khoi-nghiep-doi-moi-sang-tao/";
+            },},{id: "teachings-phát-triển-hệ-thống-thông-tin",
+          title: 'Phát triển hệ thống thông tin',
+          description: "Quy trình phát triển hệ thống thông tin trong tổ chức: khảo sát, phân tích, thiết kế, triển khai và bảo trì.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/phat-trien-he-thong-thong-tin/";
+            },},{id: "teachings-phát-triển-website-thương-mại-điện-tử",
+          title: 'Phát triển Website Thương mại điện tử',
+          description: "Thiết kế và xây dựng website thương mại điện tử: kiến trúc ứng dụng web, quản trị sản phẩm, giỏ hàng, thanh toán và bảo mật.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/phat-trien-website-thuong-mai-dien-tu/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%74%72%61%6E%74%68%61%69%68%6F%61@%68%75%65%75%6E%69.%65%64%75.%76%6E", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0006-2405-4697", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=mYEjZ20AAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/HOAHCE", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://csdlkhoahoc.hueuni.edu.vn/index.php/scientist/detail/id/2119", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

@@ -182,7 +182,7 @@ giscus:
 # Máy chủ Waline chạy miễn phí trên Vercel; điền địa chỉ vào server_url là khung bình luận
 # tự hiện ở cuối mọi bài blog. Để trống thì không hiện gì. Tắt ở một bài: comments: false.
 waline:
-  server_url: # ví dụ https://binhluan-tranthaihoa.vercel.app
+  server_url: https://binhluan.vercel.app # máy chủ Waline trên Vercel (dự án binhluan)
   login: enable # enable: khách không cần đăng nhập; tác giả có thể đăng nhập để có huy hiệu
   meta: [nick, mail] # ô Tên và Email (email không hiển thị công khai)
   required_meta: [] # để trống: được phép bình luận ẩn danh

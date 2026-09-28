@@ -178,6 +178,15 @@ giscus:
   emit_metadata: 0
   lang: vi
 
+# Waline — bình luận KHÔNG cần tài khoản (để tên hoặc ẩn danh), giao diện theo ngôn ngữ bài.
+# Máy chủ Waline chạy miễn phí trên Vercel; điền địa chỉ vào server_url là khung bình luận
+# tự hiện ở cuối mọi bài blog. Để trống thì không hiện gì. Tắt ở một bài: comments: false.
+waline:
+  server_url: # ví dụ https://binhluan-tranthaihoa.vercel.app
+  login: enable # enable: khách không cần đăng nhập; tác giả có thể đăng nhập để có huy hiệu
+  meta: [nick, mail] # ô Tên và Email (email không hiển thị công khai)
+  required_meta: [] # để trống: được phép bình luận ẩn danh
+
 # Disqus comments (DEPRECATED)
 disqus_shortname: # không dùng Disqus
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -314,10 +323,26 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  # Blog song ngữ: bài tiếng Việt đặt trong _posts/vi/, bài tiếng Anh trong _posts/en/.
+  # Thư mục quyết định ngôn ngữ của bài (lang), bộ lọc danh sách (locale) và đường dẫn.
   - scope:
-      type: posts # mọi bài blog đều có khung bình luận giscus ở cuối bài
+      type: posts
     values:
-      giscus_comments: true
+      lang: en
+      locale: en
+  - scope:
+      path: "_posts/en"
+      type: posts
+    values:
+      lang: en
+      locale: en
+  - scope:
+      path: "_posts/vi"
+      type: posts
+    values:
+      lang: vi
+      locale: vi
+      permalink: /vi/blog/:year/:title/
 
 sass:
   style: compressed

@@ -1,15 +1,15 @@
 ---
 layout: default
-permalink: /blog/
+permalink: /vi/blog/
 title: Blog
-lang: en
-lang_alt: /vi/blog/
+lang: vi
+lang_alt: /blog/
 nav: true
 nav_order: 4
 pagination:
   enabled: true
   collection: posts
-  locale: en # chỉ liệt kê bài tiếng Anh (_posts/en/)
+  locale: vi # chỉ liệt kê bài tiếng Việt (_posts/vi/)
   permalink: /page/:num/
   per_page: 5
   sort_field: date

@@ -10,6 +10,7 @@ news_title: tin mới
 posts_title: bài viết mới
 papers_title: công bố tiêu biểu
 papers_url: /vi/nghien-cuu/
+posts_url: /vi/blog/
 
 hero:
   title: Trần Thái Hòa

@@ -3,7 +3,7 @@ layout: post
 title: "Để hành trình đến Huế không còn đứt gãy — Ý tưởng cho kinhdo.hue.vn"
 date: 2026-09-28 09:00:00 +0700
 description: "Ý tưởng về kinhdo.hue.vn — Nền tảng thương mại điểm đến (Destination Commerce Platform) của Huế: một lõi dữ liệu, nhiều cửa ngõ, một hành trình liền mạch."
-lang: vi
+ref: kinhdo-hue-vn # khoá nối với bản tiếng Anh (cùng ref)
 tags: [du-lich, chuyen-doi-so]
 categories: [nghien-cuu]
 featured: false

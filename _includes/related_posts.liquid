@@ -1,0 +1,61 @@
+{%- comment -%}
+  Bản sao related_posts.liquid của theme al-folio, sửa một điểm: chỉ gợi ý các bài
+  cùng ngôn ngữ với bài đang đọc, và chữ tiêu đề theo ngôn ngữ đó.
+{%- endcomment -%}
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- if cur_lang == 'vi' -%}
+  {%- assign t_enjoy = 'Bạn thấy bài viết hữu ích?' -%}
+  {%- assign t_more = 'Có thể bạn cũng muốn đọc:' -%}
+  {%- assign t_subscribe = 'Đăng ký để nhận bài viết mới:' -%}
+{%- else -%}
+  {%- assign t_enjoy = 'Enjoy Reading This Article?' -%}
+  {%- assign t_more = 'Here are some more articles you might like to read next:' -%}
+  {%- assign t_subscribe = 'Subscribe to be notified of future articles:' -%}
+{%- endif -%}
+{% assign related_posts = site.related_posts | where: 'lang', cur_lang | limit: site.related_blog_posts.max_related %}
+{% if related_posts != empty %}
+  {% if page.layout == 'post' %}
+    <br>
+    <hr>
+    <br>
+  {% endif %}
+
+  <h2 class="text-3xl font-semibold mb-4 mt-12">{{ t_enjoy }}</h2>
+  <p class="mb-2">{{ t_more }}</p>
+
+  <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]">
+    {% for post in related_posts %}
+      <li class="leading-relaxed">
+        {% if post.redirect == blank %}
+          <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="{{ post.url | relative_url }}">
+            {{- post.title -}}
+          </a>
+        {% elsif post.redirect contains '://' %}
+          <a
+            class="underline decoration-1 hover:text-[var(--global-hover-color)]"
+            href="{{ post.redirect }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{- post.title -}}
+          </a>
+          <svg width="1rem" height="1rem" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        {% else %}
+          <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="{{ post.redirect | relative_url }}">
+            {{- post.title -}}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% if site.newsletter.enabled and site.footer_fixed %}
+  <p class="mb-2" style="margin-top: 1.5rem !important">{{ t_subscribe }}</p>
+  {% if site.plugins contains 'al_newsletter' %}
+    {% include plugins/al_newsletter_form_left.liquid %}
+  {% else %}
+    {% include newsletter.liquid left=true %}
+  {% endif %}
+{% endif %}

@@ -1,0 +1,60 @@
+{%- comment -%}
+  Bản sao latest_posts.liquid của theme al-folio, sửa một điểm: trang chủ tiếng Anh
+  chỉ hiện bài tiếng Anh, trang chủ tiếng Việt chỉ hiện bài tiếng Việt (theo page.lang).
+{%- endcomment -%}
+{%- assign cur_lang = page.lang | default: 'en' -%}
+{%- if cur_lang == 'vi' -%}
+  {%- assign date_fmt = '%d/%m/%Y' -%}
+  {%- assign t_no_posts = 'Chưa có bài viết nào.' -%}
+{%- else -%}
+  {%- assign date_fmt = '%b %d, %Y' -%}
+  {%- assign t_no_posts = 'No posts so far...' -%}
+{%- endif -%}
+{%- assign latest_posts = site.posts | where: 'lang', cur_lang -%}
+<div class="news">
+  {% if page.latest_posts != blank and latest_posts.size > 0 %}
+    {% assign latest_posts_size = latest_posts | size %}
+    <div
+      class="table-responsive"
+      {% if page.latest_posts.scrollable and latest_posts_size > 3 %}
+        style="max-height: 60vw"
+      {% endif %}
+    >
+      <table class="table table-sm table-borderless">
+        {% if page.latest_posts.limit %}
+          {% assign latest_posts_limit = page.latest_posts.limit %}
+        {% else %}
+          {% assign latest_posts_limit = latest_posts_size %}
+        {% endif %}
+        {% for item in latest_posts limit: latest_posts_limit %}
+          <tr>
+            <th scope="row" style="width: 20%">{{ item.date | date: date_fmt }}</th>
+            <td>
+              {% if item.redirect == blank %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% elsif item.redirect contains '://' %}
+                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
+                <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                    class="icon_svg-stroke"
+                    stroke="#999"
+                    stroke-width="1.5"
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              {% else %}
+                <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% else %}
+    <p>{{ t_no_posts }}</p>
+  {% endif %}
+</div>

@@ -84,30 +84,51 @@ Với thay đổi nhỏ, anh có thể sửa thẳng trên giao diện web của
 Với thay đổi nhỏ, anh có thể sửa **trực tiếp trên giao diện web của GitHub**
 (mở file → biểu tượng bút chì → sửa → *Commit changes*). Không cần dùng terminal.
 
-### 2.1. Thêm một bài blog
+### 2.1. Thêm một bài blog (song ngữ Việt – Anh)
 
-Tạo file mới trong `_posts/` theo đúng mẫu tên `NĂM-THÁNG-NGÀY-tieu-de.md`:
+Blog có hai ngôn ngữ, **thư mục quyết định ngôn ngữ** của bài:
+
+| Thư mục | Ngôn ngữ | Địa chỉ bài | Hiện ở |
+| --- | --- | --- | --- |
+| `_posts/vi/` | Tiếng Việt | `/vi/blog/NĂM/tieu-de/` | `/vi/blog/`, trang chủ `/vi/` |
+| `_posts/en/` | Tiếng Anh | `/blog/NĂM/title/` | `/blog/`, trang chủ `/` |
+
+Tên file theo mẫu `NĂM-THÁNG-NGÀY-tieu-de.md`. Hai bản của cùng một bài nên đặt
+**tên file khác nhau** (bản Việt đặt tên không dấu, bản Anh đặt tên tiếng Anh) và
+**cùng một giá trị `ref`** — nhờ `ref`, nút EN / VI trên thanh menu và dòng
+"Read in English / Đọc bằng tiếng Việt" dưới tiêu đề tự nhảy sang bản dịch.
+
+Bản tiếng Việt — `_posts/vi/2025-11-20-du-bao-khach-du-lich.md`:
 
 ```markdown
 ---
 layout: post
-title: Tiêu đề bài viết
+title: Dự báo lượt khách du lịch bằng học sâu
 date: 2025-11-20 09:00:00 +0700
 description: Mô tả ngắn hiện ở danh sách bài viết.
+ref: du-bao-khach-du-lich
 tags: [du-bao, python]
 categories: [nghien-cuu]
 ---
 
-Nội dung viết bằng Markdown.
+Nội dung tiếng Việt viết bằng Markdown.
 ```
 
+Bản tiếng Anh — `_posts/en/2025-11-20-forecasting-tourist-arrivals.md`: giống hệt phần
+đầu (cùng `ref`, `tags`, `categories`), chỉ đổi `title`, `description` và nội dung sang
+tiếng Anh. Không cần khai báo `lang` — thư mục đã quyết định.
+
+- Bài chỉ có một ngôn ngữ vẫn được: bỏ `ref` đi, nút EN / VI sẽ đưa về trang Blog
+  của ngôn ngữ kia.
 - `tags` và `categories` nên viết **không dấu**, vì chúng trở thành đường dẫn
   (`/blog/tag/du-bao/`). Muốn chúng hiện ở đầu trang blog thì khai báo thêm trong
   `_config.yml` (mục `display_tags`, `display_categories`).
 - Chèn ảnh: đặt ảnh vào `assets/img/`, rồi dùng `![Chú thích](/assets/img/ten-anh.jpg)`.
-- Bình luận (giscus) tự bật cho mọi bài blog; muốn tắt ở một bài thì thêm `giscus_comments: false`
-  vào phần đầu bài. Bình luận được lưu ở tab **Discussions** của repo, nhóm *Announcements*.
 - Ghim bài lên đầu trang blog: thêm `featured: true` vào phần đầu bài.
+- **Bình luận (Waline)** tự hiện ở cuối mọi bài, người đọc không cần tài khoản — chỉ
+  để tên hoặc bình luận ẩn danh. Khung chỉ hiện khi `waline.server_url` trong
+  `_config.yml` đã có địa chỉ máy chủ. Tắt ở một bài: thêm `comments: false`.
+  Duyệt, trả lời, xoá bình luận tại trang quản trị `<server_url>/ui`.
 
 ### 2.2. Thêm một công bố khoa học
 

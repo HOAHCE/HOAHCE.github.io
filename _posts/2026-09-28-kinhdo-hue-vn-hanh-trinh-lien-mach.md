@@ -6,7 +6,7 @@ description: "Ý tưởng về kinhdo.hue.vn — Nền tảng thương mại đi
 lang: vi
 tags: [du-lich, chuyen-doi-so]
 categories: [nghien-cuu]
-featured: true
+featured: false
 toc:
   sidebar: left
 ---

@@ -456,7 +456,7 @@ Còn lại:
 - [ ] `_teachings/*.md` — khi vào học kỳ thì mở phần `term`, `location`, `time`,
       `schedule` (đang để dạng ghi chú) và tải slide/đề cương lên `assets/pdf/`
 - [ ] `_data/resources.yml` — thay bằng tài liệu thật, hoặc xoá hết nội dung
-- [ ] `_news/2025-10-02-cong-bo-moi.md` và `_posts/2025-10-01-chao-mung.md` — mẫu, sửa hoặc xoá
+- [ ] `_news/2025-10-02-cong-bo-moi.md` — mẫu, sửa hoặc xoá
 - [ ] `_projects/*.md` — viết mô tả chi tiết cho 3 dự án GitHub
 - [ ] `assets/pdf/example_pdf.pdf` — xoá sau khi đã thay bằng tài liệu thật
 

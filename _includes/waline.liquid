@@ -2,13 +2,23 @@
   Khung bình luận Waline ở cuối bài blog.
   - Người đọc KHÔNG cần tài khoản: điền tên (hoặc để trống = ẩn danh) và nội dung.
   - Giao diện Waline theo ngôn ngữ của bài (page.lang: vi / en).
-  - Mỗi đường dẫn bài là một luồng bình luận riêng (bản tiếng Việt và tiếng Anh tách nhau).
+  - Bản tiếng Việt và tiếng Anh của cùng một bài (cùng `ref`) DÙNG CHUNG một luồng bình luận:
+    bình luận ở trang này hiện ngay ở trang kia. Khoá chung là đường dẫn của bản tiếng Việt
+    (nếu bài chỉ có bản tiếng Anh thì dùng đường dẫn của chính bài đó).
   - Chỉ hiện khi đã điền `waline.server_url` trong _config.yml.
   - Tắt ở một bài: thêm `comments: false` vào phần đầu bài.
 {%- endcomment -%}
 {%- assign waline_server = site.waline.server_url | strip -%}
 {%- if waline_server != '' and page.comments != false -%}
   {%- assign cur_lang = page.lang | default: 'en' -%}
+  {%- comment -%} Khoá luồng bình luận chung cho mọi bản dịch cùng `ref` {%- endcomment -%}
+  {%- assign w_path = page.url -%}
+  {%- if page.ref -%}
+    {%- assign w_versions = site.posts | where: 'ref', page.ref -%}
+    {%- for v in w_versions -%}
+      {%- if v.lang == 'vi' -%}{%- assign w_path = v.url -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
   {%- assign w_meta = site.waline.meta | default: 'nick,mail' -%}
   {%- if w_meta.first == nil -%}{%- assign w_meta = w_meta | split: ',' -%}{%- endif -%}
   {%- assign w_required = site.waline.required_meta -%}
@@ -43,7 +53,7 @@
       el: '#waline',
       serverURL: {{ waline_server | jsonify }},
       lang: {{ cur_lang | jsonify }},
-      path: {{ page.url | jsonify }},
+      path: {{ w_path | jsonify }},
       dark: 'html[data-theme="dark"]',
       login: {{ site.waline.login | default: 'enable' | jsonify }},
       meta: {{ w_meta | jsonify }},

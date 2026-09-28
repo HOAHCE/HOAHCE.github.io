@@ -129,6 +129,9 @@ tiếng Anh. Không cần khai báo `lang` — thư mục đã quyết định.
   để tên hoặc bình luận ẩn danh. Khung chỉ hiện khi `waline.server_url` trong
   `_config.yml` đã có địa chỉ máy chủ. Tắt ở một bài: thêm `comments: false`.
   Duyệt, trả lời, xoá bình luận tại trang quản trị `<server_url>/ui`.
+  Hai bản tiếng Việt và tiếng Anh cùng `ref` **dùng chung một luồng bình luận**:
+  bình luận ở bản nào cũng hiện ở cả hai bản (trên trang quản trị, bình luận được
+  ghi theo đường dẫn của bản tiếng Việt).
 
 ### 2.2. Thêm một công bố khoa học
 

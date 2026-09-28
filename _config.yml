@@ -168,7 +168,7 @@ giscus:
   repo: HOAHCE/HOAHCE.github.io # repo chứa bình luận (workflow deploy sẽ tự cập nhật dòng này)
   repo_id: R_kgDOUiUV2Q # ID của repo HOAHCE.github.io
   category: Announcements # nhóm Discussions chứa bình luận (giscus khuyên dùng Announcements)
-  category_id: # TODO: dán ID lấy từ https://giscus.app (dạng DIC_kwDO...)
+  category_id: DIC_kwDOUiUV2c4DGjUI # ID nhóm Announcements (lấy từ giscus.app)
   mapping: pathname # mỗi bài một luồng bình luận, gắn theo đường dẫn bài
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
@@ -314,6 +314,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      type: posts # mọi bài blog đều có khung bình luận giscus ở cuối bài
+    values:
+      giscus_comments: true
 
 sass:
   style: compressed

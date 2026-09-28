@@ -105,6 +105,9 @@ Nội dung viết bằng Markdown.
   (`/blog/tag/du-bao/`). Muốn chúng hiện ở đầu trang blog thì khai báo thêm trong
   `_config.yml` (mục `display_tags`, `display_categories`).
 - Chèn ảnh: đặt ảnh vào `assets/img/`, rồi dùng `![Chú thích](/assets/img/ten-anh.jpg)`.
+- Bình luận (giscus) tự bật cho mọi bài blog; muốn tắt ở một bài thì thêm `giscus_comments: false`
+  vào phần đầu bài. Bình luận được lưu ở tab **Discussions** của repo, nhóm *Announcements*.
+- Ghim bài lên đầu trang blog: thêm `featured: true` vào phần đầu bài.
 
 ### 2.2. Thêm một công bố khoa học
 

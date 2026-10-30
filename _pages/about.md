@@ -21,7 +21,7 @@ hero:
     - num: "11"
       label: Funded projects
     - num: "5"
-      label: Courses taught
+      label: Courses
   buttons:
     - label: Research
       url: /publications/

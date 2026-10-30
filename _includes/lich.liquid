@@ -183,10 +183,9 @@
   .lich label.f { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.78rem; color: var(--lk-muted); }
   .lich label.f input, .lich label.f select { color: var(--lk-ink); font-size: 0.92rem; }
   .lich .hint { font-size: 0.78rem; color: var(--lk-muted); }
-  .lich details.setup { border: 1px solid var(--lk-line); border-radius: 10px; padding: 0.7rem 0.9rem; }
-  .lich details.setup summary { cursor: pointer; font-weight: 650; }
-  .lich details.setup .inner { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.7rem; }
-  .lich details.setup ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  .lich .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; border-top: 1px solid var(--lk-line); padding-top: 0.8rem; }
+  .lich .foot:empty, .lich .foot .acts:only-child { justify-content: flex-end; }
+  .lich .foot .acts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .lich code { font-size: 0.8rem; background: var(--lk-surface); padding: 0 0.3rem; border-radius: 3px; }
 
   @media (max-width: 1099px) {
@@ -264,24 +263,13 @@
     </section>
   </div>
 
-  <details class="setup" id="setup">
-    <summary data-i18n="setupSum">Tài khoản Google, sao lưu và hướng dẫn thiết lập</summary>
-    <div class="inner">
-      <div id="g-panel"></div>
-      <div>
-        <p><b data-i18n="backupH">Sao lưu dữ liệu cá nhân</b></p>
-        <p class="hint" data-i18n="backupHint">Việc cần làm, ghi chú, đánh dấu và trạng thái chỉ nằm trong trình duyệt này.</p>
-        <div class="acts" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.4rem">
-          <button class="btn" type="button" id="export" data-i18n="exportBtn">Xuất tệp JSON</button>
-          <label class="btn" style="cursor:pointer"><span data-i18n="importBtn">Nhập từ tệp JSON</span> <input type="file" id="import" accept="application/json,.json" hidden></label>
-        </div>
-      </div>
-      <div id="g-guide">
-        <p><b data-i18n="guideTitle">Tạo OAuth Client ID cho Google Calendar (làm một lần)</b></p>
-        <ol data-i18n-html="guideSteps"></ol>
-      </div>
+  <footer class="foot">
+    <div id="g-panel"></div>
+    <div class="acts">
+      <button class="btn small" type="button" id="export" data-i18n="exportBtn">Xuất tệp JSON</button>
+      <label class="btn small" style="cursor:pointer"><span data-i18n="importBtn">Nhập từ tệp JSON</span> <input type="file" id="import" accept="application/json,.json" hidden></label>
     </div>
-  </details>
+  </footer>
 </div>
 
 <script>
@@ -309,23 +297,16 @@
       addEvH: 'Thêm lịch cá nhân', fDay: 'Ngày', fTime: 'Giờ', fContent: 'Nội dung', evPh: 'Ví dụ: Gặp nhóm sinh viên làm khoá luận',
       fLoc: 'Địa điểm (không bắt buộc)', addEv: 'Thêm vào lịch', noteH: 'Ghi chú tuần', weekNoteAria: 'Ghi chú tuần',
       noteHint: 'Tự lưu trên trình duyệt này, riêng cho từng tuần.',
-      setupSum: 'Tài khoản Google, sao lưu và hướng dẫn thiết lập', backupH: 'Sao lưu dữ liệu cá nhân',
-      backupHint: 'Việc cần làm, ghi chú, đánh dấu và trạng thái chỉ nằm trong trình duyệt này, không đưa lên GitHub. Xuất ra tệp để sao lưu hoặc chuyển sang máy khác.',
       exportBtn: 'Xuất tệp JSON', importBtn: 'Nhập từ tệp JSON',
-      guideTitle: 'Tạo OAuth Client ID cho Google Calendar (làm một lần)',
-      guideSteps: '<li>Vào <a href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener">Google Cloud Console</a>, tạo một project, rồi bật <b>Google Calendar API</b> trong mục APIs &amp; Services → Library.</li>' +
-        '<li>Mục <b>OAuth consent screen</b>: chọn External, điền tên ứng dụng và email của bạn. Thêm email của bạn vào Test users. Bấm <b>Publish app</b> để chuyển sang Production, nếu không quyền đã cấp sẽ hết hạn sau 7 ngày. Chỉ mình bạn dùng nên không cần Google xác minh, chỉ hiện cảnh báo "chưa xác minh".</li>' +
-        '<li>Mục <b>Credentials</b> → Create credentials → OAuth client ID → Web application. Ở <b>Authorized JavaScript origins</b> thêm <code>https://tranthaihoa.id.vn</code>.</li>' +
-        '<li>Sao chép Client ID, dán vào dòng <code>google_client_id</code> trong khối <code>lich:</code> của tệp <code>_config.yml</code>, rồi đẩy lên <code>main</code>.</li>',
       srcT: 'Trường', srcG: 'Google', srcP: 'Cá nhân', stTodo: 'Chưa làm', stDoing: 'Đang làm', stDone: 'Đã xong',
       dow: 'Chủ nhật|Thứ Hai|Thứ Ba|Thứ Tư|Thứ Năm|Thứ Sáu|Thứ Bảy', weekLabel: 'Tuần {0} · {1} – {2}',
-      chipLive: 'trực tiếp', chipSnap: 'bản lưu', chipLoading: 'đang tải', gOk: 'đã kết nối', gNoSetup: 'chưa thiết lập',
+      chipLive: 'trực tiếp', chipSnap: 'bản lưu', chipLoading: 'đang tải', gOk: 'đã kết nối', gNoSetup: 'chưa kết nối',
       gSignedOut: 'chưa đăng nhập', pLocal: 'trên máy này',
       sumLate: 'việc quá hạn', sumToday: 'việc đến hạn hôm nay', sumRel: 'việc của trường đã đánh dấu, chưa xong', sumTotal: 'lịch đang hiển thị trong tuần',
       noticeSnap: 'Không gọi trực tiếp được hce.edu.vn từ trình duyệt ({0}). Đang dùng bản lưu của GitHub{1}.',
       snapAt: ', thay đổi gần nhất lúc {0}', retry: 'Thử lại',
       noticeFail: 'Không tải được lịch công tác của Trường: {0}', noticeLive: 'Lịch Trường lấy trực tiếp từ hce.edu.vn lúc {0}.',
-      gNoSetupNote: 'Lịch Google chưa được thiết lập. Mở mục "Tài khoản Google, sao lưu và hướng dẫn thiết lập" ở cuối trang.',
+      gNoSetupNote: 'Lịch Google chưa được kết nối.',
       gSignInMsg: 'Đăng nhập Google để xem lịch cá nhân của bạn', remember: 'Ghi nhớ trên thiết bị này', signInBtn: 'Đăng nhập Google',
       resumeMsg: 'Phiên Google đã hết hạn. Bấm để tiếp tục, không cần chọn lại tài khoản.', resumeBtn: 'Tiếp tục với {0}',
       forgetBtn: 'Quên thiết bị này', gError: 'Lịch Google: {0}',
@@ -335,11 +316,9 @@
       starTitle: 'Đánh dấu liên quan đến tôi', stClick: 'Bấm để đổi trạng thái', dueMark: 'Hạn: {0}', empty: 'Không có lịch.', loading: 'Đang tải…',
       laneTodo: 'Cần làm', laneDoing: 'Đang làm', laneDone: 'Đã xong', btnStart: 'Bắt đầu', btnFinish: 'Hoàn thành', btnReopen: 'Mở lại', noTasks: 'Chưa có việc.',
       dueDate: 'Hạn {0}', dueLate: 'Quá hạn {0} ngày · {1}', dueLate1: 'Quá hạn {0} ngày · {1}', dueToday: 'Hạn hôm nay', dueTomorrow: 'Ngày mai · {0}', dueIn: 'Còn {0} ngày · {1}',
-      gPanelNo: '<b>Google Calendar:</b> chưa có Client ID. Làm theo hướng dẫn bên dưới rồi dán vào <code>google_client_id</code>.',
       gPanelOn: '<b>Google Calendar:</b> đã kết nối{0}. {1}', withEmail: ' với <b>{0}</b>',
       remembered: 'Thiết bị này đã được ghi nhớ; lần sau trang tự đăng nhập lại.', notRemembered: 'Chưa ghi nhớ thiết bị này; đóng trang là phải đăng nhập lại.',
       signOutBtn: 'Đăng xuất', forgetRevoke: 'Quên thiết bị này và thu hồi quyền',
-      gPanelOff: '<b>Google Calendar:</b> chưa đăng nhập. Quyền yêu cầu chỉ là đọc lịch; trang không sửa hay xoá gì trên Google.',
       confirmDelEv: 'Xoá lịch cá nhân này?', confirmDelTask: 'Xoá việc này?', confirmImport: 'Thay toàn bộ dữ liệu cá nhân trên trình duyệt này bằng nội dung tệp?',
       badFile: 'Tệp không đúng định dạng của trang này.', tags: 'Giảng dạy|Nghiên cứu|Hành chính|Cá nhân',
       badResp: 'Phản hồi không đúng định dạng', savedCopy: 'bản lưu', gisFail: 'Không tải được thư viện đăng nhập Google', googleErr: 'Google trả về lỗi {0}'
@@ -353,23 +332,16 @@
       addEvH: 'Add a personal event', fDay: 'Date', fTime: 'Time', fContent: 'Title', evPh: 'e.g. Meet the thesis students',
       fLoc: 'Location (optional)', addEv: 'Add to calendar', noteH: 'Notes for the week', weekNoteAria: 'Notes for the week',
       noteHint: 'Saved automatically in this browser, separately for each week.',
-      setupSum: 'Google account, backup and setup guide', backupH: 'Back up your personal data',
-      backupHint: 'Tasks, notes, stars and statuses stay in this browser only and are never sent to GitHub. Export them to a file to back up or move to another device.',
       exportBtn: 'Export JSON file', importBtn: 'Import from JSON file',
-      guideTitle: 'Create an OAuth Client ID for Google Calendar (one-time)',
-      guideSteps: '<li>Go to <a href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener">Google Cloud Console</a>, create a project, then enable the <b>Google Calendar API</b> under APIs &amp; Services → Library.</li>' +
-        '<li><b>OAuth consent screen</b>: choose External and fill in an app name and your email. Add your email as a Test user, then click <b>Publish app</b> to move to Production; otherwise the access you grant expires after 7 days. Only you use it, so Google verification is not needed and you will just see an "unverified app" warning.</li>' +
-        '<li><b>Credentials</b> → Create credentials → OAuth client ID → Web application. Under <b>Authorized JavaScript origins</b> add <code>https://tranthaihoa.id.vn</code>.</li>' +
-        '<li>Copy the Client ID into the <code>google_client_id</code> line of the <code>lich:</code> block in <code>_config.yml</code>, then push to <code>main</code>.</li>',
       srcT: 'School', srcG: 'Google', srcP: 'Personal', stTodo: 'To do', stDoing: 'In progress', stDone: 'Done',
       dow: 'Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday', weekLabel: 'Week {0} · {1} – {2}',
-      chipLive: 'live', chipSnap: 'saved copy', chipLoading: 'loading', gOk: 'connected', gNoSetup: 'not set up',
+      chipLive: 'live', chipSnap: 'saved copy', chipLoading: 'loading', gOk: 'connected', gNoSetup: 'not connected',
       gSignedOut: 'signed out', pLocal: 'on this device',
       sumLate: 'overdue tasks', sumToday: 'tasks due today', sumRel: 'starred school items not done', sumTotal: 'events shown this week',
       noticeSnap: 'Could not reach hce.edu.vn directly from the browser ({0}). Using the copy saved on GitHub{1}.',
       snapAt: ', last changed {0}', retry: 'Try again',
       noticeFail: 'Could not load the school’s weekly schedule: {0}', noticeLive: 'School schedule fetched live from hce.edu.vn at {0}.',
-      gNoSetupNote: 'Google Calendar is not set up yet. Open "Google account, backup and setup guide" at the bottom of the page.',
+      gNoSetupNote: 'Google Calendar is not connected.',
       gSignInMsg: 'Sign in with Google to see your personal calendar', remember: 'Remember this device', signInBtn: 'Sign in with Google',
       resumeMsg: 'Your Google session has expired. Click to continue without choosing an account again.', resumeBtn: 'Continue as {0}',
       forgetBtn: 'Forget this device', gError: 'Google Calendar: {0}',
@@ -379,11 +351,9 @@
       starTitle: 'Star as relevant to me', stClick: 'Click to change status', dueMark: 'Due: {0}', empty: 'Nothing scheduled.', loading: 'Loading…',
       laneTodo: 'To do', laneDoing: 'In progress', laneDone: 'Done', btnStart: 'Start', btnFinish: 'Complete', btnReopen: 'Reopen', noTasks: 'No tasks.',
       dueDate: 'Due {0}', dueLate: '{0} days overdue · {1}', dueLate1: '1 day overdue · {1}', dueToday: 'Due today', dueTomorrow: 'Tomorrow · {0}', dueIn: '{0} days left · {1}',
-      gPanelNo: '<b>Google Calendar:</b> no Client ID yet. Follow the guide below, then paste it into <code>google_client_id</code>.',
       gPanelOn: '<b>Google Calendar:</b> connected{0}. {1}', withEmail: ' as <b>{0}</b>',
       remembered: 'This device is remembered; the page will sign in again automatically next time.', notRemembered: 'This device is not remembered; you will have to sign in again after closing the page.',
       signOutBtn: 'Sign out', forgetRevoke: 'Forget this device and revoke access',
-      gPanelOff: '<b>Google Calendar:</b> not signed in. Only read access is requested; the page never edits or deletes anything on Google.',
       confirmDelEv: 'Delete this personal event?', confirmDelTask: 'Delete this task?', confirmImport: 'Replace all personal data in this browser with the contents of the file?',
       badFile: 'The file is not in this page’s format.', tags: 'Teaching|Research|Admin|Personal',
       badResp: 'Unexpected response format', savedCopy: 'saved copy', gisFail: 'Could not load the Google sign-in library', googleErr: 'Google returned error {0}'
@@ -866,18 +836,13 @@
   }
 
   function renderGoogleSetup() {
-    var h;
-    if (!CLIENT) {
-      h = '<p>' + tr('gPanelNo') + '</p>';
-    } else if (gTok || gcal.status === 'ok') {
+    var h = '';
+    if (CLIENT && (gTok || gcal.status === 'ok')) {
       h = '<p>' + tr('gPanelOn', gcal.email ? tr('withEmail', esc(gcal.email)) : '', esc(gState.remember ? tr('remembered') : tr('notRemembered'))) + '</p>' +
         '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.4rem"><button class="btn small" type="button" data-act="g-signout">' + esc(tr('signOutBtn')) + '</button>' +
         '<button class="btn small" type="button" data-act="g-forget">' + esc(tr('forgetRevoke')) + '</button></div>';
-    } else {
-      h = '<p>' + tr('gPanelOff') + '</p>';
     }
     $('g-panel').innerHTML = h;
-    $('g-guide').hidden = !!CLIENT;
   }
 
   function render() {

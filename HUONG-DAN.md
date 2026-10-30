@@ -556,6 +556,8 @@ Repo công khai nên dữ liệu cá nhân và lịch Google **không** được
 
 ### Tạo OAuth Client ID cho Google Calendar (làm một lần)
 
+Hướng dẫn này chỉ nằm ở tệp này, trang Lịch không còn hiện hướng dẫn thiết lập. Chưa có Client ID thì trang chỉ báo "Lịch Google chưa được kết nối".
+
 1. Vào https://console.cloud.google.com/projectcreate tạo project, rồi bật **Google Calendar API** (APIs & Services → Library).
 2. **OAuth consent screen**: chọn *External*, điền tên ứng dụng và email. Thêm email của anh vào *Test users*, sau đó bấm **Publish app** để chuyển sang Production (nếu để Testing, quyền đã cấp hết hạn sau 7 ngày). Chỉ mình anh dùng nên không cần Google xác minh; lần đăng nhập đầu sẽ hiện cảnh báo "Google hasn't verified this app" → *Advanced* → *Go to … (unsafe)*.
 3. **Credentials** → Create credentials → *OAuth client ID* → *Web application*. Mục *Authorized JavaScript origins* thêm `https://tranthaihoa.id.vn`.
@@ -563,7 +565,7 @@ Repo công khai nên dữ liệu cá nhân và lịch Google **không** được
 
 ### Ghi nhớ đăng nhập
 
-Tích **Ghi nhớ trên thiết bị này** khi đăng nhập lần đầu. Trình duyệt lưu email và mã truy cập (hiệu lực 1 giờ). Mở lại trang: còn hạn thì vào thẳng; hết hạn thì trang tự xin mã mới ngầm. Nếu Google chặn bước ngầm (chưa đăng nhập Google trong trình duyệt, chặn cookie bên thứ ba…) sẽ hiện nút **Tiếp tục với <email>**, bấm một lần là xong. Trang tĩnh không giữ được mã làm mới (refresh token) một cách an toàn nên không thể "đăng nhập vĩnh viễn" hơn mức này. Muốn xoá: mở mục *Tài khoản Google, sao lưu và hướng dẫn thiết lập* → **Quên thiết bị này**.
+Tích **Ghi nhớ trên thiết bị này** khi đăng nhập lần đầu. Trình duyệt lưu email và mã truy cập (hiệu lực 1 giờ). Mở lại trang: còn hạn thì vào thẳng; hết hạn thì trang tự xin mã mới ngầm. Nếu Google chặn bước ngầm (chưa đăng nhập Google trong trình duyệt, chặn cookie bên thứ ba…) sẽ hiện nút **Tiếp tục với <email>**, bấm một lần là xong. Trang tĩnh không giữ được mã làm mới (refresh token) một cách an toàn nên không thể "đăng nhập vĩnh viễn" hơn mức này. Muốn xoá: bấm **Quên thiết bị này và thu hồi quyền** ở chân trang Lịch (chỉ hiện khi đang đăng nhập Google).
 
 ### Chạy thử workflow lấy lịch Trường
 

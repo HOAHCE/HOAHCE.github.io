@@ -1,24 +1,25 @@
 ---
-layout: page
+layout: none
 permalink: /ai-tools/
 title: AI Tools
-lang: vi
-lang_alt: /
+sitemap: false
 nav: true
 nav_order: 5
-nav_lang: both # "AI Tools" dùng chung, hiện ở cả menu tiếng Anh lẫn tiếng Việt
-description: Công cụ nhỏ hỗ trợ viết bài và nghiên cứu có dùng AI.
-# Menu thả xuống. Thêm công cụ mới: tạo trang trong _pages/ai-tools/ rồi thêm
-# một dòng vào children (title phải trùng title của trang để menu tô đậm đúng mục).
-dropdown: true
-children:
-  - title: Lọc ký tự ẩn
-    permalink: /ai-tools/loc-ky-tu-an/
-  - title: Trợ lý nghiên cứu
-    permalink: /ai-tools/tro-ly-nghien-cuu/
+nav_lang: both # hiện ở cả menu tiếng Anh lẫn tiếng Việt
+# Mục menu này mở thẳng trang ngoài (xem nav_external trong _includes/header.liquid).
+# Trang /ai-tools/ cũ vẫn giữ để ai còn lưu địa chỉ cũ được chuyển sang đó.
+nav_external: https://hi.hue.vn
 ---
-
-- [**Lọc ký tự ẩn**](/ai-tools/loc-ky-tu-an/) — tìm và loại bỏ ký tự Unicode vô hình, khoảng trắng đặc biệt trong văn bản sao chép từ chatbot, kèm báo cáo từng ký tự đã xử lý.
-- [**Trợ lý nghiên cứu**](/ai-tools/tro-ly-nghien-cuu/) — tự tìm kiếm trên web và các kho học thuật (arXiv, Semantic Scholar, PubMed Central) rồi tổng hợp thành báo cáo, danh mục tài liệu hoặc dàn ý có trích dẫn nguồn. Dựa trên GPT Researcher, dùng API key của chính bạn.
-
-Mỗi công cụ đều có phần _Giới hạn và trách nhiệm sử dụng AI_. Vui lòng đọc trước khi dùng.
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <title>Đang chuyển trang…</title>
+    <link rel="canonical" href="{{ page.nav_external }}">
+    <meta http-equiv="refresh" content="0; url={{ page.nav_external }}">
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <p>Các công cụ AI đã chuyển sang <a href="{{ page.nav_external }}">hi.hue.vn</a>.</p>
+  </body>
+</html>

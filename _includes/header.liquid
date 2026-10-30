@@ -1,5 +1,5 @@
 {%- comment -%}
-  Bản sao header.liquid của theme al-folio, sửa 2 điểm:
+  Bản sao header.liquid của theme al-folio, sửa 3 điểm:
 
   1. Thanh menu hiển thị theo NGÔN NGỮ của trang đang xem: trang tiếng Việt
      (lang: vi) chỉ hiện các mục tiếng Việt, trang tiếng Anh chỉ hiện mục tiếng Anh.
@@ -11,8 +11,11 @@
      Mỗi trang khai báo địa chỉ trang tương ứng ở ngôn ngữ kia, ví dụ trong
      _pages/teaching.md:  lang_alt: /vi/giang-day/
 
+  3. Mục menu trỏ ra trang ngoài: trang khai báo nav_external: <địa chỉ>, mục menu
+     mở địa chỉ đó ở tab mới (xem _pages/ai-tools.md).
+
   LƯU Ý khi nâng cấp theme: nếu al-folio đổi file này, chép lại bản mới từ gem
-  rồi áp dụng lại đúng hai thay đổi trên.
+  rồi áp dụng lại đúng ba thay đổi trên.
 {%- endcomment -%}
 {%- assign cur_lang = page.lang | default: 'en' -%}
 {%- comment -%}
@@ -149,12 +152,18 @@
                   {%- else -%}
                     {%- assign url = p.url -%}
                   {%- endif %}
+                  {%- if p.nav_external -%}
+                    <a class="nav-link" href="{{ p.nav_external }}" target="_blank" rel="noopener">
+                      {{- p.nav_title | default: p.title -}}
+                    </a>
+                  {%- else -%}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.nav_title | default: p.title }}
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
+                  {%- endif %}
                 </li>
               {% endif %}
             {% endif %}

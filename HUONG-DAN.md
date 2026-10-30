@@ -536,3 +536,32 @@ Người dùng tự nhập API key của họ, nên anh **không cần đặt ke
   rồi **Restart**. Người dùng cũng có thể tự nhập tên mô hình ở *Tuỳ chọn nâng cao*.
 - Giới hạn mặc định: 2 lượt chạy cùng lúc, 8 lượt/giờ cho mỗi địa chỉ IP, tối đa
   15 phút/lượt — đổi bằng các biến `MAX_CONCURRENT`, `RATE_LIMIT_PER_HOUR`, `RUN_TIMEOUT`.
+
+---
+
+## 11. Lịch làm việc (`/lich/`)
+
+Trang `_pages/lich.html` gom ba nguồn lịch vào một bảng tuần, kèm danh sách việc cần làm theo hạn.
+
+| Nguồn | Cách lấy | Lưu ở đâu |
+| --- | --- | --- |
+| Lịch công tác Trường Kinh tế | Trình duyệt gọi thẳng API của hce.edu.vn (cùng API với trang hce.edu.vn/#/schedule). Nếu bị chặn, trang đọc bản lưu `_data/lich-truong.json` do workflow *Fetch school schedule* cập nhật mỗi 3 giờ. | Không lưu gì thêm |
+| Google Calendar | Đăng nhập Google trên trang, quyền chỉ đọc. Dữ liệu đi thẳng từ Google về trình duyệt, không qua GitHub. | Trình duyệt (khi chọn "Ghi nhớ trên thiết bị này") |
+| Lịch cá nhân, việc cần làm, ghi chú, đánh dấu ★, trạng thái | Nhập trên trang | Trình duyệt đang dùng; có nút xuất/nhập JSON để sao lưu |
+
+Repo công khai nên dữ liệu cá nhân và lịch Google **không** được đưa vào repo.
+
+### Tạo OAuth Client ID cho Google Calendar (làm một lần)
+
+1. Vào https://console.cloud.google.com/projectcreate tạo project, rồi bật **Google Calendar API** (APIs & Services → Library).
+2. **OAuth consent screen**: chọn *External*, điền tên ứng dụng và email. Thêm email của anh vào *Test users*, sau đó bấm **Publish app** để chuyển sang Production (nếu để Testing, quyền đã cấp hết hạn sau 7 ngày). Chỉ mình anh dùng nên không cần Google xác minh; lần đăng nhập đầu sẽ hiện cảnh báo "Google hasn't verified this app" → *Advanced* → *Go to … (unsafe)*.
+3. **Credentials** → Create credentials → *OAuth client ID* → *Web application*. Mục *Authorized JavaScript origins* thêm `https://tranthaihoa.id.vn`.
+4. Sao chép Client ID, dán vào dòng `google_client_id:` ở đầu `_pages/lich.html`, đẩy lên `main`.
+
+### Ghi nhớ đăng nhập
+
+Tích **Ghi nhớ trên thiết bị này** khi đăng nhập lần đầu. Trình duyệt lưu email và mã truy cập (hiệu lực 1 giờ). Mở lại trang: còn hạn thì vào thẳng; hết hạn thì trang tự xin mã mới ngầm. Nếu Google chặn bước ngầm (chưa đăng nhập Google trong trình duyệt, chặn cookie bên thứ ba…) sẽ hiện nút **Tiếp tục với <email>**, bấm một lần là xong. Trang tĩnh không giữ được mã làm mới (refresh token) một cách an toàn nên không thể "đăng nhập vĩnh viễn" hơn mức này. Muốn xoá: mở mục *Tài khoản Google, sao lưu và hướng dẫn thiết lập* → **Quên thiết bị này**.
+
+### Chạy thử workflow lấy lịch Trường
+
+Trên GitHub: Actions → *Fetch school schedule* → *Run workflow*. Nếu log báo lỗi, gửi nội dung log để chỉnh lại tham số gọi API.

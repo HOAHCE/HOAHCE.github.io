@@ -1,0 +1,55 @@
+name: Fetch school schedule
+
+# Lấy lịch công tác của Trường ĐH Kinh tế (cùng API mà hce.edu.vn/#/schedule dùng) và lưu vào
+# _data/lich-truong.json. Trang /lich/ gọi thẳng API trước; nếu trình duyệt bị chặn (CORS, mạng)
+# thì đọc bản lưu này qua raw.githubusercontent.com. Tệp .json không nằm trong `paths` của
+# workflow Deploy site nên việc cập nhật không kích hoạt build lại trang.
+
+on:
+  schedule:
+    - cron: "23 */3 * * *" # mỗi 3 giờ
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: school-schedule
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Fetch schedule 📅
+        run: |
+          start=$(date -u -d '-14 days' +%F)
+          end=$(date -u -d '+60 days' +%F)
+          curl -fsS --retry 3 --retry-delay 5 --max-time 60 -X POST \
+            -H 'Content-Type: application/json' \
+            -d "{\"startdate\":\"$start\",\"enddate\":\"$end\",\"what\":\"210\"}" \
+            https://hce.edu.vn/api/hce-api/P1Controller/C2User/SelectAllByWhat.php \
+            -o "$RUNNER_TEMP/resp.json"
+          if ! jq -e '(.data | type) == "array"' "$RUNNER_TEMP/resp.json" >/dev/null; then
+            echo "Phản hồi không có mảng data:"; head -c 800 "$RUNNER_TEMP/resp.json"; exit 1
+          fi
+          echo "Số dòng lịch: $(jq '.data | length' "$RUNNER_TEMP/resp.json")"
+          mkdir -p _data
+          old='null'; [ -f _data/lich-truong.json ] && old=$(jq -S '.data' _data/lich-truong.json)
+          new=$(jq -S '.data' "$RUNNER_TEMP/resp.json")
+          if [ "$old" = "$new" ]; then echo "Không có thay đổi."; exit 0; fi
+          jq --arg u "$(date -u +%FT%TZ)" --arg s "$start" --arg e "$end" \
+            '{updated: $u, start: $s, end: $e, data: .data}' "$RUNNER_TEMP/resp.json" > _data/lich-truong.json
+      - name: Commit 💾
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/lich-truong.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Cập nhật lịch công tác của Trường"
+          git pull --rebase origin main
+          git push origin HEAD:main

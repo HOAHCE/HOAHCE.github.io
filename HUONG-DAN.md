@@ -541,7 +541,10 @@ Người dùng tự nhập API key của họ, nên anh **không cần đặt ke
 
 ## 11. Lịch làm việc (`/lich/`)
 
-Trang `_pages/lich.html` gom ba nguồn lịch vào một bảng tuần, kèm danh sách việc cần làm theo hạn.
+Trang gom ba nguồn lịch vào một bảng tuần, kèm danh sách việc cần làm theo hạn. Có hai bản:
+`/vi/lich/` (tiếng Việt, menu "Lịch làm việc") và `/schedule/` (tiếng Anh, menu "Schedule"). Cả hai dùng chung
+một giao diện ở `_includes/lich.liquid`; chuỗi chữ của hai ngôn ngữ nằm trong từ điển `I18N` ở đầu thẻ `<script>`
+của tệp này. Địa chỉ cũ `/lich/` tự chuyển sang `/vi/lich/`. Cấu hình (API, Client ID) ở khối `lich:` cuối `_config.yml`.
 
 | Nguồn | Cách lấy | Lưu ở đâu |
 | --- | --- | --- |
@@ -556,7 +559,7 @@ Repo công khai nên dữ liệu cá nhân và lịch Google **không** được
 1. Vào https://console.cloud.google.com/projectcreate tạo project, rồi bật **Google Calendar API** (APIs & Services → Library).
 2. **OAuth consent screen**: chọn *External*, điền tên ứng dụng và email. Thêm email của anh vào *Test users*, sau đó bấm **Publish app** để chuyển sang Production (nếu để Testing, quyền đã cấp hết hạn sau 7 ngày). Chỉ mình anh dùng nên không cần Google xác minh; lần đăng nhập đầu sẽ hiện cảnh báo "Google hasn't verified this app" → *Advanced* → *Go to … (unsafe)*.
 3. **Credentials** → Create credentials → *OAuth client ID* → *Web application*. Mục *Authorized JavaScript origins* thêm `https://tranthaihoa.id.vn`.
-4. Sao chép Client ID, dán vào dòng `google_client_id:` ở đầu `_pages/lich.html`, đẩy lên `main`.
+4. Sao chép Client ID, dán vào dòng `google_client_id:` trong khối `lich:` ở cuối `_config.yml`, đẩy lên `main`.
 
 ### Ghi nhớ đăng nhập
 
@@ -565,3 +568,9 @@ Tích **Ghi nhớ trên thiết bị này** khi đăng nhập lần đầu. Trì
 ### Chạy thử workflow lấy lịch Trường
 
 Trên GitHub: Actions → *Fetch school schedule* → *Run workflow*. Nếu log báo lỗi, gửi nội dung log để chỉnh lại tham số gọi API.
+
+### Menu theo ngôn ngữ
+
+Mỗi mục menu là một trang riêng cho từng ngôn ngữ (`lang: en` / `lang: vi`, có `lang_alt` trỏ sang bản kia).
+Mục "Trợ lý NCKH" / "Research Assistant" mở thẳng `hi.hue.vn` ở tab mới (khai báo `nav_external` ở đầu trang:
+`_pages/research-assistant.md` và `_pages/vi/tro-ly-nckh.md`). Địa chỉ cũ `/ai-tools/` tự chuyển sang `hi.hue.vn`.

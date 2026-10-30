@@ -754,3 +754,16 @@ jsonresume:
   - languages
   - interests
   - references
+
+# -----------------------------------------------------------------------------
+# Lịch làm việc (/vi/lich/ và /schedule/, giao diện chung ở _includes/lich.liquid)
+# -----------------------------------------------------------------------------
+
+lich:
+  # Lịch công tác của Trường ĐH Kinh tế: API công khai mà hce.edu.vn/#/schedule dùng.
+  school_api: https://hce.edu.vn/api/hce-api/P1Controller/C2User/SelectAllByWhat.php
+  # Bản lưu do workflow "Fetch school schedule" cập nhật; dùng khi trình duyệt không gọi thẳng được API.
+  school_snapshot: https://raw.githubusercontent.com/HOAHCE/HOAHCE.github.io/main/_data/lich-truong.json
+  # Đăng nhập Google: dán OAuth Client ID vào đây (cách tạo xem HUONG-DAN.md, mục 11).
+  google_client_id: ""
+  google_account: tranthaihoa.hce@gmail.com

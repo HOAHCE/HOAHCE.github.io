@@ -1,13 +1,13 @@
 ---
 layout: none
 permalink: /ai-tools/
-title: AI Tools
+title: Trợ lý NCKH
 sitemap: false
 nav: true
 nav_order: 5
 nav_lang: both # hiện ở cả menu tiếng Anh lẫn tiếng Việt
 # Mục menu này mở thẳng trang ngoài (xem nav_external trong _includes/header.liquid).
-# Trang /ai-tools/ cũ vẫn giữ để ai còn lưu địa chỉ cũ được chuyển sang đó.
+# Trang /ai-tools/ (địa chỉ cũ của mục AI Tools) vẫn giữ để ai còn lưu địa chỉ này được chuyển sang đó.
 nav_external: https://hi.hue.vn
 ---
 <!doctype html>
@@ -20,6 +20,6 @@ nav_external: https://hi.hue.vn
     <meta name="robots" content="noindex">
   </head>
   <body>
-    <p>Các công cụ AI đã chuyển sang <a href="{{ page.nav_external }}">hi.hue.vn</a>.</p>
+    <p>Trợ lý NCKH đã chuyển sang <a href="{{ page.nav_external }}">hi.hue.vn</a>.</p>
   </body>
 </html>

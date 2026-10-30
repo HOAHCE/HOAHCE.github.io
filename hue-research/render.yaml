@@ -1,0 +1,39 @@
+# Render Blueprint: dựng web app HUE Research từ Dockerfile.
+# Dùng: https://render.com/deploy?repo=https://github.com/HOAHCE/HUE-Research  (cần tài khoản Render của bạn)
+# Hướng dẫn từng bước: docs/TRIEN-KHAI-RENDER.md
+#
+# Gói free: không có ổ đĩa bền, máy chủ ngủ sau ~15 phút không có truy cập, và dữ liệu (tài khoản đăng nhập, dự án,
+# dữ liệu đã nạp) MẤT khi khởi động lại; dữ liệu thật được nạp lại từ đầu (vài phút). Chạy thử thì đủ; dùng thật thì
+# nâng lên gói trả phí và gắn Disk (xem hướng dẫn), hoặc bỏ chú thích khối disk bên dưới và đổi plan.
+#
+# Muốn dùng thật (giữ dữ liệu + tự cập nhật bằng Cron): dùng render.production.yaml (Blueprint Path trên Render).
+#
+# Các biến tuỳ chọn (thêm sau ở Dashboard > service > Environment, không cần điền lúc tạo Blueprint):
+#   ANTHROPIC_API_KEY            trợ lý AI thật
+#   GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET     đăng nhập GitHub
+#   ORCID_CLIENT_ID / ORCID_CLIENT_SECRET       đăng nhập ORCID
+#   SMTP_HOST SMTP_PORT SMTP_SECURE SMTP_USER SMTP_PASS SMTP_FROM   đăng nhập bằng email
+#   ALLOWED_EMAIL_DOMAINS, ADMIN_EMAILS
+services:
+  - type: web
+    name: hue-research
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /api/providers
+    autoDeploy: true
+    # disk:
+    #   name: hue-data
+    #   mountPath: /data
+    #   sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SEED_ON_START
+        value: "1"
+      - key: BETTER_AUTH_SECRET
+        generateValue: true
+      # Khoá để Cron Job (nếu có) kích hoạt đồng bộ dữ liệu qua API; chưa có Cron thì không dùng tới.
+      - key: SYNC_TOKEN
+        generateValue: true

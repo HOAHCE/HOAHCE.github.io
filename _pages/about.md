@@ -6,6 +6,10 @@ permalink: /
 lang: en
 lang_alt: /vi/
 
+news_title: News
+posts_title: Latest posts
+papers_title: Selected publications
+
 hero:
   title: Hoa Tran Thai
   # highlight: ...   # chữ nhấn màu xanh nối sau tên, bỏ trống thì chỉ hiện tên

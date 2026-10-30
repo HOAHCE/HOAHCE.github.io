@@ -1,0 +1,116 @@
+# Nội dung trang "Trợ lý NCKH" / "Research Assistant" (_pages/vi/tro-ly-nckh.md,
+# _pages/research-assistant.md, hiển thị bởi _includes/research_assistant.liquid).
+#
+# Đây là bản giới thiệu tĩnh của hệ thống HUE - Research. Ứng dụng thật chạy ở app_url
+# (cần máy chủ, GitHub Pages không chạy được); mã nguồn nằm ở thư mục hue-research/.
+# Danh sách công cụ, trạng thái "sắp có" lấy từ hue-research/hce-research/lib/registry.ts:
+# khi sửa bên đó thì sửa lại ở đây cho khớp.
+
+app_url: https://hi.hue.vn
+
+icons:
+  folder-kanban: '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/>'
+  message-circle: '<path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>'
+  layout-grid: '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>'
+  sliders-horizontal: '<path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/>'
+  arrow-right: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>'
+
+cards:
+  - icon: folder-kanban
+    path: /projects
+    vi:
+      title: Dự án nghiên cứu
+      text: Theo dõi 6 giai đoạn, nhắc hạn, mời cộng sự và tải tệp nền làm ngữ cảnh cho trợ lý.
+    en:
+      title: Research projects
+      text: Track the six research stages, get deadline reminders, invite collaborators and upload background files as context for the assistant.
+  - icon: message-circle
+    path: /chat
+    vi:
+      title: Chatbot
+      text: Hỏi đáp trợ lý, tra cứu bài báo, hội thảo–tạp chí, quỹ và quy trình biểu mẫu của Trường.
+    en:
+      title: Chatbot
+      text: Ask the assistant, look up papers, conferences and journals, funds, and the University's procedures and forms.
+  - icon: layout-grid
+    path: /tools
+    vi:
+      title: Kho công cụ
+      text: Thiết kế khảo sát, tra cứu chuyên gia, tạp chí, quỹ… kèm đánh giá của người dùng.
+    en:
+      title: Tool library
+      text: Survey design, expert search, journals, funds and more, with user ratings.
+  - icon: sliders-horizontal
+    path: /huong-dan
+    vi:
+      title: Hướng dẫn
+      text: Cách dùng hệ thống theo từng bước của vòng đời nghiên cứu.
+    en:
+      title: User guide
+      text: How to use the system, step by step through the research life cycle.
+
+questions:
+  vi:
+    - Tôi muốn thiết kế phiếu khảo sát thì dùng công cụ nào?
+    - Có những hội thảo nào về kinh tế số sắp diễn ra?
+    - Gợi ý tạp chí Q1 về kinh tế để công bố bài báo
+    - Cronbach's alpha bao nhiêu là đạt yêu cầu?
+  en:
+    - Which tool should I use to design a survey questionnaire?
+    - Which conferences on the digital economy are coming up?
+    - Suggest Q1 economics journals to publish a paper in
+    - What Cronbach's alpha value is acceptable?
+
+# Sáu giai đoạn nghiên cứu và các công cụ trong từng giai đoạn (soon: true = "sắp có").
+stages:
+  - vi: Tìm hiểu
+    en: Explore
+    tools:
+      - {alias: experts, vi: Tìm kiếm chuyên gia, en: Expert search}
+      - {alias: topics, vi: Đề tài khoa học, en: Research topics}
+  - vi: Tổng quan tài liệu
+    en: Literature review
+    tools:
+      - {alias: papers, vi: Tra cứu bài báo, en: Paper search}
+      - {alias: bibliomap, vi: Trắc lượng thư mục, en: Bibliometrics, soon: true}
+  - vi: Thiết kế & thu thập dữ liệu
+    en: Design & data collection
+    tools:
+      - {alias: surveylab, vi: Thiết kế khảo sát, en: Survey design}
+  - vi: Phân tích
+    en: Analysis
+    tools:
+      - {alias: quantis, vi: Phân tích định lượng, en: Quantitative analysis, soon: true}
+      - {alias: annota, vi: Phân tích định tính, en: Qualitative analysis, soon: true}
+  - vi: Viết & phản biện
+    en: Write & review
+    tools:
+      - {alias: writium, vi: Viết nghiên cứu, en: Research writing, soon: true}
+      - {alias: plagiarism, vi: Kiểm tra đạo văn, en: Plagiarism check, soon: true}
+      - {alias: review, vi: Phản biện bài báo, en: Manuscript review, soon: true}
+  - vi: Công bố & tài trợ
+    en: Publish & funding
+    tools:
+      - {alias: journals, vi: Hội thảo – tạp chí, en: Conferences & journals}
+      - {alias: funds, vi: Tra cứu quỹ, en: Funding search}
+      - {alias: regulations, vi: Quy trình, biểu mẫu, en: Procedures & forms}
+
+strings:
+  vi:
+    heading: Hệ thống hỗ trợ nghiên cứu khoa học dựa trên trí tuệ nhân tạo (AI)
+    lead: Nền tảng AI phục vụ hoạt động nghiên cứu tại Trường Đại học Kinh tế, Đại học Huế
+    open: Mở ứng dụng HUE - Research
+    try: Thử hỏi Trợ lý chính
+    try_note: Bấm một câu để dùng thử ngay — câu hỏi được điền sẵn, bạn sửa được trước khi gửi.
+    stages: Sáu giai đoạn nghiên cứu
+    soon: sắp có
+    note: Ứng dụng chạy trên máy chủ riêng tại hi.hue.vn; các nút trên trang này sẽ mở ứng dụng ở một tab mới. Đăng nhập bằng email, GitHub hoặc ORCID, khách dùng được ngay với hạn mức thấp.
+  en:
+    heading: AI-based research support system
+    lead: An AI platform supporting research at the University of Economics, Hue University
+    open: Open HUE - Research
+    try: Try asking the main assistant
+    try_note: Click a question to try it straight away — it is pre-filled and you can edit it before sending.
+    stages: The six research stages
+    soon: coming soon
+    note: The application runs on its own server at hi.hue.vn; the buttons on this page open it in a new tab. Sign in with email, GitHub or ORCID; guests can use it straight away with a low quota.

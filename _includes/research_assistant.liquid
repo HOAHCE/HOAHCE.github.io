@@ -1,0 +1,55 @@
+{%- comment -%}
+  Trang giới thiệu Trợ lý NCKH, bố cục theo trang chủ của hi.hue.vn.
+  Dùng: {% include research_assistant.liquid lang="vi" %}  (hoặc lang="en").
+  Mọi chữ, đường dẫn, danh sách công cụ nằm ở _data/research_assistant.yml.
+{%- endcomment -%}
+{%- assign ra = site.data.research_assistant -%}
+{%- assign l = include.lang | default: 'vi' -%}
+{%- assign t = ra.strings[l] -%}
+<div class="ra">
+  <header class="ra-head">
+    <h2 class="ra-title">{{ t.heading }}</h2>
+    <p class="ra-lead">{{ t.lead }}</p>
+    <a class="ra-open" href="{{ ra.app_url }}" target="_blank" rel="noopener">{{ t.open }}</a>
+  </header>
+
+  <div class="ra-cards">
+    {%- for c in ra.cards -%}
+      <a class="ra-card" href="{{ ra.app_url }}{{ c.path }}" target="_blank" rel="noopener">
+        <svg class="ra-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ ra.icons[c.icon] }}</svg>
+        <div class="ra-card-title">{{ c[l].title }}</div>
+        <p>{{ c[l].text }}</p>
+      </a>
+    {%- endfor -%}
+  </div>
+
+  <h3 class="ra-sub">{{ t.try }}</h3>
+  <div class="ra-questions">
+    {%- for q in ra.questions[l] -%}
+      <a href="{{ ra.app_url }}/chat?q={{ q | uri_escape }}" target="_blank" rel="noopener">
+        <span>{{ q }}</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ ra.icons['arrow-right'] }}</svg>
+      </a>
+    {%- endfor -%}
+  </div>
+  <p class="ra-muted">{{ t.try_note }}</p>
+
+  <h3 class="ra-sub">{{ t.stages }}</h3>
+  <div class="ra-stages">
+    {%- for s in ra.stages -%}
+      <div class="ra-stage">
+        <div class="ra-stage-name"><span class="ra-stage-num">{{ forloop.index }}</span>{{ s[l] }}</div>
+        <ul>
+          {%- for tool in s.tools -%}
+            <li>
+              <a href="{{ ra.app_url }}/tools/{{ tool.alias }}" target="_blank" rel="noopener">{{ tool[l] }}</a>
+              {%- if tool.soon %} <span class="ra-soon">{{ t.soon }}</span>{% endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <p class="ra-muted ra-note">{{ t.note }}</p>
+</div>

@@ -1,0 +1,13 @@
+# Đường dẫn neo theo gốc ngữ cảnh (tránh loại nhầm app/api/me/data).
+hce-research/node_modules
+hce-research/.next
+hce-research/data
+hce-research/data-test
+hce-research/.env
+hce-research/.env.local
+desktop
+docs
+.git
+.github
+.devcontainer
+**/*.md

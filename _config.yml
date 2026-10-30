@@ -266,6 +266,7 @@ exclude:
   - requirements.txt
   - HUONG-DAN.md
   - hf-space/
+  - hue-research/
 keep_files:
   - CNAME
   - .nojekyll

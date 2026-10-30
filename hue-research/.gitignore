@@ -1,0 +1,16 @@
+node_modules/
+.next/
+dist/
+# Dữ liệu chạy thử (CSDL SQLite, nhật ký đồng bộ). Neo theo đường dẫn để KHÔNG loại nhầm thư mục mã nguồn như app/api/me/data.
+/data/
+/data-test/
+/hce-research/data/
+/hce-research/data-test/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.log
+.DS_Store
+Thumbs.db
+~$*

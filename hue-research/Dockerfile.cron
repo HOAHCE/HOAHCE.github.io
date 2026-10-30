@@ -1,0 +1,6 @@
+# Ảnh nhỏ cho Render Cron Job: chỉ chạy scripts/cron-trigger.mjs (gọi API đồng bộ của web service). Không cần thư viện.
+FROM node:24-bookworm-slim
+WORKDIR /app
+COPY hce-research/scripts/cron-trigger.mjs ./cron-trigger.mjs
+USER node
+CMD ["node", "cron-trigger.mjs", "auto"]

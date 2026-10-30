@@ -1,0 +1,13 @@
+{
+  "name": "HUE Research",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" }
+  },
+  "forwardPorts": [3100],
+  "portsAttributes": {
+    "3100": { "label": "HUE Research", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "postAttachCommand": "cd hce-research && (pgrep -f 'next dev' >/dev/null || nohup npm run dev -- -H 0.0.0.0 > /tmp/next-dev.log 2>&1 &)"
+}

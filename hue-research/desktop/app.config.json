@@ -1,0 +1,4 @@
+{
+  "url": "http://localhost:3100",
+  "authHosts": ["github.com", "orcid.org", "sandbox.orcid.org"]
+}

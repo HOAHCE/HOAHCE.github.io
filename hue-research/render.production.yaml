@@ -1,0 +1,49 @@
+# Render Blueprint DÙNG THẬT: web service có Disk (giữ dữ liệu) + Cron Job tự cập nhật dữ liệu.
+# Cách dùng: Dashboard > New > Blueprint > chọn repo > ô "Blueprint Path" nhập: render.production.yaml
+# Hướng dẫn: docs/TRIEN-KHAI-RENDER.md (mục "Tự cập nhật dữ liệu bằng Cron Job").
+#
+# CHI PHÍ: web service gói trả phí + Disk + Cron Job (Render tính tối thiểu 1 USD/tháng cho mỗi cron job service).
+# Xem giá hiện tại: https://render.com/pricing. Tên gói (plan) bên dưới chưa được thử trên tài khoản thật; nếu Render
+# báo sai tên gói, đổi theo danh sách gói hiện có.
+services:
+  - type: web
+    name: hue-research
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /api/providers
+    autoDeploy: true
+    disk:
+      name: hue-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SEED_ON_START
+        value: "1"
+      - key: BETTER_AUTH_SECRET
+        generateValue: true
+      - key: SYNC_TOKEN
+        generateValue: true
+
+  # Cron Job: mỗi ngày 06:00 UTC (13:00 giờ Việt Nam) chạy "eu" (quỹ EU); riêng Chủ nhật chạy thêm "weekly"
+  # (CSDL Khoa học ĐH Huế, biểu mẫu, danh mục QĐ 2244, DOAJ). Cron không truy cập được Disk của web nên chỉ gọi API
+  # đồng bộ của web service; việc đồng bộ chạy bên trong web service.
+  - type: cron
+    name: hue-sync
+    runtime: docker
+    dockerfilePath: ./Dockerfile.cron
+    dockerContext: .
+    plan: starter
+    schedule: "0 6 * * *"
+    envVars:
+      # Địa chỉ công khai của web service. ĐỔI nếu tên hue-research bị trùng và Render thêm hậu tố ngẫu nhiên.
+      - key: SYNC_URL
+        value: https://hue-research.onrender.com
+      - key: SYNC_TOKEN
+        fromService:
+          type: web
+          name: hue-research
+          envVarKey: SYNC_TOKEN

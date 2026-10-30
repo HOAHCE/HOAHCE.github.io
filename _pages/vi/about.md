@@ -6,9 +6,9 @@ permalink: /vi/
 lang: vi
 lang_alt: /
 
-news_title: tin mới
-posts_title: bài viết mới
-papers_title: công bố tiêu biểu
+news_title: Tin mới
+posts_title: Bài viết mới
+papers_title: Công bố tiêu biểu
 papers_url: /vi/nghien-cuu/
 posts_url: /vi/blog/
 

@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hce-research
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: hce-research/package-lock.json
+      - run: npm ci
+      - name: Kiểm tra kiểu (TypeScript)
+        run: npx tsc --noEmit
+      - name: Kiểm tra cú pháp các bộ đồng bộ
+        run: for f in scripts/*.mjs; do node --check "$f"; done
+      - name: Build
+        run: npm run build
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: web
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image (không đẩy)
+        run: |
+          set -o pipefail
+          if ! docker build --progress=plain -t hue-research . 2>&1 | tee build.log; then
+            # Đưa phần cuối nhật ký vào chú thích của lần chạy để đọc nhanh mà không cần mở nhật ký đầy đủ.
+            msg=$(tail -n 40 build.log | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+            echo "::error title=docker build thất bại::${msg}"
+            exit 1
+          fi
+      - name: Chạy thử container và kiểm tra API
+        run: |
+          docker run -d --name hue -p 3100:3100 -e SEED_ON_START=0 hue-research
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3100/api/providers; then echo; break; fi
+            sleep 2
+            if [ "$i" = "30" ]; then
+              msg=$(docker logs hue 2>&1 | tail -n 30 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+              echo "::error title=container không lên::${msg}"
+              exit 1
+            fi
+          done
+          # Kiểm tra tuyến đồng bộ dữ liệu người dùng có mặt (trả 401 khi chưa đăng nhập, không phải 404).
+          code=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:3100/api/me/data/profile)
+          [ "$code" = "401" ] || { echo "::error::/api/me/data/profile trả $code, mong đợi 401"; exit 1; }
+          # Ứng dụng phải chạy bằng người dùng không đặc quyền.
+          # (image slim không có lệnh ps nên đọc UID từ /proc; chọn tiến trình có argv[0] là "node", bỏ qua tini ở PID 1 chạy bằng root)
+          # (Next đổi tên tiến trình thành "next-server (vX)" nên khớp cả "node" lẫn "next-server*")
+          uid=$(docker exec hue sh -c 'for d in /proc/[0-9]*; do a=$(xargs -0 -n1 < "$d/cmdline" 2>/dev/null | head -n1); case "$a" in node|next-server*) grep "^Uid:" "$d/status" | cut -f2; break;; esac; done')
+          [ "$uid" = "1000" ] || { echo "::error::tiến trình ứng dụng chạy với UID '$uid', mong đợi 1000 (node)"; exit 1; }
+      - name: Cron Job kích hoạt đồng bộ qua API (ảnh Dockerfile.cron)
+        run: |
+          docker build -f Dockerfile.cron -t hue-cron .
+          docker run -d --name hue3 --network host -e PORT=3103 -e SEED_ON_START=0 \
+            -e SYNC_TOKEN=ci-test-token-0123456789abcdef -e SYNC_ALLOW_NOOP=1 hue-research
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3103/api/providers >/dev/null; then break; fi
+            sleep 2
+            if [ "$i" = "30" ]; then docker logs hue3 | tail -n 30; echo "::error::web cho cron không lên"; exit 1; fi
+          done
+          # Cron chạy tác vụ giả thành công => thoát 0
+          docker run --rm --network host -e SYNC_URL=http://localhost:3103 -e SYNC_TOKEN=ci-test-token-0123456789abcdef hue-cron node cron-trigger.mjs noop
+          # Sai token => thoát khác 0 (mong đợi lỗi)
+          if docker run --rm --network host -e SYNC_URL=http://localhost:3103 -e SYNC_TOKEN=wrong-token-0123456789abcdef hue-cron node cron-trigger.mjs noop-fail; then
+            echo "::error::token sai nhưng cron vẫn thành công"; exit 1
+          fi
+      - name: Ổ dữ liệu gắn ngoài thuộc root (như Render Disk)
+        run: |
+          sudo mkdir -p /tmp/hdata && sudo chown root:root /tmp/hdata && sudo chmod 755 /tmp/hdata
+          docker run -d --name hue2 -p 3101:3100 -e SEED_ON_START=0 -v /tmp/hdata:/data hue-research
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3101/api/providers >/dev/null; then break; fi
+            sleep 2
+            if [ "$i" = "30" ]; then
+              msg=$(docker logs hue2 2>&1 | tail -n 30 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+              echo "::error title=container với ổ root không lên::${msg}"
+              exit 1
+            fi
+          done
+          # Gọi một API ghi vào CSDL để chắc chắn tạo được tệp trong /data.
+          curl -s -o /dev/null -X POST http://localhost:3101/api/chat -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"xin chào"}]}'
+          ls -la /tmp/hdata
+          test -s /tmp/hdata/hce.db || { echo "::error::không thấy /data/hce.db"; exit 1; }
+          test -s /tmp/hdata/.auth-secret || { echo "::error::không thấy khoá bí mật tự sinh"; exit 1; }

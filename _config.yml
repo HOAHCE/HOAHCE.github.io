@@ -765,5 +765,5 @@ lich:
   # Bản lưu do workflow "Fetch school schedule" cập nhật; dùng khi trình duyệt không gọi thẳng được API.
   school_snapshot: https://raw.githubusercontent.com/HOAHCE/HOAHCE.github.io/main/_data/lich-truong.json
   # Đăng nhập Google: dán OAuth Client ID vào đây (cách tạo xem HUONG-DAN.md, mục 11).
-  google_client_id: ""
+  google_client_id: "833393275532-quakiu9rfo4un98q8kh49flqnqggeqpp.apps.googleusercontent.com"
   google_account: tranthaihoa.hce@gmail.com

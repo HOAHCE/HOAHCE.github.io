@@ -6,9 +6,8 @@ permalink: /vi/
 lang: vi
 lang_alt: /
 
-news_title: tin mới
-posts_title: bài viết mới
-papers_title: công bố tiêu biểu
+posts_title: Bài viết mới
+papers_title: Công bố
 papers_url: /vi/nghien-cuu/
 posts_url: /vi/blog/
 
@@ -38,11 +37,6 @@ hero:
 
 selected_papers: true
 social: true
-
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
 
 latest_posts:
   enabled: true

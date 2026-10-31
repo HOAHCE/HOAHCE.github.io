@@ -30,13 +30,11 @@ hero:
       url: /teaching/
       style: ghost
 
+posts_title: Latest posts
+papers_title: Publications
+
 selected_papers: true
 social: true
-
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
 
 latest_posts:
   enabled: true

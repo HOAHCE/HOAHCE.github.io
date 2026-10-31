@@ -1,8 +1,9 @@
 /*******************************************************************************
- * Tuỳ biến riêng: bảng màu xám nhạt – đen – xanh nhạt, chữ monospace.
+ * Tuỳ biến riêng: bảng màu xanh – vàng của logo HUE (theo hi.hue.vn, bih.hue.vn),
+ * nền ảnh phong cảnh Huế chìm mờ.
  *
- * Muốn đổi màu chủ đạo: sửa đúng một giá trị --global-theme-color bên dưới
- * (một cho nền sáng, một cho nền tối). Không cần sửa chỗ nào khác.
+ * Quy ước màu: xanh cho chữ nhấn, liên kết và NÚT; vàng cho ĐƯỜNG KẺ nhấn.
+ * Muốn đổi màu chủ đạo: sửa $c-blue / $c-yellow bên dưới (kèm bản nền tối).
  ******************************************************************************/
 
 // ---------- Font ----------
@@ -22,19 +23,22 @@ $font-main:
   sans-serif;
 
 // ---------- Bảng màu ----------
-$c-black: #1c1e21; // chữ chính
-$c-grey: #6b7280; // chữ phụ, chú thích
-$c-grey-light: #f5f6f7; // nền xám nhạt
-$c-grey-line: #e3e5e8; // đường kẻ
-$c-blue: #2f6fd0; // xanh nhạt — màu chủ đạo (nền sáng)
+$c-black: #0f2f5f; // chữ chính: xanh navy đậm của logo
+$c-grey: #5b6b85; // chữ phụ, chú thích
+$c-grey-light: #eef4fb; // nền xanh rất nhạt (thẻ, mã, chân trang)
+$c-grey-line: #d8e8f7; // đường kẻ mảnh
+$c-bg: #f8fbff; // nền trang
+$c-blue: #23389a; // xanh logo HUE — màu chủ đạo, dùng cho nút và liên kết
+$c-yellow: #f8c51c; // vàng logo HUE — dùng cho đường kẻ nhấn
 
-$c-black-dark: #16181a; // nền tối
-$c-text-dark: #d8dadd; // chữ trên nền tối
-$c-grey-dark: #9aa0a6;
-$c-line-dark: #2c2f33;
-$c-blue-dark: #7fb3ff; // xanh nhạt — màu chủ đạo (nền tối)
+$c-black-dark: #0b1a33; // nền tối: xanh navy rất đậm
+$c-text-dark: #dbe6f5; // chữ trên nền tối
+$c-grey-dark: #9fb1cc;
+$c-line-dark: #223a63;
+$c-blue-dark: #8fa8ff; // xanh sáng hơn cho nền tối
 
 :root {
+  --global-bg-color: #{$c-bg};
   --global-text-color: #{$c-black};
   --global-text-color-light: #{$c-grey};
   --global-theme-color: #{$c-blue};
@@ -57,15 +61,53 @@ html[data-theme="dark"] {
   --global-hover-color: #{$c-blue-dark};
   --global-hover-text-color: #{$c-black-dark};
   --global-divider-color: #{$c-line-dark};
-  --global-code-bg-color: #1f2225;
-  --global-card-bg-color: #1f2225;
+  --global-code-bg-color: #12264a;
+  --global-card-bg-color: #12264a;
   --global-highlight-color: #{$c-blue-dark};
-  --global-footer-bg-color: #1f2225;
+  --global-footer-bg-color: #12264a;
   --global-footer-text-color: #{$c-grey-dark};
   --global-footer-link-color: #{$c-text-dark};
 }
 
-// ---------- Chữ monospace, giống trang mẫu ----------
+// ---------- Nền ảnh chìm (giống bih.hue.vn) ----------
+// Ảnh phong cảnh Huế nằm cố định sau toàn trang, mờ ở độ trong suốt 35%,
+// neo ở đáy như trang mẫu. Đổi ảnh: thay file assets/img/hue-bg.svg, hoặc
+// trỏ $bg-image sang ảnh khác (ví dụ hue-bg.png). Đổi độ chìm: sửa opacity.
+$bg-image: "/assets/img/hue-bg.svg";
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("#{$bg-image}") center bottom / cover no-repeat;
+  opacity: 0.35;
+}
+
+// Ảnh vẽ nét xanh nhạt cho nền sáng; nền tối thì đảo sáng và hạ rất mờ.
+html[data-theme="dark"] body::before {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.1;
+}
+
+// ---------- Thanh menu: đường kẻ vàng, mục đang chọn gạch chân vàng ----------
+.navbar {
+  border-bottom: 2px solid $c-yellow;
+  background-color: rgba(255, 255, 255, 0.92);
+
+  .nav-link.active,
+  .nav-item.active > .nav-link {
+    color: var(--global-theme-color);
+    box-shadow: inset 0 -3px 0 $c-yellow;
+  }
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: rgba($c-black-dark, 0.92);
+}
+
+// ---------- Chữ ----------
 html,
 body {
   font-family: $font-main;
@@ -111,9 +153,9 @@ body {
   color: var(--global-text-color-light);
 }
 
-// Đường kẻ mảnh, nhạt
+// Đường kẻ ngang: vàng
 hr {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 2px solid $c-yellow;
   opacity: 1;
 }
 
@@ -133,12 +175,11 @@ hr {
  * Phong cách tối giản: nền sáng, chữ mảnh giãn rộng, một đường kẻ ngắn,
  * ảnh chân dung đã tách nền nên hoà thẳng vào nền, không có khung.
  *
- * Đổi màu nền banner: sửa $hero-bg. Đổi màu chữ nhấn: sửa $hero-accent.
+ * Banner trong suốt, để lộ nền ảnh chìm. Đổi màu chữ nhấn: sửa $hero-accent.
  ******************************************************************************/
 
-// Đổi $hero-bg thì phải tạo lại ảnh assets/img/prof_pic.png với đúng màu nền mới,
-// nếu không viền tròn của ảnh sẽ lộ ra thành một khung xám trên nền banner.
-$hero-bg: #f4f5f7;
+// Banner không có màu nền riêng để ảnh nền chìm hiện ra phía sau.
+// Ảnh assets/img/prof_pic.png đã tách nền (PNG trong suốt) nên hoà thẳng vào đây.
 $hero-accent: $c-blue;
 
 .hero {
@@ -153,7 +194,7 @@ $hero-accent: $c-blue;
 
   padding: 3.5rem 1.5rem;
   margin-bottom: 3.5rem;
-  background: $hero-bg;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -192,10 +233,10 @@ body {
 
 .hero-rule {
   display: block;
-  width: 64px;
-  height: 2px;
+  width: 72px;
+  height: 3px;
   margin: 1.5rem 0;
-  background: rgba(0, 0, 0, 0.18);
+  background: $c-yellow;
 }
 
 .hero-role {
@@ -247,23 +288,25 @@ body {
 }
 
 .hero-btn-primary {
-  background: $c-black;
+  background: $c-blue;
   color: #fff;
+  border-radius: 8px;
 
   &:hover {
-    background: $hero-accent;
+    background: #1a2c80;
     color: #fff;
   }
 }
 
 .hero-btn-ghost {
   background: transparent;
-  color: $c-black;
-  border-color: rgba(0, 0, 0, 0.25);
+  color: $c-blue;
+  border-color: $c-blue;
+  border-radius: 8px;
 
   &:hover {
-    border-color: $hero-accent;
-    color: $hero-accent;
+    background: $c-blue;
+    color: #fff;
   }
 }
 
@@ -320,26 +363,29 @@ body {
   }
 }
 
-// Nền tối: banner dùng nền xám đậm, ảnh tách nền vẫn hợp.
+// Nền tối: chữ sáng, nút xanh sáng hơn.
 html[data-theme="dark"] .hero {
-  background: #202326;
-
   .hero-title {
-    color: #e8eaed;
+    color: $c-text-dark;
   }
 
   .hero-btn-primary {
-    background: #e8eaed;
-    color: #16181a;
+    background: $c-blue-dark;
+    color: $c-black-dark;
+
+    &:hover {
+      background: #a9bcff;
+    }
   }
 
   .hero-btn-ghost {
-    color: #e8eaed;
-    border-color: rgba(255, 255, 255, 0.3);
-  }
+    color: $c-blue-dark;
+    border-color: $c-blue-dark;
 
-  .hero-rule {
-    background: rgba(255, 255, 255, 0.25);
+    &:hover {
+      background: $c-blue-dark;
+      color: $c-black-dark;
+    }
   }
 }
 
@@ -385,7 +431,7 @@ html[data-theme="dark"] .hero {
   li {
     margin-bottom: 1.25rem;
     padding-left: 1rem;
-    border-left: 2px solid var(--global-divider-color);
+    border-left: 3px solid $c-yellow;
   }
 
   .text-muted {

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <!-- Phong cảnh Huế nét mảnh: tháp Phước Duyên chùa Thiên Mụ, cầu Trường Tiền, sông Hương.
+       Chỉ dùng một tông xanh nhạt; độ chìm do CSS (body::before trong _sass/_custom.scss) quyết định.
+       Muốn dùng ảnh khác: thay file này (hoặc đổi $bg-image trong _custom.scss). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe0f5" stop-opacity="0"/>
+      <stop offset="1" stop-color="#cfe0f5" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <g fill="none" stroke="#4a78b8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Núi xa -->
+    <path d="M0 640 C120 590 220 600 330 630 C440 590 560 560 700 610 L700 700 L0 700Z" fill="#b9d0ec" fill-opacity=".45" stroke="none"/>
+
+    <!-- Tháp Phước Duyên (7 tầng) -->
+    <g transform="translate(1330 250)" fill="#b9d0ec" fill-opacity=".5">
+      <path d="M60 0 L60 -14 M54 -14 L66 -14"/>
+      <path d="M45 6 L75 6 L70 26 L50 26Z"/>
+      <path d="M40 26 L80 26 L76 52 L44 52Z"/>
+      <path d="M34 52 L86 52 L82 82 L38 82Z"/>
+      <path d="M28 82 L92 82 L88 116 L32 116Z"/>
+      <path d="M22 116 L98 116 L94 154 L26 154Z"/>
+      <path d="M16 154 L104 154 L100 196 L20 196Z"/>
+      <path d="M10 196 L110 196 L106 242 L14 242Z"/>
+      <path d="M0 242 L120 242 L120 262 L0 262Z"/>
+    </g>
+
+    <!-- Cung điện / cổng thành xa -->
+    <g transform="translate(110 500)" fill="#b9d0ec" fill-opacity=".4">
+      <path d="M0 120 L0 60 L40 60 L40 30 L160 30 L160 60 L200 60 L200 120Z"/>
+      <path d="M30 60 L80 20 L120 20 L170 60"/>
+      <path d="M70 120 L70 90 Q100 66 130 90 L130 120"/>
+    </g>
+
+    <!-- Cầu Trường Tiền -->
+    <g transform="translate(0 640)">
+      <path d="M0 40 L1600 40" stroke-width="3"/>
+      <path d="M0 52 L1600 52"/>
+      <g fill="#b9d0ec" fill-opacity=".35">
+        <path d="M60 52 Q160 -40 260 52Z"/>
+        <path d="M260 52 Q360 -40 460 52Z"/>
+        <path d="M460 52 Q560 -40 660 52Z"/>
+        <path d="M660 52 Q760 -40 860 52Z"/>
+        <path d="M860 52 Q960 -40 1060 52Z"/>
+        <path d="M1060 52 Q1160 -40 1260 52Z"/>
+        <path d="M1260 52 Q1360 -40 1460 52Z"/>
+      </g>
+      <path d="M60 52 L60 110 M260 52 L260 110 M460 52 L460 110 M660 52 L660 110 M860 52 L860 110 M1060 52 L1060 110 M1260 52 L1260 110 M1460 52 L1460 110"/>
+    </g>
+
+    <!-- Sông Hương: các lớp sóng -->
+    <path d="M0 780 Q100 764 200 780 T400 780 T600 780 T800 780 T1000 780 T1200 780 T1400 780 T1600 780" stroke-opacity=".7"/>
+    <path d="M0 810 Q120 794 240 810 T480 810 T720 810 T960 810 T1200 810 T1440 810 T1680 810" stroke-opacity=".55"/>
+    <path d="M0 842 Q140 826 280 842 T560 842 T840 842 T1120 842 T1400 842 T1680 842" stroke-opacity=".4"/>
+    <path d="M0 876 Q160 860 320 876 T640 876 T960 876 T1280 876 T1600 876" stroke-opacity=".3"/>
+
+    <!-- Mây -->
+    <path d="M1180 150 q20 -28 52 -14 q22 -22 54 0 q34 -6 36 22 L1180 158Z" fill="#b9d0ec" fill-opacity=".4" stroke="none"/>
+    <path d="M620 110 q16 -22 42 -10 q18 -18 44 0 q28 -4 28 18 L620 118Z" fill="#b9d0ec" fill-opacity=".35" stroke="none"/>
+  </g>
+</svg>

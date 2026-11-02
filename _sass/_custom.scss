@@ -1,6 +1,5 @@
 /*******************************************************************************
- * Tuỳ biến riêng: bảng màu xanh – vàng của logo HUE (theo hi.hue.vn, bih.hue.vn),
- * nền ảnh phong cảnh Huế chìm mờ.
+ * Tuỳ biến riêng: bảng màu xanh – vàng của logo HUE (theo hi.hue.vn, bih.hue.vn).
  *
  * Quy ước màu: xanh cho chữ nhấn, liên kết và NÚT; vàng cho ĐƯỜNG KẺ nhấn.
  * Muốn đổi màu chủ đạo: sửa $c-blue / $c-yellow bên dưới (kèm bản nền tối).
@@ -67,28 +66,6 @@ html[data-theme="dark"] {
   --global-footer-bg-color: #12264a;
   --global-footer-text-color: #{$c-grey-dark};
   --global-footer-link-color: #{$c-text-dark};
-}
-
-// ---------- Nền ảnh chìm (giống bih.hue.vn) ----------
-// Ảnh phong cảnh Huế nằm cố định sau toàn trang, mờ ở độ trong suốt 35%,
-// neo ở đáy như trang mẫu. Đổi ảnh: thay file assets/img/hue-bg.svg, hoặc
-// trỏ $bg-image sang ảnh khác (ví dụ hue-bg.png). Đổi độ chìm: sửa opacity.
-$bg-image: "/assets/img/hue-bg.svg";
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: url("#{$bg-image}") center bottom / cover no-repeat;
-  opacity: 0.35;
-}
-
-// Ảnh vẽ nét xanh nhạt cho nền sáng; nền tối thì đảo sáng và hạ rất mờ.
-html[data-theme="dark"] body::before {
-  filter: invert(1) hue-rotate(180deg);
-  opacity: 0.1;
 }
 
 // ---------- Thanh menu: đường kẻ vàng, mục đang chọn gạch chân vàng ----------
@@ -175,11 +152,11 @@ hr {
  * Phong cách tối giản: nền sáng, chữ mảnh giãn rộng, một đường kẻ ngắn,
  * ảnh chân dung đã tách nền nên hoà thẳng vào nền, không có khung.
  *
- * Banner trong suốt, để lộ nền ảnh chìm. Đổi màu chữ nhấn: sửa $hero-accent.
+ * Banner trong suốt. Đổi màu chữ nhấn: sửa $hero-accent.
  ******************************************************************************/
 
-// Banner không có màu nền riêng để ảnh nền chìm hiện ra phía sau.
-// Ảnh assets/img/prof_pic.png đã tách nền (PNG trong suốt) nên hoà thẳng vào đây.
+// Banner không có màu nền riêng, hoà vào nền trang. Ảnh assets/img/prof_pic.png
+// đã tách nền (PNG trong suốt) nên không bị lộ khung.
 $hero-accent: $c-blue;
 
 .hero {

@@ -295,9 +295,12 @@ body {
     width: 300px;
     max-width: 100%;
     height: auto;
-    // Ảnh đã tách nền và tô lại đúng màu nền banner, nên viền tròn hoà
-    // vào nền, không tạo thành khung.
+    // Ảnh tách nền (PNG trong suốt), đặt trong khung tròn viền vàng; màu nền
+    // xanh rất nhạt phía sau để người trong ảnh nổi lên khỏi nền trang.
     border-radius: 50%;
+    border: 5px solid $c-yellow;
+    background: $c-grey-light;
+    box-shadow: 0 8px 24px rgba($c-black, 0.12);
   }
 }
 
@@ -470,4 +473,48 @@ html[data-theme="dark"] .pub-status {
 html[data-theme="dark"] .publications h2.bibliography {
   background: rgba($c-blue-dark, 0.16);
   color: $c-blue-dark;
+}
+
+/*******************************************************************************
+ * Đường hoa văn ngăn cách các phần ở trang chủ (About, Education, Contact,
+ * Bài viết mới, Công bố…). Layout about.liquid gắn lớp .home-sections cho
+ * <article>. Một đường mảnh mờ dần hai đầu, giữa có hình thoi vàng và hai chấm xanh.
+ * Đổi màu đường: sửa $divider-line; đổi hình trang trí: sửa SVG trong $divider-ornament.
+ ******************************************************************************/
+
+$divider-line: rgba($c-blue, 0.28);
+$divider-line-dark: rgba($c-blue-dark, 0.35);
+$divider-ornament: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 10'%3E%3Ccircle cx='3' cy='5' r='1.4' fill='%2323389a'/%3E%3Ccircle cx='25' cy='5' r='1.4' fill='%2323389a'/%3E%3Cpath d='M14 0.5 L19.5 5 L14 9.5 L8.5 5Z' fill='%23f8c51c'/%3E%3C/svg%3E";
+
+@mixin divider-bg($line) {
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      $line 15%,
+      $line calc(50% - 22px),
+      transparent calc(50% - 22px),
+      transparent calc(50% + 22px),
+      $line calc(50% + 22px),
+      $line 85%,
+      transparent
+    ),
+    url("#{$divider-ornament}");
+}
+
+.home-sections h2:not(.bibliography)::before {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-bottom: 1.4rem;
+  @include divider-bg($divider-line);
+  background-size:
+    100% 1px,
+    28px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html[data-theme="dark"] .home-sections h2:not(.bibliography)::before {
+  @include divider-bg($divider-line-dark);
 }

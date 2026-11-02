@@ -84,6 +84,30 @@ html[data-theme="dark"] .navbar {
   background-color: rgba($c-black-dark, 0.92);
 }
 
+// Máy tính: các mục menu (Home, Research, … Schedule) dồn sang trái; nhóm công cụ
+// bên phải (EN / VI, tìm kiếm, đổi giao diện) dồn sang phải. Điện thoại giữ nguyên
+// menu xổ dọc của theme.
+@media (min-width: 576px) {
+  .navbar .navbar-collapse-main {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .navbar .navbar-menu-list {
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar .navbar-menu-list > .lang-switch {
+    margin-left: auto;
+  }
+}
+
+html[data-theme="dark"] .hero-photo img {
+  outline-color: $c-blue-dark;
+}
+
 // ---------- Chữ ----------
 html,
 body {
@@ -298,7 +322,10 @@ body {
     // Ảnh tách nền (PNG trong suốt), đặt trong khung tròn viền vàng; màu nền
     // xanh rất nhạt phía sau để người trong ảnh nổi lên khỏi nền trang.
     border-radius: 50%;
-    border: 5px solid $c-yellow;
+    // Hai viền: vàng mảnh ở ngoài, xanh mảnh hơn một chút nằm sát bên trong.
+    border: 3px solid $c-yellow;
+    outline: 2px solid $c-blue;
+    outline-offset: -5px;
     background: $c-grey-light;
     box-shadow: 0 8px 24px rgba($c-black, 0.12);
   }

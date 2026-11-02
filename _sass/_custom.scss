@@ -545,3 +545,34 @@ $divider-ornament: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
 html[data-theme="dark"] .home-sections h2:not(.bibliography)::before {
   @include divider-bg($divider-line-dark);
 }
+
+/*******************************************************************************
+ * Biểu tượng liên hệ ở cuối trang chủ (Email, ORCID, GitHub, Scholar…)
+ *
+ * Thu nhỏ còn 2/3 kích thước mặc định của theme (4rem → 2/3). Muốn đổi cỡ:
+ * sửa $icon-scale (1 = cỡ gốc của theme).
+ ******************************************************************************/
+
+$icon-scale: 0.6667; // 2/3
+
+.social .contact-icons,
+.contact-icons {
+  font-size: 4rem * $icon-scale;
+
+  a img {
+    width: 3.2rem * $icon-scale;
+    height: 3.2rem * $icon-scale;
+    margin-bottom: 1rem * $icon-scale;
+  }
+
+  a svg {
+    width: 3.5rem * $icon-scale;
+    height: 4rem * $icon-scale;
+    margin-bottom: 0.5rem * $icon-scale;
+  }
+
+  a svg image {
+    width: 3.5rem * $icon-scale;
+    height: 3.5rem * $icon-scale;
+  }
+}

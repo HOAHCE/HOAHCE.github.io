@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T02:57:55Z",
+  "updated": "2026-11-03T19:38:51Z",
   "start": "2026-10-20",
   "end": "2027-01-02",
   "data": [
@@ -517,6 +517,18 @@
       "host": "Chủ tịch Hội đồng",
       "approved": "1",
       "postdate": "2026-10-30 16:40:12",
+      "lang": "vn"
+    },
+    {
+      "id": "13190",
+      "sdate": "2026-11-04",
+      "stime": "14:00:00",
+      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">L&agrave;m việc với đơn vị thiết kế đồng phục tốt nghiệp</span></span></p>\n",
+      "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- L&atilde;nh đạo c&aacute;c Ph&ograve;ng: TT&amp;TS, ĐT&amp;HTNH, TC-HC, KH-TC</span></span></p>\n",
+      "location": "Phòng họp 2",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-03 15:17:40",
       "lang": "vn"
     },
     {

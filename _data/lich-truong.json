@@ -1,44 +1,8 @@
 {
-  "updated": "2026-11-02T06:28:43Z",
-  "start": "2026-10-19",
-  "end": "2027-01-01",
+  "updated": "2026-11-03T02:57:55Z",
+  "start": "2026-10-20",
+  "end": "2027-01-02",
   "data": [
-    {
-      "id": "13135",
-      "sdate": "2026-10-19",
-      "stime": "08:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Kiểm tra hồ sơ th&iacute; sinh tr&uacute;ng tuyển đại học hệ ch&iacute;nh quy năm 2026 tại Trường Đại học Kinh tế, Đại học Huế</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">(Từ ng&agrave;y 19 &ndash; 20/10)</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Đo&agrave;n kiểm tra theo Quyết định số </span></span><a href=\"https://qldh.hueuni.edu.vn/data/kyso/2026/10/Quyet_dinh_thanh_lap_To_kiem_tra_ho_so111.pdf\" target=\"_blank\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">1803/QĐ-ĐHH</span></span></a><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"> ng&agrave;y 05/10/2026 của Gi&aacute;m đốc Đại học Huế&nbsp;</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Trường ĐHKT: </span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hiệu trưởng</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp; L&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch ph&ograve;ng ĐT&amp;HTNH</span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Tổ trưởng Tổ Kiểm tra",
-      "approved": "1",
-      "postdate": "2026-10-16 16:09:01",
-      "lang": "vn"
-    },
-    {
-      "id": "13134",
-      "sdate": "2026-10-19",
-      "stime": "08:15:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội &yacute; Ban gi&aacute;m hiệu v&agrave; Trưởng ph&ograve;ng TC-HC</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Trưởng ph&ograve;ng TC-HC</span></span></p>\n",
-      "location": "Phòng họp 1",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-16 16:08:26",
-      "lang": "vn"
-    },
-    {
-      "id": "13136",
-      "sdate": "2026-10-19",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Hội đồng tuyển chọn danh mục đề t&agrave;i khoa học v&agrave; c&ocirc;ng nghệ cấp Đại học Huế năm 2027</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/754_QD_DHKT (1).pdf\">754/QĐ-ĐHKT</a> v&agrave; <a href=\"/uploads/LichCongTac/10-2026/760_QD_DHKT.pdf\">760/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng – Phó Hiệu trưởng Bùi Đức Tính",
-      "approved": "1",
-      "postdate": "2026-10-16 16:10:25",
-      "lang": "vn"
-    },
     {
       "id": "13137",
       "sdate": "2026-10-20",
@@ -649,6 +613,18 @@
       "host": "Phó Hiệu trưởng Bùi Đức Tính",
       "approved": "1",
       "postdate": "2026-10-30 16:47:52",
+      "lang": "vn"
+    },
+    {
+      "id": "13189",
+      "sdate": "2026-11-06",
+      "stime": "15:30:00",
+      "content": "<p>Lễ kết nạp Đảng vi&ecirc;n mới v&agrave; sinh hoạt Chi bộ Sinh vi&ecirc;n</p>\n",
+      "stakeholder": "<p>- Đại diện BTV Đảng Ủy Trường</p>\n\n<p>- Đại biểu mời</p>\n\n<p>- To&agrave;n thể Đảng vi&ecirc;n chi bộ sinh vi&ecirc;n</p>\n",
+      "location": "Hội trường Nhà hành chính",
+      "host": "Bí thư Chi bộ Sinh viên",
+      "approved": "1",
+      "postdate": "2026-11-03 08:43:12",
       "lang": "vn"
     }
   ]

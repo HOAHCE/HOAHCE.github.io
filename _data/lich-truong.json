@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T01:29:44Z",
+  "updated": "2026-11-04T11:14:20Z",
   "start": "2026-10-21",
   "end": "2027-01-03",
   "data": [
@@ -601,6 +601,18 @@
       "host": "Bí thư Chi bộ Sinh viên",
       "approved": "1",
       "postdate": "2026-11-03 08:43:12",
+      "lang": "vn"
+    },
+    {
+      "id": "13191",
+      "sdate": "2026-11-08",
+      "stime": "08:00:00",
+      "content": "<p>Hội nghị Tuy&ecirc;n truyền ph&ograve;ng, chống mua b&aacute;n người năm 2026 d&agrave;nh cho sinh vi&ecirc;n Đại học Huế</p>\n",
+      "stakeholder": "<p>* C&ocirc;ng an th&agrave;nh phố Huế.</p>\n\n<p>* Đại học Huế:<br />\n- Đại diện L&atilde;nh đạo Đại hoc Huế;<br />\n- Ban ĐTCTSV: L&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n c&oacute; li&ecirc;n quan.<br />\n* Sinh vi&ecirc;n được điều động (Theo c&ocirc;ng văn số <a href=\"https://qldh.hueuni.edu.vn/data/kyso/2026/10/Dieu_dong_sv_tham_gia_Hoi_nghi_tuyen_truyen_phong_chong_mua_ban_nguoi111.pdf\" rel=\"noopener\" target=\"_blank\">1978/ĐHH-ĐTCTSV</a> ng&agrave;y 23/10/2026 của Đại học Huế).</p>\n",
+      "location": "Hội trường Đại học Huế, 01 Điện Biên Phủ, phường Thuận Hóa",
+      "host": "Công an thành phố Huế",
+      "approved": "1",
+      "postdate": "2026-11-04 13:50:57",
       "lang": "vn"
     }
   ]

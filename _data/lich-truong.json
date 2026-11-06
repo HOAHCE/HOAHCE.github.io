@@ -1,56 +1,8 @@
 {
-  "updated": "2026-11-05T01:31:57Z",
-  "start": "2026-10-22",
-  "end": "2027-01-04",
+  "updated": "2026-11-06T01:39:51Z",
+  "start": "2026-10-23",
+  "end": "2027-01-05",
   "data": [
-    {
-      "id": "13142",
-      "sdate": "2026-10-22",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Lịch tiếp c&ocirc;ng d&acirc;n</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;</span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"><span style=\"color:black\">Ph&oacute;&nbsp;Hiệu trưởng&nbsp;Phan Khoa Cương </span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;<span style=\"color:black\">ThS. Nguyễn B&aacute; Tường chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch c&ocirc;ng t&aacute;c Kiểm tra &ndash; Ph&aacute;p chế, ph&ograve;ng TC-HC</span></span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;CB, GV, NLĐ c&oacute; nhu cầu</span></span></p>\n",
-      "location": "Phòng Phó Hiệu trưởng Phan Khoa Cương",
-      "host": "Phó Hiệu trưởng Phan Khoa Cương",
-      "approved": "1",
-      "postdate": "2026-10-16 16:13:14",
-      "lang": "vn"
-    },
-    {
-      "id": "13143",
-      "sdate": "2026-10-22",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp g&oacute;p &yacute; th&ocirc;ng qua dự thảo Quy chế hoạt động của HĐ thi đua khen thưởng Trường (Lần 1)</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Ban soạn thảo theo Quyết định số <a href=\"uploads/LichCongTac/10-2026/683_QD_DHKT.pdf\">683/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Trưởng ban – Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-16 16:13:40",
-      "lang": "vn"
-    },
-    {
-      "id": "13144",
-      "sdate": "2026-10-22",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp r&agrave; so&aacute;t Danh mục ng&agrave;nh đ&agrave;o tạo c&aacute;c tr&igrave;nh độ của gi&aacute;o dục đại học tại Đại học Huế theo Th&ocirc;ng tư số 74/2026/TT-BGDĐH ng&agrave;y 28/8/2026 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Đại học Huế:</span></span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</span></span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Ban ĐTCTSV: L&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch;</span></span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* C&aacute;c trường đại học th&agrave;nh vi&ecirc;n; trường, khoa, ph&acirc;n hiệu thuộc ĐHH:</span></span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Đại diện Ban Gi&aacute;m hiệu;</span></span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Trưởng ph&ograve;ng/ Tổ Đ&agrave;o tạo đại học/ sau đại học</span></span></p>\n",
-      "location": "Phòng họp I.2 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
-      "host": "Quyền Giám đốc Đại học Huế",
-      "approved": "1",
-      "postdate": "2026-10-16 16:14:05",
-      "lang": "vn"
-    },
-    {
-      "id": "13149",
-      "sdate": "2026-10-22",
-      "stime": "16:15:00",
-      "content": "<p>Họp Đảng ủy Đại học Huế</p>\n",
-      "stakeholder": "<p>- Ban Chấp h&agrave;nh Đảng bộ Đại học Huế;</p>\n\n<p>- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- Ch&aacute;nh c&aacute;c văn ph&ograve;ng, trưởng c&aacute;c ban chức năng;</p>\n\n<p>- C&aacute;c Ph&oacute; Ch&aacute;nh Văn ph&ograve;ng Đảng v&agrave; Đo&agrave;n thể v&agrave; chuy&ecirc;n vi&ecirc;n li&ecirc;n quan.</p>\n",
-      "location": "Phòng họp I.2 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
-      "host": "Thường trực Đảng ủy Đại học Huế",
-      "approved": "1",
-      "postdate": "2026-10-20 09:08:32",
-      "lang": "vn"
-    },
     {
       "id": "13145",
       "sdate": "2026-10-23",

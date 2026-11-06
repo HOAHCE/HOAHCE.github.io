@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T01:39:51Z",
+  "updated": "2026-11-06T11:11:21Z",
   "start": "2026-10-23",
   "end": "2027-01-05",
   "data": [
@@ -505,6 +505,18 @@
       "host": "Bí thư Chi bộ Sinh viên",
       "approved": "1",
       "postdate": "2026-11-03 08:43:12",
+      "lang": "vn"
+    },
+    {
+      "id": "13192",
+      "sdate": "2026-11-07",
+      "stime": "14:00:00",
+      "content": "<p>Hội nghị triển khai g&oacute;p &yacute; dự thảo Th&ocirc;ng tư quy định ti&ecirc;u chuẩn, điều kiện v&agrave; quy tr&igrave;nh bổ nhiệm, miễn nhiệm chức danh gi&aacute;o sư, ph&oacute; gi&aacute;o sư</p>\n",
+      "stakeholder": "<p>Th&agrave;nh phần theo C&ocirc;ng văn số 7749/BGDĐT-NGCBQLGD ng&agrave;y 03/11/2026 của Bộ trưởng Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo<br />\n* Điểm cầu trung t&acirc;m (trực tiếp):</p>\n\n<p>- L&atilde;nh đạo Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo;</p>\n\n<p>- Đại diện l&atilde;nh đạo c&ocirc;ng chức c&aacute;c đơn vị thuộc Bộ c&oacute; li&ecirc;n quan;</p>\n\n<p>- Đại diện một số cơ sở gi&aacute;o dục đại học tr&ecirc;n địa b&agrave;n Th&agrave;nh phố H&agrave; Nội (c&oacute; danh s&aacute;ch ri&ecirc;ng).</p>\n\n<p>* Đại học Huế (trực tuyến)</p>\n\n<p>- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- C&aacute;c Ban TCCB; KHCNQHQT: Đại diện l&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n li&ecirc;n quan.</p>\n\n<p>* C&aacute;c trường đại học th&agrave;nh vi&ecirc;n, trường thuộc ĐHH</p>\n\n<p>- Đại diện L&atilde;nh đạo đơn vị (Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh);</p>\n\n<p>- Ph&ograve;ng KHCNHTQT: đại diện l&atilde;nh đạo ph&ograve;ng.</p>\n\n<p>* C&aacute;c Hội đồng Gi&aacute;o sư cơ sở Đại học Huế năm 2025</p>\n\n<p>- Nguy&ecirc;n chủ tịch; ph&oacute; chủ tịch v&agrave; thư k&yacute; c&aacute;c Hội đồng.</p>\n",
+      "location": "Phòng họp I.2 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa  Link trực tuyến: https://qr.cde.edu.vn/tXyJwv",
+      "host": "Bộ trưởng Hoàng Minh Sơn",
+      "approved": "1",
+      "postdate": "2026-11-06 10:55:17",
       "lang": "vn"
     },
     {

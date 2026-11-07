@@ -1,56 +1,8 @@
 {
-  "updated": "2026-11-06T19:34:00Z",
-  "start": "2026-10-23",
-  "end": "2027-01-05",
+  "updated": "2026-11-07T00:59:16Z",
+  "start": "2026-10-24",
+  "end": "2027-01-06",
   "data": [
-    {
-      "id": "13145",
-      "sdate": "2026-10-23",
-      "stime": "09:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">HO&Atilde;N: Họp Hội đồng x&eacute;t khen thưởng năm học 2025-2026 cho sinh vi&ecirc;n bậc Đại học</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo quyết định</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng",
-      "approved": "1",
-      "postdate": "2026-10-16 16:14:25",
-      "lang": "vn"
-    },
-    {
-      "id": "13150",
-      "sdate": "2026-10-23",
-      "stime": "09:30:00",
-      "content": "<p>Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo khảo s&aacute;t tại Đại học Huế về cơ chế, ch&iacute;nh s&aacute;ch ph&aacute;t triển 3&ndash;5 đại học tinh hoa</p>\n",
-      "stakeholder": "<p>* Đo&agrave;n c&ocirc;ng t&aacute;c của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo</p>\n\n<p>* Đại học Huế</p>\n\n<p>- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- Đai diện l&atilde;nh đạo : Văn ph&ograve;ng ĐHH; Ban TCCB; Ban ĐTCTSV; Ban KHCNQHQT; Ban KTPC;</p>\n\n<p>- Ban KHTCCSVC: L&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n c&oacute; li&ecirc;n quan.</p>\n\n<p>* C&aacute;c đơn vị th&agrave;nh vi&ecirc;n, đơn vị trực thuộc, đơn vị thuộc</p>\n\n<p>- Hiệu trưởng.</p>\n",
-      "location": "Phòng họp I.2 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
-      "host": "Vụ trưởng Vụ KHTC - Bộ GDĐT và Phó Giám đốc Đại học Huế Trần Đăng Hòa",
-      "approved": "1",
-      "postdate": "2026-10-20 09:09:46",
-      "lang": "vn"
-    },
-    {
-      "id": "13146",
-      "sdate": "2026-10-23",
-      "stime": "14:00:00",
-      "content": "<p>K&yacute; kết giao ước thi đua Khối 1, Trường Đại học Kinh t&ecirc;́ năm 2026</p>\n",
-      "stakeholder": "<p>- Đại diện BGH (Ph&oacute; Hiệu trưởng B&ugrave;i Đức Tính);</p>\n\n<p>- Đại diện L&atilde;nh đạo c&aacute;c Khoa</p>\n",
-      "location": "Phòng họp 3",
-      "host": "Trưởng Khối thi đua",
-      "approved": "1",
-      "postdate": "2026-10-16 17:04:23",
-      "lang": "vn"
-    },
-    {
-      "id": "13148",
-      "sdate": "2026-10-23",
-      "stime": "15:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Tập huấn nghiệp vụ coi thi </span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">CBGV c&aacute;c đơn vị (theo danh s&aacute;ch đăng k&yacute;)</span></span></p>\n",
-      "location": "   Phòng họp 2",
-      "host": "Trưởng Phòng KT-BĐCLGD",
-      "approved": "1",
-      "postdate": "2026-10-19 14:08:26",
-      "lang": "vn"
-    },
     {
       "id": "13153",
       "sdate": "2026-10-27",
@@ -716,7 +668,7 @@
       "sdate": "2026-11-13",
       "stime": "14:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp b&agrave;n, bổ sung c&aacute;c học phần về năng lực số, nội dung về tr&iacute; tuệ nh&acirc;n tạo (AI), học phần li&ecirc;n quan đến STEM</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Hội đồng Khoa học v&agrave; Đ&agrave;o tạo (theo Quyết định số: 1<a href=\"/uploads/LichCongTac/11_2026/184_QD_DHKT.pdf\">84/QĐ-ĐHKT</a> ng&agrave;y 10/3/2026)</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CV: Nguyễn Văn Đức; Phạm Xu&acirc;n Tu&acirc;n</span></span></p>\n",
+      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Hội đồng Khoa học v&agrave; Đ&agrave;o tạo theo Quyết định số</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CV: Nguyễn Văn Đức; Phạm Xu&acirc;n Tu&acirc;n</span></span></p>\n",
       "location": "Phòng họp 3",
       "host": "Chủ tịch Hội đồng",
       "approved": "1",

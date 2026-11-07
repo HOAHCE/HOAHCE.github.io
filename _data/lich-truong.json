@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T00:59:16Z",
+  "updated": "2026-11-07T10:28:30Z",
   "start": "2026-10-24",
   "end": "2027-01-06",
   "data": [
@@ -597,10 +597,34 @@
       "stime": "08:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp Giao ban hoạt động KH,CN&amp;HTQT năm học 2026-2027</span></span></p>\n",
       "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh </span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Trưởng, Ph&oacute; Trưởng ph&ograve;ng KH,CN&amp;HTQT</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Đại diện l&atilde;nh đạo c&aacute;c Khoa </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch</span></span></p>\n",
-      "location": "Phòng họp 3",
+      "location": "Phòng họp 2",
       "host": "Phó Hiệu trưởng Bùi Đức Tính ",
       "approved": "1",
       "postdate": "2026-11-06 18:21:38",
+      "lang": "vn"
+    },
+    {
+      "id": "13207",
+      "sdate": "2026-11-11",
+      "stime": "08:00:00",
+      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp Ban soạn thảo Quy định quản l&yacute; văn bằng, chứng chỉ tại trường ĐH Kinh tế</span></span></p>\n",
+      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ban soạn thảo theo Quyết định số <a href=\"/uploads/LichCongTac/11_2026/822_QD_DHKT.pdf\">822/QĐ-ĐHKT</a></span></span></p>\n",
+      "location": "Phòng họp 3",
+      "host": "Hiệu trưởng - Trưởng ban",
+      "approved": "1",
+      "postdate": "2026-11-06 18:25:24",
+      "lang": "vn"
+    },
+    {
+      "id": "13208",
+      "sdate": "2026-11-11",
+      "stime": "14:00:00",
+      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp b&agrave;n, bổ sung c&aacute;c học phần về năng lực số, nội dung về tr&iacute; tuệ nh&acirc;n tạo (AI), học phần li&ecirc;n quan đến STEM</span></span></p>\n",
+      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Hội đồng Khoa học v&agrave; Đ&agrave;o tạo theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/148_QD_DHKT.pdf\">148/QĐ-ĐHKT</a></span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CV: Nguyễn Văn Đức; Phạm Xu&acirc;n Tu&acirc;n</span></span></p>\n",
+      "location": "Phòng họp 3",
+      "host": "Chủ tịch Hội đồng",
+      "approved": "1",
+      "postdate": "2026-11-06 18:26:16",
       "lang": "vn"
     },
     {
@@ -652,27 +676,15 @@
       "lang": "vn"
     },
     {
-      "id": "13207",
+      "id": "13211",
       "sdate": "2026-11-13",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp Ban soạn thảo Quy định quản l&yacute; văn bằng, chứng chỉ tại trường ĐH Kinh tế</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ban soạn thảo theo Quyết định số <a href=\"/uploads/LichCongTac/11_2026/822_QD_DHKT.pdf\">822/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng - Trưởng ban",
+      "stime": "15:00:00",
+      "content": "<p>L&agrave;m việc với Trung t&acirc;m GDNN- GDTX H&agrave; Tĩnh</p>\n",
+      "stakeholder": "<p>- Hiệu trưởng</p>\n\n<p>- Trưởng c&aacute;c ph&ograve;ng: Đ&agrave;o tạo &amp; HTNH, Truyền th&ocirc;ng &amp; Tuyển sinh, KH-TC</p>\n\n<p>- Ths. Nguyễn Đức Phương</p>\n",
+      "location": "Trung tâm GDNN- GDTX Hà Tĩnh",
+      "host": "Hiệu trưởng",
       "approved": "1",
-      "postdate": "2026-11-06 18:25:24",
-      "lang": "vn"
-    },
-    {
-      "id": "13208",
-      "sdate": "2026-11-13",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp b&agrave;n, bổ sung c&aacute;c học phần về năng lực số, nội dung về tr&iacute; tuệ nh&acirc;n tạo (AI), học phần li&ecirc;n quan đến STEM</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Hội đồng Khoa học v&agrave; Đ&agrave;o tạo theo Quyết định số</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CV: Nguyễn Văn Đức; Phạm Xu&acirc;n Tu&acirc;n</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng",
-      "approved": "1",
-      "postdate": "2026-11-06 18:26:16",
+      "postdate": "2026-11-07 10:45:13",
       "lang": "vn"
     },
     {

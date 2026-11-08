@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-07T10:28:30Z",
-  "start": "2026-10-24",
-  "end": "2027-01-06",
+  "updated": "2026-11-08T13:41:44Z",
+  "start": "2026-10-25",
+  "end": "2027-01-07",
   "data": [
     {
       "id": "13153",
@@ -517,6 +517,18 @@
       "host": "Phó Hiệu trưởng Phan Khoa Cương - Chủ tịch Hội đồng",
       "approved": "1",
       "postdate": "2026-11-06 18:17:38",
+      "lang": "vn"
+    },
+    {
+      "id": "13212",
+      "sdate": "2026-11-09",
+      "stime": "15:15:00",
+      "content": "<p>Họp thống nhất chỉ ti&ecirc;u nh&acirc;n lực v&agrave; bi&ecirc;n chế của Trường Đại học Kinh tế giai đoạn 2027 - 2031 theo y&ecirc;u cầu của Ban tổ chức Trung ương</p>\n",
+      "stakeholder": "<p>- Ban Gi&aacute;m hiệu;</p>\n\n<p>- Trưởng c&aacute;c đơn vị;</p>\n\n<p>- Ths. Nguyễn Mạnh H&ugrave;ng</p>\n\n<p>-&nbsp;CN. L&ecirc; Phước Thiện Tr&iacute;</p>\n",
+      "location": "Phòng họp 3",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-08 20:04:38",
       "lang": "vn"
     },
     {

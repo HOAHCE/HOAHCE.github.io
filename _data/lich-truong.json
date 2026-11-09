@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-08T13:41:44Z",
-  "start": "2026-10-25",
-  "end": "2027-01-07",
+  "updated": "2026-11-09T11:51:10Z",
+  "start": "2026-10-26",
+  "end": "2027-01-08",
   "data": [
     {
       "id": "13153",
@@ -500,7 +500,7 @@
       "sdate": "2026-11-09",
       "stime": "14:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">L&agrave;m việc với UBND Phường An Cựu</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hiệu trưởng</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Trưởng ph&ograve;ng KH,CN&amp;HTQT</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại diện L&atilde;nh đạo c&aacute;c khoa</span></span></p>\n",
+      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hiệu trưởng</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ph&oacute; Hiệu trưởng Phan Thanh Ho&agrave;n</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Nh&oacute;m NC Kinh tế đ&ecirc;m sinh vi&ecirc;n</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Trưởng ph&ograve;ng KH,CN&amp;HTQT</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại diện L&atilde;nh đạo c&aacute;c khoa</span></span></p>\n",
       "location": "Phòng họp 3",
       "host": "Hiệu trưởng",
       "approved": "1",
@@ -510,7 +510,7 @@
     {
       "id": "13195",
       "sdate": "2026-11-09",
-      "stime": "15:00:00",
+      "stime": "14:00:00",
       "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hội đồng đ&aacute;nh gi&aacute; cấp cơ sở đề t&agrave;i KH&amp;CN cấp Đại học Huế</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Chủ nhiệm: Phan Nhật Quang (DHH2024-06-140)</span></span></p>\n",
       "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/11_2026/714_QD_DHKT_0001.pdf\">714/QĐ-ĐHKT</a></span></span></p>\n",
       "location": "Phòng họp 2",
@@ -583,12 +583,24 @@
       "id": "13200",
       "sdate": "2026-11-10",
       "stime": "10:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Gặp mặt ch&iacute;nh thức c&aacute;c T&acirc;n giảng vi&ecirc;n hợp đồng năm 2026 (đợt 2) để trao đổi về chế độ tiền lương, ph&uacute;c lợi v&agrave; quy định l&agrave;m việc.</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Trưởng ph&ograve;ng: TC-HC, KH-TC</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CN. L&ecirc; Phước Thiện Tr&iacute; (Chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch tuyển dụng)</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">&nbsp;- T&acirc;n giảng vi&ecirc;n năm 2026 (đợt 2) đ&atilde; k&yacute; kết hợp đồng lao động.</span></span></p>\n",
+      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Gặp mặt ch&iacute;nh thức c&aacute;c T&acirc;n giảng vi&ecirc;n hợp đồng năm 2026 để trao đổi về chế độ tiền lương, ph&uacute;c lợi v&agrave; quy định l&agrave;m việc.</span></span></p>\n",
+      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Trưởng ph&ograve;ng: TC-HC, KH-TC</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- CN. L&ecirc; Phước Thiện Tr&iacute; (Chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch tuyển dụng)</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">&nbsp;- C&aacute;c T&acirc;n&nbsp;giảng vi&ecirc;n năm 2026 đ&atilde; k&yacute; kết hợp đồng lao động.</span></span></p>\n",
       "location": "Phòng họp 3",
       "host": "Hiệu trưởng",
       "approved": "1",
       "postdate": "2026-11-06 18:20:36",
+      "lang": "vn"
+    },
+    {
+      "id": "13213",
+      "sdate": "2026-11-10",
+      "stime": "10:30:00",
+      "content": "<p><span style=\"font-size:14.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Họp Ban tổ chức giải Cầu l&ocirc;ng Đại học v&agrave; Cao đẳng Huế&nbsp; năm 2026</span></span></span></p>\n",
+      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Ban tổ chức theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/52_QD_HTT.pdf\">52/QĐ-HTT</a>&nbsp;v&agrave; Quyết định số <a href=\"uploads/LichCongTac/11_2026/53_QD_HTT.pdf\">53/QĐ-HTT</a></span></span></span></p>\n",
+      "location": "Phòng họp 2",
+      "host": "Phó Hiệu trưởng Bùi Đức Tính",
+      "approved": "1",
+      "postdate": "2026-11-09 08:19:07",
       "lang": "vn"
     },
     {
@@ -704,7 +716,7 @@
       "sdate": "2026-11-15",
       "stime": "06:00:00",
       "content": "<p>Thủ lĩnh học đường - Honda Young Mode</p>\n",
-      "stakeholder": "<p>-Ban tổ chức theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/830_QD_DHKT.pdf\">830/QĐ-ĐHKT</a></p>\n\n<p>- SV được điều động</p>\n\n<p>- Sinh vi&ecirc;n quan t&acirc;m</p>\n",
+      "stakeholder": "<p>-Ban tổ chức v&agrave; Tổ gi&uacute;p việc theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/830_QD_DHKT.pdf\">830/QĐ-ĐHKT</a></p>\n\n<p>- SV được điều động</p>\n\n<p>- Sinh vi&ecirc;n quan t&acirc;m</p>\n",
       "location": "Trường Đại học Kinh tế",
       "host": "Hiệu trưởng",
       "approved": "1",

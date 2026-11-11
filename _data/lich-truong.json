@@ -1,68 +1,8 @@
 {
-  "updated": "2026-11-09T11:51:10Z",
-  "start": "2026-10-26",
-  "end": "2027-01-08",
+  "updated": "2026-11-11T06:49:02Z",
+  "start": "2026-10-28",
+  "end": "2027-01-10",
   "data": [
-    {
-      "id": "13153",
-      "sdate": "2026-10-27",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Ban soạn thảo Quy chế tổ chức v&agrave; hoạt động của Trường Đại học Kinh tế </span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Ban soạn thảo theo Quyết định <a href=\"/uploads/LichCongTac/10-2026/779_QD_DHKT.pdf\">779/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:01:17",
-      "lang": "vn"
-    },
-    {
-      "id": "13154",
-      "sdate": "2026-10-27",
-      "stime": "09:30:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Ban soạn thảo Đề &aacute;n tự chủ của Trường Đại học Kinh tế </span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Ban soạn thảo theo Quyết định <a href=\"/uploads/LichCongTac/10-2026/782_QD_DHKT.pdf\">782/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:01:58",
-      "lang": "vn"
-    },
-    {
-      "id": "13170",
-      "sdate": "2026-10-27",
-      "stime": "10:30:00",
-      "content": "<p>Họp Ban soạn thảo quy chế t&agrave;i ch&iacute;nh&nbsp;</p>\n",
-      "stakeholder": "<p>Bạn soạn thảo theo<a href=\"/uploads/LichCongTac/786_QD_DHKT.pdf\"> Quyết định&nbsp;</a></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Trưởng ban - Hiệu trưởng ",
-      "approved": "1",
-      "postdate": "2026-10-24 14:21:20",
-      "lang": "vn"
-    },
-    {
-      "id": "13155",
-      "sdate": "2026-10-27",
-      "stime": "14:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng nghiệm thu đề t&agrave;i NCKH cấp Đại học Huế </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">CNĐT: ThS. L&ecirc; Ngọc Anh Vũ</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/711_QD_DHKT_0001.pdf\">711/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng  - Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:02:43",
-      "lang": "vn"
-    },
-    {
-      "id": "13156",
-      "sdate": "2026-10-27",
-      "stime": "15:15:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng nghiệm thu đề t&agrave;i NCKH cấp Đại học Huế </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">CNĐT: ThS. B&ugrave;i Thị Thanh Nga</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/722_QD_DHKT_0001.pdf\">722/QĐ - ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng  - Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:03:39",
-      "lang": "vn"
-    },
     {
       "id": "13157",
       "sdate": "2026-10-28",

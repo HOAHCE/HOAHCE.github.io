@@ -1,56 +1,8 @@
 {
-  "updated": "2026-11-11T06:49:02Z",
-  "start": "2026-10-28",
-  "end": "2027-01-10",
+  "updated": "2026-11-12T00:51:53Z",
+  "start": "2026-10-29",
+  "end": "2027-01-11",
   "data": [
-    {
-      "id": "13157",
-      "sdate": "2026-10-28",
-      "stime": "08:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng nghiệm thu đề t&agrave;i NCKH cấp Đại học Huế </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">&nbsp;CNĐT: Trương Thị Hương Xu&acirc;n</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/712_QD_DHKT_0001.pdf\">712/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Chủ tịch Hội đồng  - Phó Hiệu trưởng Bùi Đức Tính",
-      "approved": "1",
-      "postdate": "2026-10-23 18:04:17",
-      "lang": "vn"
-    },
-    {
-      "id": "13172",
-      "sdate": "2026-10-28",
-      "stime": "08:00:00",
-      "content": "<p>Họp Ban chỉ đạo, Ban nội dung v&agrave; Ban tổ chức Hội thảo &ldquo;Nghi&ecirc;n cứu c&aacute;c m&ocirc; h&igrave;nh, giải ph&aacute;p g&oacute;p phần ph&aacute;t triển kinh tế đ&ecirc;m th&agrave;nh phố Huế&rdquo;</p>\n",
-      "stakeholder": "<p>Th&agrave;nh phần theo Quyết định số <a href=\"uploads/LichCongTac/10-2026/792_QD_DHKT.pdf\">792/QĐ-ĐHKT</a></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Phó Hiệu trưởng Phan Thanh Hoàn ",
-      "approved": "1",
-      "postdate": "2026-10-27 09:11:30",
-      "lang": "vn"
-    },
-    {
-      "id": "13159",
-      "sdate": "2026-10-28",
-      "stime": "14:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Gặp mặt c&aacute;n bộ c&ocirc;ng đo&agrave;n qua c&aacute;c thời kỳ</span></span></span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Đại biểu mời: c&oacute; Giấy mời ri&ecirc;ng.</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* C&ocirc;ng đo&agrave;n Đại học Huế:</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;Ủy vi&ecirc;n Ban Chấp h&agrave;nh;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;Chủ nhiệm/Ph&oacute; Chủ nhiệm Ủy ban kiểm tra.</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* C&ocirc;ng đo&agrave;n cơ sở trực thuộc:</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;Chủ tịch, Ph&oacute; Chủ tịch, Ủy vi&ecirc;n Ban Thường vụ (nếu c&oacute;);</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;Trưởng/Phụ tr&aacute;ch Ban Nữ c&ocirc;ng quần ch&uacute;ng.</span></span></p>\n",
-      "location": "Hội trường Đại học Huế, số 03 Lê Lợi, phường Thuận Hóa",
-      "host": "Chủ tịch Công đoàn Đại học Huế",
-      "approved": "1",
-      "postdate": "2026-10-23 18:05:06",
-      "lang": "vn"
-    },
-    {
-      "id": "13160",
-      "sdate": "2026-10-28",
-      "stime": "14:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng nghiệm thu đề t&agrave;i NCKH cấp Đại học Huế&nbsp; </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">&nbsp;CNĐT: TS. Đ&agrave;o Duy Minh</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng&nbsp; theo Quyết định <a href=\"/uploads/LichCongTac/10-2026/713_QD_DHKT_0001.pdf\">713/QĐ - ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng  - Phó Hiệu trưởng Phan Thanh Hoàn",
-      "approved": "1",
-      "postdate": "2026-10-23 18:05:46",
-      "lang": "vn"
-    },
     {
       "id": "13161",
       "sdate": "2026-10-29",

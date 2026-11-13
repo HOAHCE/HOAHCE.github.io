@@ -1,56 +1,8 @@
 {
-  "updated": "2026-11-12T00:51:53Z",
-  "start": "2026-10-29",
-  "end": "2027-01-11",
+  "updated": "2026-11-13T01:58:13Z",
+  "start": "2026-10-30",
+  "end": "2027-01-12",
   "data": [
-    {
-      "id": "13161",
-      "sdate": "2026-10-29",
-      "stime": "08:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng nghiệm thu đề t&agrave;i NCKH cấp Đại học Huế&nbsp; </span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">CNĐT: TS. Nguyễn L&ecirc; Hiệp</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết đinh số <a href=\"/uploads/LichCongTac/10-2026/710_QD_DHKT_0001.pdf\">710/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng  - Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:06:25",
-      "lang": "vn"
-    },
-    {
-      "id": "13162",
-      "sdate": "2026-10-29",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Lịch tiếp c&ocirc;ng d&acirc;n</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;</span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"><span style=\"color:black\">Ph&oacute;&nbsp;Hiệu trưởng&nbsp;Phan Khoa Cương </span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;<span style=\"color:black\">ThS. Nguyễn B&aacute; Tường chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch c&ocirc;ng t&aacute;c Kiểm tra &ndash; Ph&aacute;p chế, ph&ograve;ng TC-HC</span></span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">-&nbsp;CB, GV, NLĐ c&oacute; nhu cầu</span></span></p>\n",
-      "location": "Phòng Phó Hiệu trưởng Phan Khoa Cương",
-      "host": "Phó Hiệu trưởng Phan Khoa Cương",
-      "approved": "1",
-      "postdate": "2026-10-23 18:06:48",
-      "lang": "vn"
-    },
-    {
-      "id": "13171",
-      "sdate": "2026-10-29",
-      "stime": "09:30:00",
-      "content": "<p><span style=\"font-size:14.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Họp thảo luận Kế hoạch quảng b&aacute; TVTS bậc đại học năm 2027</span></span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"color:#212529\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Ban chỉ đạo v&agrave; Tổ TVTS trường theo <a href=\"uploads/LichCongTac/10-2026/916_QD_DHKT_TVTS.pdf\">Quyết định</a></span></span></span><a href=\"uploads/LichCongTac/10-2026/916_QD_DHKT_TVTS.pdf\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">;</span></span></span></a></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">- Trưởng c&aacute;c Khoa;</span></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-26 16:50:21",
-      "lang": "vn"
-    },
-    {
-      "id": "13163",
-      "sdate": "2026-10-29",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Ban soạn thảo Bản m&ocirc; tả v&agrave; khung năng lực VTVL của Trường Đại học Kinh tế </span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"><span style=\"color:red\">Ban soạn thảo theo Quyết định số<a href=\"/uploads/LichCongTac/10-2026/780_QD_DHKT.pdf\"> 780/QĐ-ĐHKT</a></span></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Trưởng Ban – Phó Hiệu trưởng Phan Thanh Hoàn",
-      "approved": "1",
-      "postdate": "2026-10-23 18:07:23",
-      "lang": "vn"
-    },
     {
       "id": "13158",
       "sdate": "2026-10-30",

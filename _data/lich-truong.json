@@ -1,68 +1,8 @@
 {
-  "updated": "2026-11-13T11:16:02Z",
-  "start": "2026-10-30",
-  "end": "2027-01-12",
+  "updated": "2026-11-14T01:29:46Z",
+  "start": "2026-10-31",
+  "end": "2027-01-13",
   "data": [
-    {
-      "id": "13158",
-      "sdate": "2026-10-30",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"><span style=\"color:red\">L&agrave;m việc với c&ocirc;ng ty Nam Việt về phần mềm Quản l&yacute; Đ&agrave;o tạo v&agrave; h&agrave;nh ch&iacute;nh</span></span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">C&ocirc;ng ty Nam Việt</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Đại diện l&atilde;nh đạo c&aacute;c ph&ograve;ng chức năng v&agrave; c&aacute;c chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch chuyển giao phần mềm</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Tổ tiếp nhận phần mềm</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:04:38",
-      "lang": "vn"
-    },
-    {
-      "id": "13164",
-      "sdate": "2026-10-30",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Lễ trao Học bổng VESAF, NFP năm học 2026 - 2027 cho sinh vi&ecirc;n Đại học Huế</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Đại diện đơn vị t&agrave;i trợ học bổng.<br />\n* Đại học Huế:<br />\n-&nbsp;Ph&oacute; Gi&aacute;m đốc Trần Đăng H&ograve;a;<br />\n- L&atilde;nh đạo Ban ĐTCTSV v&agrave; chuy&ecirc;n vi&ecirc;n c&oacute; li&ecirc;n quan.<br />\n* C&aacute;c trường: ĐHYD, ĐHNL, ĐHKT, ĐHKH<br />\n- Đại diện l&atilde;nh đạo đơn vị&nbsp;(Ph&oacute; Hiệu trưởng Phan Thanh Ho&agrave;n)<br />\n- Sinh vi&ecirc;n được nhận học bổng (theo C&ocirc;ng văn số 1943/ĐHH-ĐTCTSV ng&agrave;y 19/10/2026 của Đại học Huế).</span></span></p>\n",
-      "location": "Hội trường Đại học Huế, số 03 Lê Lợi, thành phố Huế",
-      "host": "Phó Giám đốc Trần Đăng Hòa",
-      "approved": "1",
-      "postdate": "2026-10-23 18:07:47",
-      "lang": "vn"
-    },
-    {
-      "id": "13165",
-      "sdate": "2026-10-30",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">HO&Atilde;N: Họp Hội đồng tự đ&aacute;nh gi&aacute; Chương tr&igrave;nh đ&agrave;o tạo theo bộ ti&ecirc;u chuẩn AUN-QA</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/753_QD_DHKT.pdf\">753/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:08:23",
-      "lang": "vn"
-    },
-    {
-      "id": "13166",
-      "sdate": "2026-10-30",
-      "stime": "09:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp BGĐ Trung t&acirc;m Đ&agrave;o tạo ECO</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- BGĐ Trung t&acirc;m</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Kế to&aacute;n Trung t&acirc;m</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Giám đốc",
-      "approved": "1",
-      "postdate": "2026-10-23 18:09:10",
-      "lang": "vn"
-    },
-    {
-      "id": "13167",
-      "sdate": "2026-10-30",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Bảo vệ luận &aacute;n tiến sĩ cấp Đại học Huế của nghi&ecirc;n cứu sinh H&agrave; Tiến Ngọc</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Hội đồng đ&aacute;nh gi&aacute; luận &aacute;n tiến sĩ cấp Đại học Huế theo </span></span><a href=\"https://qldh.hueuni.edu.vn/data/2026/10/QD_TL_HD_cham_luan_an_tien_si_NCS_Ha_Tien_Ngoc1111.pdf\" target=\"_blank\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Quyết định số 1565/QĐ-ĐHH</span></span></a><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"> ng&agrave;y 07/9/2026 của Gi&aacute;m đốc Đại học Huế;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Ban Đ&agrave;o tạo v&agrave; C&ocirc;ng t&aacute;c sinh vi&ecirc;n: l&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Trường Đại học Kinh tế: l&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch;</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Nghi&ecirc;n cứu sinh v&agrave; những người quan t&acirc;m.</span></span></p>\n",
-      "location": "Phòng họp I.1 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
-      "host": "Chủ tịch Hội đồng",
-      "approved": "1",
-      "postdate": "2026-10-23 18:09:36",
-      "lang": "vn"
-    },
     {
       "id": "13168",
       "sdate": "2026-10-31",

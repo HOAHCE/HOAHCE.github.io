@@ -1,68 +1,8 @@
 {
-  "updated": "2026-11-16T06:50:27Z",
-  "start": "2026-11-02",
-  "end": "2027-01-15",
+  "updated": "2026-11-17T16:16:10Z",
+  "start": "2026-11-03",
+  "end": "2027-01-16",
   "data": [
-    {
-      "id": "13184",
-      "sdate": "2026-11-02",
-      "stime": "08:30:00",
-      "content": "<p>Hội nghị nghi&ecirc;n cứu, học tập, qu&aacute;n triệt v&agrave; triển khai thực hiện Nghị quyết Hội nghị Trung ương 4 kh&oacute;a XIV, c&aacute;c kế hoạch, chương tr&igrave;nh h&agrave;nh động của Ban Thường vụ Th&agrave;nh ủy</p>\n",
-      "stakeholder": "<p>- BCH Đảng b&ocirc;̣ Trường;</p>\n\n<p>- UBKT Đảng ủy;</p>\n\n<p>- Chi ủy các Chi b&ocirc;̣ trực thu&ocirc;̣c;</p>\n\n<p>- Toàn th&ecirc;̉ đảng vi&ecirc;n, VC, NLĐ Trường</p>\n",
-      "location": "Hội trường nhà hành chính",
-      "host": "Phó Bí thư Đảng ủy",
-      "approved": "1",
-      "postdate": "2026-10-30 16:46:59",
-      "lang": "vn"
-    },
-    {
-      "id": "13187",
-      "sdate": "2026-11-02",
-      "stime": "08:30:00",
-      "content": "<p>Hội nghị nghi&ecirc;n cứu học tập qu&aacute;n triệt v&agrave; triển khai thực hiện Nghị quyết Trung ương 4 v&agrave; c&aacute;c kế hoạch, chương tr&igrave;nh h&agrave;nh động của Ban Thường vụ Th&agrave;nh ủy</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n",
-      "stakeholder": "<p>* Đại học Huế:</p>\n\n<p>-Ban Chấp h&agrave;nh Đảng bộ;</p>\n\n<p>- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- Uỷ vi&ecirc;n Uỷ ban Kiểm tra của Đảng ủy;</p>\n\n<p>- Ch&aacute;nh, Ph&oacute; ch&aacute;nh c&aacute;c văn ph&ograve;ng; Trưởng, Ph&oacute; c&aacute;c ban chức năng;</p>\n\n<p>- Thường trực c&aacute;c tổ chức đo&agrave;n thể ĐHH.</p>\n\n<p>* C&aacute;c đảng bộ, chi bộ trực thuộc: B&iacute; thư hoặc Ph&oacute; b&iacute; thư.</p>\n\n<p>* Đảng bộ Cơ quan Đại học Huế: to&agrave;n thể đảng vi&ecirc;n, vi&ecirc;n chức, người lao động.</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n",
-      "location": "Hội trường Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa.",
-      "host": "Bí thư Đảng bộ Đại học Huế ",
-      "approved": "1",
-      "postdate": "2026-10-31 12:40:55",
-      "lang": "vn"
-    },
-    {
-      "id": "13173",
-      "sdate": "2026-11-02",
-      "stime": "13:30:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng đ&aacute;nh gi&aacute; Chuy&ecirc;n đề 2 tiến sĩ cho NCS Nguyễn Thị Th&uacute;y Đạt</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/797_QD_DHKT.pdf\">797/QĐ-ĐHKT</a> ng&agrave;y 29/10/2026</span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Trưởng Tiểu ban",
-      "approved": "1",
-      "postdate": "2026-10-30 16:37:28",
-      "lang": "vn"
-    },
-    {
-      "id": "13174",
-      "sdate": "2026-11-02",
-      "stime": "15:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng đ&aacute;nh gi&aacute; Chuy&ecirc;n đề 2 tiến sĩ cho NCS B&ugrave;i Thị Thanh Nga</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/799_QD_DHKT.pdf\">799/QĐ-ĐHKT</a> ng&agrave;y 29/10/2026</span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Trưởng Tiểu ban",
-      "approved": "1",
-      "postdate": "2026-10-30 16:39:21",
-      "lang": "vn"
-    },
-    {
-      "id": "13186",
-      "sdate": "2026-11-02",
-      "stime": "16:00:00",
-      "content": "<p>Vinh danh Đo&agrave;n Thể thao Đại học Huế đạt th&agrave;nh t&iacute;ch tại Đại hội Thể thao sinh vi&ecirc;n to&agrave;n quốc lần thứ VI năm 2026</p>\n",
-      "stakeholder": "<p>Đại biểu: C&oacute; giấy mời ri&ecirc;ng.</p>\n\n<p>* Đại học Huế</p>\n\n<p>- Quyền Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- Đại diện l&atilde;nh đạo c&aacute;c văn ph&ograve;ng v&agrave; ban chức năng;</p>\n\n<p>- B&iacute; thư Đo&agrave;n TN; Chủ tịch Hội SV;</p>\n\n<p>- Đo&agrave;n Thể thao Đại học Huế theo Quyết định số 1850/QĐ-ĐHH ng&agrave;y 12/10/2026 của Gi&aacute;m đốc Đại học Huế.</p>\n\n<p>* Đại diện L&atilde;nh đạo c&aacute;c đơn vị th&agrave;nh vi&ecirc;n v&agrave; đơn vị thuộc ĐHH c&oacute; sinh vi&ecirc;n tham dự: Trường ĐHNL; Trường ĐHKT, Trường ĐHNN, Trường Du lịch, Trường KTCN, Khoa GDTC.</p>\n",
-      "location": "Hội trường Đại học Huế, số 03 Lê Lợi, phường Thuận Hóa.",
-      "host": "Quyền Giám đốc Đại học Huế ",
-      "approved": "1",
-      "postdate": "2026-10-31 12:38:08",
-      "lang": "vn"
-    },
     {
       "id": "13175",
       "sdate": "2026-11-04",
@@ -633,7 +573,7 @@
       "stime": "08:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">L&agrave;m việc với Đại học Lincoln (New Zealand)</span></span></p>\n",
       "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* GS. Christopher Gan, Đại học Lincoln (New Zealand)</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">* Trường Đại học Kinh tế Huế: </span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Trưởng v&agrave; Ph&oacute; trưởng ph&ograve;ng KH,CN &amp; HTQT;</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- TS. L&ecirc; T&ocirc; Minh T&acirc;n, Ph&oacute; Trưởng Khoa Kế to&aacute;n &ndash; T&agrave;i ch&iacute;nh;<br />\n- Chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch Hợp t&aacute;c quốc tế</span></span></p>\n",
-      "location": "Phòng họp 3",
+      "location": "Phòng họp 2",
       "host": "Phó Hiệu trưởng Bùi Đức Tính",
       "approved": "1",
       "postdate": "2026-11-13 16:10:46",
@@ -645,7 +585,7 @@
       "stime": "14:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Kiểm tra tiến độ đề t&agrave;i ĐHH 2025 (đợt 2)</span></span></p>\n",
       "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:12pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\"><span style=\"font-size:13.0pt\">- Th&agrave;nh phần theo quyết định <a href=\"/uploads/LichCongTac/11_2026/827_QD_DHKT.pdf\">827/QĐ-ĐHKT</a> ng&agrave;y 06/11/2026</span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;\">- Chủ nhiệm đề t&agrave;i ĐHH 2025</span></span></p>\n",
-      "location": "Phòng họp 3",
+      "location": "Phòng họp 2",
       "host": "Phó Hiệu trưởng Bùi Đức Tính",
       "approved": "1",
       "postdate": "2026-11-13 16:11:46",
@@ -657,7 +597,7 @@
       "stime": "15:00:00",
       "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng kiểm tra tiến độ đề t&agrave;i khoa học v&agrave; c&ocirc;ng nghệ cấp cơ sở năm 2026</span></span></p>\n",
       "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/857_QD_DHKT.pdf\">857/QĐ - ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
+      "location": "Phòng họp 2",
       "host": "Phó Hiệu trưởng Bùi Đức Tính",
       "approved": "1",
       "postdate": "2026-11-13 16:28:58",
@@ -673,6 +613,18 @@
       "host": "Hiệu trưởng",
       "approved": "1",
       "postdate": "2026-11-13 16:29:37",
+      "lang": "vn"
+    },
+    {
+      "id": "13230",
+      "sdate": "2026-11-21",
+      "stime": "08:00:00",
+      "content": "<p>Bảo vệ luận &aacute;n tiến sĩ cấp Đại học Huế của nghi&ecirc;n cứu sinh Tống Viết Bảo Ho&agrave;ng</p>\n",
+      "stakeholder": "<p>- Hội đồng đ&aacute;nh gi&aacute; luận &aacute;n tiến sĩ cấp Đại học Huế theo <a href=\"https://qldh.hueuni.edu.vn/data/2026/10/QD_TL_HD_cham_luan_an_tien_si_NCS_Tong_Viet_Bao_Hoang111.pdf\" rel=\"noopener\" target=\"_blank\">Quyết định số 1743/QĐ-ĐHH</a> ng&agrave;y 29/9/2026 của Gi&aacute;m đốc Đại học Huế;</p>\n\n<p>- Ban Đ&agrave;o tạo v&agrave; C&ocirc;ng t&aacute;c sinh vi&ecirc;n: l&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch;</p>\n\n<p>- Trường Đại học Kinh tế: l&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n phụ tr&aacute;ch;</p>\n\n<p>- Nghi&ecirc;n cứu sinh v&agrave; những người quan t&acirc;m.</p>\n",
+      "location": "Phòng họp I.1 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
+      "host": "Chủ tịch Hội đồng",
+      "approved": "1",
+      "postdate": "2026-11-17 08:15:41",
       "lang": "vn"
     }
   ]

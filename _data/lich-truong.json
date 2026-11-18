@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-17T16:16:10Z",
-  "start": "2026-11-03",
-  "end": "2027-01-16",
+  "updated": "2026-11-18T11:57:13Z",
+  "start": "2026-11-04",
+  "end": "2027-01-17",
   "data": [
     {
       "id": "13175",
@@ -577,6 +577,30 @@
       "host": "Phó Hiệu trưởng Bùi Đức Tính",
       "approved": "1",
       "postdate": "2026-11-13 16:10:46",
+      "lang": "vn"
+    },
+    {
+      "id": "13231",
+      "sdate": "2026-11-19",
+      "stime": "09:15:00",
+      "content": "<p>Tiếp đ&oacute;n Chủ tịch UBND th&agrave;nh phố Huế đến thăm v&agrave; ch&uacute;c mừng Trường Đại học Kinh tế, Đại học Huế nh&acirc;n&nbsp;Ng&agrave;y Nh&agrave; gi&aacute;o Việt Nam 20/11<br />\n&nbsp;</p>\n",
+      "stakeholder": "<p>- Chủ tịch UBND th&agrave;nh phố Huế</p>\n\n<p>- Ban gi&aacute;m hiệu</p>\n\n<p>- Trưởng c&aacute;c đơn vị</p>\n",
+      "location": "Phòng họp 3",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-18 08:37:55",
+      "lang": "vn"
+    },
+    {
+      "id": "13232",
+      "sdate": "2026-11-19",
+      "stime": "10:30:00",
+      "content": "<p><span style=\"font-size:14.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp&nbsp;Ban tổ chức Hội thảo &ldquo;Doanh nghiệp nhỏ v&agrave; vừa Việt Nam với việc tận dụng Hiệp định RCEP: Cơ hội, th&aacute;ch thức v&agrave; khuyến nghị ch&iacute;nh s&aacute;ch&rdquo;</span></span></p>\n",
+      "stakeholder": "<p>Ban tổ chức theo Quyết định số <a href=\"uploads/LichCongTac/11_2026/870_QD_DHKT.pdf\">870/QĐ-ĐHKT</a></p>\n",
+      "location": "Phòng họp 2",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-18 16:16:28",
       "lang": "vn"
     },
     {

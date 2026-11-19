@@ -1,68 +1,8 @@
 {
-  "updated": "2026-11-18T11:57:13Z",
-  "start": "2026-11-04",
-  "end": "2027-01-17",
+  "updated": "2026-11-19T11:55:12Z",
+  "start": "2026-11-05",
+  "end": "2027-01-18",
   "data": [
-    {
-      "id": "13175",
-      "sdate": "2026-11-04",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp giao ban th&aacute;ng 11/2026</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Trưởng c&aacute;c đơn vị</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">B&iacute; thư Đo&agrave;n TN</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Chủ tịch Hội sinh vi&ecirc;n</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-30 16:39:46",
-      "lang": "vn"
-    },
-    {
-      "id": "13188",
-      "sdate": "2026-11-04",
-      "stime": "09:30:00",
-      "content": "<p>Họp g&oacute;p &yacute; Dự thảo Quy chế tổ chức v&agrave; hoạt động của Trường Đại học Kinh tế, Đại học Huế</p>\n",
-      "stakeholder": "<p>- Ban gi&aacute;m hiệu;</p>\n\n<p>- Trưởng c&aacute;c đơn vị;</p>\n\n<p>- Chủ tịch C&ocirc;ng đo&agrave;n Trường;</p>\n\n<p>- B&iacute; thư Đo&agrave;n TN;</p>\n\n<p>- Chủ tịch Hội sinh vi&ecirc;n;</p>\n\n<p>- Ths. Nguyễn Mạnh H&ugrave;ng</p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng - Trưởng Ban soạn thảo",
-      "approved": "1",
-      "postdate": "2026-11-02 09:10:24",
-      "lang": "vn"
-    },
-    {
-      "id": "13176",
-      "sdate": "2026-11-04",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Hội đồng x&eacute;t khen thưởng năm học 2025-2026 cho sinh vi&ecirc;n bậc Đại học</span></span></p>\n",
-      "stakeholder": "<p>Th&agrave;nh vi&ecirc;n Hội đồng theo quyết định số <a href=\"uploads/LichCongTac/9_2026/783_QD_DHKT.pdf\">783/QĐ-ĐHKT</a> v&agrave; <a href=\"uploads/LichCongTac/10-2026/793_QD_DHKT_261102004611.pdf\">793/QĐ-ĐHKT</a></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch Hội đồng",
-      "approved": "1",
-      "postdate": "2026-10-30 16:40:12",
-      "lang": "vn"
-    },
-    {
-      "id": "13190",
-      "sdate": "2026-11-04",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">L&agrave;m việc với đơn vị thiết kế đồng phục tốt nghiệp</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ban gi&aacute;m hiệu</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span>Đại diện L&atilde;nh đạo c&aacute;c ph&ograve;ng<span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">: TT&amp;TS, ĐT&amp;HTNH, TC-HC, KH-TC</span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-11-03 15:17:40",
-      "lang": "vn"
-    },
-    {
-      "id": "13177",
-      "sdate": "2026-11-04",
-      "stime": "15:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Họp Hội đồng tự đ&aacute;nh gi&aacute; Chương tr&igrave;nh đ&agrave;o tạo theo bộ ti&ecirc;u chuẩn AUN-QA</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/753_QD_DHKT.pdf\">753/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-30 16:40:59",
-      "lang": "vn"
-    },
     {
       "id": "13178",
       "sdate": "2026-11-05",

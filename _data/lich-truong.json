@@ -1,56 +1,8 @@
 {
-  "updated": "2026-11-20T02:25:38Z",
-  "start": "2026-11-06",
-  "end": "2027-01-19",
+  "updated": "2026-11-21T02:33:39Z",
+  "start": "2026-11-07",
+  "end": "2027-01-20",
   "data": [
-    {
-      "id": "13182",
-      "sdate": "2026-11-06",
-      "stime": "07:30:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội thảo &quot;Nghi&ecirc;n cứu c&aacute;c m&ocirc; h&igrave;nh, giải ph&aacute;p g&oacute;p phần ph&aacute;t triển kinh tế đ&ecirc;m th&agrave;nh phố Huế&quot;</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Ban Gi&aacute;m hiệu;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Ban Chỉ đạo, Ban nội dung, Ban tổ chức Hội thảo theo QĐ<a href=\"/uploads/LichCongTac/10-2026/792_QD_DHKT.pdf\"> 792/QĐ-ĐHKT;</a></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Đại biểu mời;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Đại diện L&atilde;nh đạo c&aacute;c đơn vị</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Th&agrave;nh vi&ecirc;n nh&oacute;m soạn thảo đề &aacute;n ph&aacute;t triển kinh tế đ&ecirc;m th&agrave;nh phố Huế;</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- C&aacute;n bộ, giảng vi&ecirc;n theo C&ocirc;ng văn số <a href=\"uploads/LichCongTac/10-2026/742_DHKT_KHCN.pdf\">742/ĐHKT-KH,CN&amp;HTQT</a></span></span></p>\n",
-      "location": "Hội trường nhà hành chính",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-10-30 16:44:58",
-      "lang": "vn"
-    },
-    {
-      "id": "13183",
-      "sdate": "2026-11-06",
-      "stime": "09:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">Hội đồng đ&aacute;nh gi&aacute; cấp Cơ sở Luận &aacute;n tiến sĩ cho NCS Huỳnh Văn Thuấn</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/10-2026/718_QD_DHKT (3).pdf\">718/QĐ-ĐHKT</a> ng&agrave;y 30/9/2026</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,&quot;sans-serif&quot;\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Kh&aacute;ch mời ĐH Huế (C&oacute; Giấy mời )</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;\">- Đại diện Tập thể Giảng vi&ecirc;n hướng dẫn NCS</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Chủ tịch HĐ - Hiệu trưởng ",
-      "approved": "1",
-      "postdate": "2026-10-30 16:45:44",
-      "lang": "vn"
-    },
-    {
-      "id": "13185",
-      "sdate": "2026-11-06",
-      "stime": "15:00:00",
-      "content": "<p>L&agrave;m việc với Trường Đại học FPT</p>\n",
-      "stakeholder": "<p>- Đại diện Trường Đại học FPT</p>\n\n<p>- Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh</p>\n\n<p>- Trưởng ph&ograve;ng KH,CN&amp;HTQT</p>\n\n<p>- Đại diện l&atilde;nh đạo Khoa HTTTKT</p>\n\n<p>- Trưởng/ph&oacute; bộ m&ocirc;n Tin học Kinh tế.</p>\n",
-      "location": "Phòng họp 3",
-      "host": "Phó Hiệu trưởng Bùi Đức Tính",
-      "approved": "1",
-      "postdate": "2026-10-30 16:47:52",
-      "lang": "vn"
-    },
-    {
-      "id": "13189",
-      "sdate": "2026-11-06",
-      "stime": "15:30:00",
-      "content": "<p>Lễ kết nạp Đảng vi&ecirc;n mới v&agrave; sinh hoạt Chi bộ Sinh vi&ecirc;n</p>\n",
-      "stakeholder": "<p>- Đại diện BTV Đảng Ủy Trường</p>\n\n<p>- Đại biểu mời</p>\n\n<p>- To&agrave;n thể Đảng vi&ecirc;n chi bộ sinh vi&ecirc;n</p>\n",
-      "location": "Hội trường Nhà hành chính",
-      "host": "Bí thư Chi bộ Sinh viên",
-      "approved": "1",
-      "postdate": "2026-11-03 08:43:12",
-      "lang": "vn"
-    },
     {
       "id": "13192",
       "sdate": "2026-11-07",

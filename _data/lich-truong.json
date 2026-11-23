@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T01:50:37Z",
+  "updated": "2026-11-23T13:16:23Z",
   "start": "2026-11-09",
   "end": "2027-01-22",
   "data": [
@@ -685,6 +685,18 @@
       "host": "Trưởng khoa KTCT",
       "approved": "1",
       "postdate": "2026-11-20 17:21:12",
+      "lang": "vn"
+    },
+    {
+      "id": "13251",
+      "sdate": "2026-11-29",
+      "stime": "14:00:00",
+      "content": "<p>H&ocirc;̣i nghị vi&ecirc;n chức, người lao đ&ocirc;̣ng năm học 2026-2027</p>\n",
+      "stakeholder": "<p>- Đại biểu mời</p>\n\n<p>- To&agrave;n thể CBVC, NLĐ</p>\n\n<p>&nbsp;</p>\n",
+      "location": "Hội trường Nhà hành chính",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-23 09:14:42",
       "lang": "vn"
     }
   ]

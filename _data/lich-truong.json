@@ -1,20 +1,8 @@
 {
-  "updated": "2026-11-22T01:26:14Z",
-  "start": "2026-11-08",
-  "end": "2027-01-21",
+  "updated": "2026-11-23T01:50:37Z",
+  "start": "2026-11-09",
+  "end": "2027-01-22",
   "data": [
-    {
-      "id": "13191",
-      "sdate": "2026-11-08",
-      "stime": "08:00:00",
-      "content": "<p>Hội nghị Tuy&ecirc;n truyền ph&ograve;ng, chống mua b&aacute;n người năm 2026 d&agrave;nh cho sinh vi&ecirc;n Đại học Huế</p>\n",
-      "stakeholder": "<p>* C&ocirc;ng an th&agrave;nh phố Huế.</p>\n\n<p>* Đại học Huế:<br />\n- Đại diện L&atilde;nh đạo Đại hoc Huế;<br />\n- Ban ĐTCTSV: L&atilde;nh đạo v&agrave; chuy&ecirc;n vi&ecirc;n c&oacute; li&ecirc;n quan.<br />\n* Sinh vi&ecirc;n được điều động (Theo c&ocirc;ng văn số <a href=\"https://qldh.hueuni.edu.vn/data/kyso/2026/10/Dieu_dong_sv_tham_gia_Hoi_nghi_tuyen_truyen_phong_chong_mua_ban_nguoi111.pdf\" rel=\"noopener\" target=\"_blank\">1978/ĐHH-ĐTCTSV</a> ng&agrave;y 23/10/2026 của Đại học Huế).</p>\n",
-      "location": "Hội trường Đại học Huế, 01 Điện Biên Phủ, phường Thuận Hóa",
-      "host": "Công an thành phố Huế",
-      "approved": "1",
-      "postdate": "2026-11-04 13:50:57",
-      "lang": "vn"
-    },
     {
       "id": "13193",
       "sdate": "2026-11-09",
@@ -589,6 +577,30 @@
       "host": "Cục Trưởng Cục Quản lý chất lượng - Bộ Giáo dục và Đào tạo",
       "approved": "1",
       "postdate": "2026-11-21 09:27:47",
+      "lang": "vn"
+    },
+    {
+      "id": "13249",
+      "sdate": "2026-11-26",
+      "stime": "08:00:00",
+      "content": "<p>Đơn vị thiết kế tr&igrave;nh b&agrave;y phương &aacute;n lễ phục tốt nghiệp</p>\n",
+      "stakeholder": "<p>- Đơn vị thiết kế;</p>\n\n<p>- Ban gi&aacute;m hiệu</p>\n\n<p>- Đại diện l&atilde;nh đạo c&aacute;c ph&ograve;ng:&nbsp;TC-HC, KH-TC, TT&amp;TS, ĐT&amp;HTNH.&nbsp;</p>\n",
+      "location": "Phòng họp 2",
+      "host": "Hiệu trưởng",
+      "approved": "1",
+      "postdate": "2026-11-23 08:00:22",
+      "lang": "vn"
+    },
+    {
+      "id": "13250",
+      "sdate": "2026-11-26",
+      "stime": "09:30:00",
+      "content": "<p><span style=\"font-size:12.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Hội đồng đ&aacute;nh gi&aacute; Tiểu luận tổng quan tiến sĩ cho NCS <strong><em>Nguyễn Hữu Lợi</em></strong></span></span></span></p>\n",
+      "stakeholder": "<p><span style=\"font-size:12.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"color:#212529\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"uploads/11-2026/846_QD_DHKT.pdf\"><strong>846/QĐ-ĐHKT </strong></a></span></span></span></p>\n",
+      "location": "Phòng họp 2",
+      "host": "Trưởng Tiểu ban",
+      "approved": "1",
+      "postdate": "2026-11-23 08:03:02",
       "lang": "vn"
     },
     {

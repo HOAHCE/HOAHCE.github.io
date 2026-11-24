@@ -1,80 +1,8 @@
 {
-  "updated": "2026-11-23T13:16:23Z",
-  "start": "2026-11-09",
-  "end": "2027-01-22",
+  "updated": "2026-11-24T02:22:55Z",
+  "start": "2026-11-10",
+  "end": "2027-01-23",
   "data": [
-    {
-      "id": "13193",
-      "sdate": "2026-11-09",
-      "stime": "08:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hội nghị Thực hiện quy tr&igrave;nh bổ nhiệm Gi&aacute;m đốc Đại học Huế</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Bộ GDĐT:</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại diện Đảng ủy;</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại diện l&atilde;nh đạo Vụ TCCB.</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Đại diện Ban Thường vụ Th&agrave;nh ủy Huế.</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Đại diện Ban Tổ chức Th&agrave;nh ủy Huế.</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Đại diện Ủy ban Kiểm tra Th&agrave;nh ủy Huế.</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Đại diện Ph&ograve;ng An ninh ch&iacute;nh trị nội bộ - C&ocirc;ng an TP Huế.</span></span></span></span></p>\n\n<p><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">* Đại học Huế:<br />\n- Ban Tổ chức v&agrave; Tổ gi&uacute;p việc theo Quyết định của Gi&aacute;m đốc Đại học Huế;</span></span></span></span></p>\n\n<p><span style=\"font-size:10.0pt\"><span style=\"background-color:whitesmoke\"><span style=\"font-family:&quot;Verdana&quot;,sans-serif\"><span style=\"color:black\">- </span></span></span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Th&agrave;nh phần v&agrave; thời gian tham dự c&aacute;c bước theo C&ocirc;ng văn số </span></span><span style=\"font-size:11.0pt\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif\"><a href=\"https://qldh.hueuni.edu.vn/data/kyso/2026/11/CV_trieu_tap_dai_bieu_tham_du_Hoi_nghi_thuc_hien_quy_trinh_bo_nhiem_Giam_doc_DHH11.pdf\" target=\"_blank\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">2090/ĐHH-TCCB</span></span></a></span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"> ng&agrave;y 06/11/2026 của Đại học Huế v/v triệu tập đại biểu tham dự Hội nghị thực hiện quy tr&igrave;nh bổ nhiệm Gi&aacute;m đốc Đại học Huế.</span></span></p>\n",
-      "location": "Hội trường Đại học Huế, số 03 Lê Lợi, phường Thuận Hóa",
-      "host": "Vụ trưởng Vụ Tổ chức cán bộ",
-      "approved": "1",
-      "postdate": "2026-11-06 18:15:31",
-      "lang": "vn"
-    },
-    {
-      "id": "13194",
-      "sdate": "2026-11-09",
-      "stime": "14:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">L&agrave;m việc với UBND Phường An Cựu</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hiệu trưởng</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ph&oacute; Hiệu trưởng B&ugrave;i Đức T&iacute;nh</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ph&oacute; Hiệu trưởng Phan Thanh Ho&agrave;n</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Nh&oacute;m NC Kinh tế đ&ecirc;m sinh vi&ecirc;n</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Trưởng ph&ograve;ng KH,CN&amp;HTQT</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại diện L&atilde;nh đạo c&aacute;c khoa</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-11-06 18:16:05",
-      "lang": "vn"
-    },
-    {
-      "id": "13195",
-      "sdate": "2026-11-09",
-      "stime": "14:00:00",
-      "content": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hội đồng đ&aacute;nh gi&aacute; cấp cơ sở đề t&agrave;i KH&amp;CN cấp Đại học Huế</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Chủ nhiệm: Phan Nhật Quang (DHH2024-06-140)</span></span></p>\n",
-      "stakeholder": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Th&agrave;nh vi&ecirc;n Hội đồng theo Quyết định số <a href=\"/uploads/LichCongTac/11_2026/714_QD_DHKT_0001.pdf\">714/QĐ-ĐHKT</a></span></span></p>\n",
-      "location": "Phòng họp 2",
-      "host": "Phó Hiệu trưởng Phan Khoa Cương - Chủ tịch Hội đồng",
-      "approved": "1",
-      "postdate": "2026-11-06 18:17:38",
-      "lang": "vn"
-    },
-    {
-      "id": "13212",
-      "sdate": "2026-11-09",
-      "stime": "15:15:00",
-      "content": "<p>Họp thống nhất chỉ ti&ecirc;u nh&acirc;n lực v&agrave; bi&ecirc;n chế của Trường Đại học Kinh tế giai đoạn 2027 - 2031 theo y&ecirc;u cầu của Ban tổ chức Trung ương</p>\n",
-      "stakeholder": "<p>- Ban Gi&aacute;m hiệu;</p>\n\n<p>- Trưởng c&aacute;c đơn vị;</p>\n\n<p>- Ths. Nguyễn Mạnh H&ugrave;ng</p>\n\n<p>-&nbsp;CN. L&ecirc; Phước Thiện Tr&iacute;</p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-11-08 20:04:38",
-      "lang": "vn"
-    },
-    {
-      "id": "13196",
-      "sdate": "2026-11-09",
-      "stime": "16:00:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Họp b&agrave;n về mua sắm CSVC</span></span></p>\n",
-      "stakeholder": "<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Hiệu trưởng</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Trưởng c&aacute;c ph&ograve;ng: TC-HC, KH-TC</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Ph&oacute; trưởng ph&ograve;ng TC-HC phụ tr&aacute;ch CSVC</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">ThS. Nguyễn Quốc Đạt</span></span></span></span></p>\n\n<p style=\"margin-left:48px; text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- </span></span><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">ThS. Đ&agrave;o Văn Việt</span></span></span></span></p>\n\n<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- ThS. Trần H&agrave; Th&agrave;nh Trung</span></span></p>\n",
-      "location": "Phòng họp 3",
-      "host": "Hiệu trưởng",
-      "approved": "1",
-      "postdate": "2026-11-06 18:18:19",
-      "lang": "vn"
-    },
-    {
-      "id": "13197",
-      "sdate": "2026-11-09",
-      "stime": "17:30:00",
-      "content": "<p><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">Khai mạc Giải B&oacute;ng chuyền vi&ecirc;n chức, người lao động Đại học Huế lần thứ XI - năm 2026</span></span></p>\n",
-      "stakeholder": "<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Đại biểu mời (c&oacute; Giấy mời ri&ecirc;ng);</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ban Chấp h&agrave;nh C&ocirc;ng đo&agrave;n Đại học Huế;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Chủ tịch c&aacute;c C&ocirc;ng đo&agrave;n cơ sở trực thuộc;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Ban Tổ chức v&agrave; Tổ gi&uacute;p việc: Th&agrave;nh vi&ecirc;n theo Quyết định số </span></span><a href=\"https://qldh.hueuni.edu.vn/data/2026/9/Quyet_dinh_thanh_lap_Ban_To_chuc_va_To_giup_viec_Giai_Bong_chuyen_vien_chuc,_nguoi_lao_dong_Dai_hoc_Hue_lan_thu_XI,_nam_2026.pdf\" target=\"_blank\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">181/QĐ-CĐ</span></span></a><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"> ng&agrave;y 30/9/2026</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- C&aacute;c đội tham dự Giải;</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:13.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">- Vi&ecirc;n chức, người lao động v&agrave; sinh vi&ecirc;n Đại học Huế quan t&acirc;m.</span></span></span></span></p>\n",
-      "location": "Nhà thi đấu Khoa Giáo dục thể chất - Đại học Huế, số 52 Hồ Đắc Di, phường An Cựu",
-      "host": "Chủ tịch Công đoàn Đại học Huế",
-      "approved": "1",
-      "postdate": "2026-11-06 18:18:50",
-      "lang": "vn"
-    },
     {
       "id": "13198",
       "sdate": "2026-11-10",
@@ -673,6 +601,30 @@
       "host": "Thứ trưởng Bộ Giáo dục và Đào tạo Đoàn Trung Kiên",
       "approved": "1",
       "postdate": "2026-11-20 17:19:09",
+      "lang": "vn"
+    },
+    {
+      "id": "13252",
+      "sdate": "2026-11-28",
+      "stime": "08:00:00",
+      "content": "<p>Lễ C&ocirc;ng bố Quyết định bổ nhiệm Gi&aacute;m đốc Đại học Huế</p>\n",
+      "stakeholder": "<p>* Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o taọ:<br />\n- Bộ trưởng;<br />\n- Đại diện L&atilde;nh đạo Văn ph&ograve;ng, c&aacute;c cục, vụ.<br />\n* Bộ Y tế:<br />\n- Đại điện L&atilde;nh đạo Bộ;<br />\n- Đại diện L&atilde;nh đạo: Hội đồng Y khoa quốc gia; Cục KHCNĐT.<br />\n* C&aacute;c đại học, trường đại học, học viện:<br />\n- Đại diện l&atilde;nh đạo.<br />\n* C&aacute;c tỉnh/th&agrave;nh miền Trung:<br />\n- Đại diện l&atilde;nh đạo.<br />\n* Th&agrave;nh ủy, HĐND, UBND th&agrave;nh phố Huế:<br />\n- L&atilde;nh đạo Th&agrave;nh ủy, HĐND, UBND;<br />\n- Đại diện L&atilde;nh đạo c&aacute;c Sở, ban, ng&agrave;nh;<br />\n- Đại diện L&atilde;nh đạo c&aacute;c phường: Thuận H&oacute;a, Ph&uacute; Xu&acirc;n, An Cựu.<br />\n* C&ocirc;ng an th&agrave;nh phố Huế, Bệnh vi&ecirc;n Trung ương Huế:<br />\n- Đại diện l&atilde;nh đạo.<br />\n* Đại diện c&aacute;c tổ chức, đơn vị c&oacute; mối quan hệ với ĐHH.<br />\n* Đại học Huế:<br />\n- Ban Thường vụ Đảng ủy;<br />\n- Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;<br />\n- Nguy&ecirc;n Gi&aacute;m đốc; nguy&ecirc;n Ph&oacute; Gi&aacute;m đốc đang sinh sống tại Huế;<br />\n- L&atilde;nh đạo c&aacute;c văn ph&ograve;ng, ban chức năng;<br />\n- Chủ tịch C&ocirc;ng đo&agrave;n; Chủ tịch Hội Cựu chiến binh; B&iacute; thư Đo&agrave;n Thanh ni&ecirc;n; Chủ tịch Hội Sinh vi&ecirc;n.<br />\n* C&aacute;c trường đại học th&agrave;nh vi&ecirc;n, đơn vị trực thuộc v&agrave; thuộc Đại học Huế:<br />\n- B&iacute; thư Đảng ủy, Hiệu trưởng, Ph&oacute; B&iacute; thư Đảng ủy, Ph&oacute; Hiệu trưởng;<br />\n- Trưởng, ph&oacute; c&aacute;c đơn vị trực thuộc, đơn vị thuộc ĐHH;<br />\n- C&aacute;c Gi&aacute;o sư, Ph&oacute; Gi&aacute;o sư;<br />\n- Ban Gi&aacute;m đốc Bệnh viện Trường Đại học Y - Dược.</p>\n",
+      "location": "Hội trường Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
+      "host": "Trưởng Ban Tổ chức Lễ ",
+      "approved": "1",
+      "postdate": "2026-11-23 21:44:11",
+      "lang": "vn"
+    },
+    {
+      "id": "13253",
+      "sdate": "2026-11-28",
+      "stime": "09:00:00",
+      "content": "<p>Bộ trưởng Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o l&agrave;m việc với Đại học Huế</p>\n",
+      "stakeholder": "<p>* Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o taọ:<br />\n- Bộ trưởng;<br />\n- Đại diện L&atilde;nh đạo Văn ph&ograve;ng, c&aacute;c cục, vụ.<br />\n* Th&agrave;nh ủy, UBND th&agrave;nh phố Huế:<br />\n- Đại diện L&atilde;nh đạo Th&agrave;nh ủy, UBND.<br />\n* Đại học Huế:<br />\n- Gi&aacute;m đốc; c&aacute;c Ph&oacute; Gi&aacute;m đốc;<br />\n- Nguy&ecirc;n Gi&aacute;m đốc đang sinh sống tại Huế;<br />\n- Ch&aacute;nh Văn ph&ograve;ng ĐĐT, Trưởng ban chức năng;<br />\n- Văn ph&ograve;ng ĐHH: L&atilde;nh đạo Văn ph&ograve;ng.<br />\n* C&aacute;c trường đại học th&agrave;nh vi&ecirc;n, đơn vị trực thuộc v&agrave; thuộc Đại học Huế:<br />\n- Trưởng đơn vị.</p>\n",
+      "location": "Hội trường Đại học Huế, số 03 Lê Lợi, phường Thuận Hóa",
+      "host": "Bộ trưởng Bộ Giáo dục và Đào tạo",
+      "approved": "1",
+      "postdate": "2026-11-23 21:45:47",
       "lang": "vn"
     },
     {

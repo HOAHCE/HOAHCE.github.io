@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T01:49:06Z",
+  "updated": "2026-11-27T23:35:08Z",
   "start": "2026-11-13",
   "end": "2027-01-26",
   "data": [
@@ -469,6 +469,18 @@
       "host": "Thứ trưởng Bộ Giáo dục và Đào tạo Đoàn Trung Kiên",
       "approved": "1",
       "postdate": "2026-11-20 17:19:09",
+      "lang": "vn"
+    },
+    {
+      "id": "13254",
+      "sdate": "2026-11-27",
+      "stime": "16:30:00",
+      "content": "<p>Họp đ&aacute;nh gi&aacute;, xếp loại chất lượng năm 2026 đối với Đại học Huế v&agrave; Gi&aacute;m đốc, c&aacute;c Ph&oacute; Gi&aacute;m đốc Đại học Huế.</p>\n",
+      "stakeholder": "<p>* Đại học Huế:</p>\n\n<p>- Ban Thường vụ Đảng ủy;</p>\n\n<p>- Gi&aacute;m đốc v&agrave; c&aacute;c Ph&oacute; Gi&aacute;m đốc;</p>\n\n<p>- Đại diện C&ocirc;ng đo&agrave;n, Đo&agrave;n thanh ni&ecirc;n;<br />\n- Ch&aacute;nh c&aacute;c văn ph&ograve;ng, Trưởng c&aacute;c ban chức năng;</p>\n\n<p>- L&atilde;nh đạo Ban TCCB v&agrave; chuy&ecirc;n vi&ecirc;n c&oacute; li&ecirc;n quan.</p>\n\n<p>* C&aacute;c trường đại học th&agrave;nh vi&ecirc;n, đơn vị trực thuộc, đơn vị thuộc ĐHH: Trưởng đơn vị.</p>\n",
+      "location": "Phòng họp I.2 Đại học Huế, số 01 Điện Biên Phủ, phường Thuận Hóa",
+      "host": "Giám đốc Đại học Huế",
+      "approved": "1",
+      "postdate": "2026-11-27 13:25:32",
       "lang": "vn"
     },
     {
